@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +19,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+	
+	// Enable Parse local datastore so the app can be used seamlessly when user is offline
+	[Parse enableLocalDatastore];
+ 
+	// Initialize Parse with Bob's unique keys
+	[Parse setApplicationId:@"iEYncbhxZ5GGYHLvQKGEhfFkV1AihTvnS98pSwSo"
+								clientKey:@"dpSEmTvPieJGS7J3fT5GLeE6q7HhugobvW12h5Xo"];
+ 
+	// Use Parse analytics to track statistics around application opens.
+	[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+	
 	return YES;
+}
+
+// Facebook integration test
+- (BOOL)application:(UIApplication *)application
+						openURL:(NSURL *)url
+	sourceApplication:(NSString *)sourceApplication
+				 annotation:(id)annotation {
+	// attempt to extract a token from the url
+	return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -36,6 +58,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+	
+	// Start Facebook analytics to track app events
+	[FBAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

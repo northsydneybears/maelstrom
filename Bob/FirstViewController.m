@@ -7,6 +7,8 @@
 //
 
 #import "FirstViewController.h"
+#import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface FirstViewController ()
 
@@ -17,6 +19,16 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	// Parse test
+	PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+	testObject[@"foo"] = @"bar";
+	[testObject saveInBackground];
+	
+	// Facebook test
+	FBLoginView *loginView = [[FBLoginView alloc] init];
+	loginView.center = self.view.center;
+	[self.view addSubview:loginView];
 }
 
 - (void)didReceiveMemoryWarning {
