@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <Twitter/Twitter.h>
+#import "initialViewController.h"
 
 @interface AppDelegate ()
 
@@ -29,6 +31,11 @@
  
 	// Use Parse analytics to track statistics around application opens.
 	[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+	
+	[PFTwitterUtils initializeWithConsumerKey:@"C73yi30lDbS4C8TF1BhCzquZm"
+														 consumerSecret:@"lrY11Ujj071MvE1G1bRZzJgekd07IjxwPFvQBwF48cvI3F4lmy"];
+	
+	self.window.rootViewController = [[initialViewController alloc] init];
 	
 	return YES;
 }
