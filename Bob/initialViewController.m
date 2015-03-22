@@ -10,6 +10,7 @@
 #import <Parse/PFUser.h>
 #import "bobLogInViewController.h"
 #import "bobSignUpViewController.h"
+#import "bobMainViewController.h"
 
 @interface initialViewController ()
 
@@ -62,8 +63,9 @@
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-	[self dismissViewControllerAnimated:YES completion:NULL];
-	
+	//[self dismissViewControllerAnimated:YES completion:NULL];
+	bobMainViewController *bobMainVC = [[bobMainViewController alloc] init];
+	[self presentViewController:bobMainVC animated:YES completion:NULL];
 	// Here is where you can load profile pictures etc later on
 }
 

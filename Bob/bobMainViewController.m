@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 Peter Gow. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "bobMainViewController.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface FirstViewController ()
+@interface bobMainViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation bobMainViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
