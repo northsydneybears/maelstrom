@@ -32,6 +32,11 @@
 		EF6955C61ABCA26700707E61 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955BB1ABCA26700707E61 /* StoreKit.framework */; };
 		EF6955C71ABCA26700707E61 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955BC1ABCA26700707E61 /* SystemConfiguration.framework */; };
 		EF6955C91ABCA3C200707E61 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955C81ABCA3C200707E61 /* FacebookSDK.framework */; };
+		EF6955CE1ABE9D1C00707E61 /* initialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955CD1ABE9D1C00707E61 /* initialViewController.m */; };
+		EF6955D11ABE9D7A00707E61 /* bobLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955D01ABE9D7A00707E61 /* bobLogInViewController.m */; };
+		EF6955D41ABE9DB400707E61 /* bobSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955D31ABE9DB400707E61 /* bobSignUpViewController.m */; };
+		EF6955D61ABF217D00707E61 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955D51ABF217D00707E61 /* Social.framework */; };
+		EF6955D81ABF218C00707E61 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955D71ABF218C00707E61 /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,14 @@
 		EF6955BB1ABCA26700707E61 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EF6955BC1ABCA26700707E61 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EF6955C81ABCA3C200707E61 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		EF6955CC1ABE9D1C00707E61 /* initialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = initialViewController.h; sourceTree = "<group>"; };
+		EF6955CD1ABE9D1C00707E61 /* initialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = initialViewController.m; sourceTree = "<group>"; };
+		EF6955CF1ABE9D7A00707E61 /* bobLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bobLogInViewController.h; sourceTree = "<group>"; };
+		EF6955D01ABE9D7A00707E61 /* bobLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bobLogInViewController.m; sourceTree = "<group>"; };
+		EF6955D21ABE9DB400707E61 /* bobSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bobSignUpViewController.h; sourceTree = "<group>"; };
+		EF6955D31ABE9DB400707E61 /* bobSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bobSignUpViewController.m; sourceTree = "<group>"; };
+		EF6955D51ABF217D00707E61 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		EF6955D71ABF218C00707E61 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF6955D81ABF218C00707E61 /* Accounts.framework in Frameworks */,
+				EF6955D61ABF217D00707E61 /* Social.framework in Frameworks */,
 				EF6955BD1ABCA26700707E61 /* AudioToolbox.framework in Frameworks */,
 				EF6955BE1ABCA26700707E61 /* CFNetwork.framework in Frameworks */,
 				EF6955BF1ABCA26700707E61 /* CoreGraphics.framework in Frameworks */,
@@ -146,6 +161,12 @@
 				EF69558E1ABCA15500707E61 /* Images.xcassets */,
 				EF6955901ABCA15500707E61 /* LaunchScreen.xib */,
 				EF69557E1ABCA15500707E61 /* Supporting Files */,
+				EF6955CC1ABE9D1C00707E61 /* initialViewController.h */,
+				EF6955CD1ABE9D1C00707E61 /* initialViewController.m */,
+				EF6955CF1ABE9D7A00707E61 /* bobLogInViewController.h */,
+				EF6955D01ABE9D7A00707E61 /* bobLogInViewController.m */,
+				EF6955D21ABE9DB400707E61 /* bobSignUpViewController.h */,
+				EF6955D31ABE9DB400707E61 /* bobSignUpViewController.m */,
 			);
 			path = Bob;
 			sourceTree = "<group>";
@@ -179,6 +200,8 @@
 		EF6955A71ABCA1EC00707E61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF6955D71ABF218C00707E61 /* Accounts.framework */,
+				EF6955D51ABF217D00707E61 /* Social.framework */,
 				EF6955C81ABCA3C200707E61 /* FacebookSDK.framework */,
 				EF6955B21ABCA26700707E61 /* AudioToolbox.framework */,
 				EF6955B31ABCA26700707E61 /* CFNetwork.framework */,
@@ -302,7 +325,10 @@
 			files = (
 				EF69558A1ABCA15500707E61 /* SecondViewController.m in Sources */,
 				EF6955841ABCA15500707E61 /* AppDelegate.m in Sources */,
+				EF6955CE1ABE9D1C00707E61 /* initialViewController.m in Sources */,
 				EF6955871ABCA15500707E61 /* FirstViewController.m in Sources */,
+				EF6955D41ABE9DB400707E61 /* bobSignUpViewController.m in Sources */,
+				EF6955D11ABE9D7A00707E61 /* bobLogInViewController.m in Sources */,
 				EF6955811ABCA15500707E61 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
