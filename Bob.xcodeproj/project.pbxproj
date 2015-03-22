@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EF6955811ABCA15500707E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955801ABCA15500707E61 /* main.m */; };
 		EF6955841ABCA15500707E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955831ABCA15500707E61 /* AppDelegate.m */; };
-		EF6955871ABCA15500707E61 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955861ABCA15500707E61 /* FirstViewController.m */; };
+		EF6955871ABCA15500707E61 /* bobMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955861ABCA15500707E61 /* bobMainViewController.m */; };
 		EF69558A1ABCA15500707E61 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955891ABCA15500707E61 /* SecondViewController.m */; };
 		EF69558D1ABCA15500707E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF69558B1ABCA15500707E61 /* Main.storyboard */; };
 		EF69558F1ABCA15500707E61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF69558E1ABCA15500707E61 /* Images.xcassets */; };
@@ -55,8 +55,8 @@
 		EF6955801ABCA15500707E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF6955821ABCA15500707E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EF6955831ABCA15500707E61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EF6955851ABCA15500707E61 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		EF6955861ABCA15500707E61 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		EF6955851ABCA15500707E61 /* bobMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bobMainViewController.h; sourceTree = "<group>"; };
+		EF6955861ABCA15500707E61 /* bobMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bobMainViewController.m; sourceTree = "<group>"; };
 		EF6955881ABCA15500707E61 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		EF6955891ABCA15500707E61 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		EF69558C1ABCA15500707E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 			children = (
 				EF6955821ABCA15500707E61 /* AppDelegate.h */,
 				EF6955831ABCA15500707E61 /* AppDelegate.m */,
-				EF6955851ABCA15500707E61 /* FirstViewController.h */,
-				EF6955861ABCA15500707E61 /* FirstViewController.m */,
+				EF6955851ABCA15500707E61 /* bobMainViewController.h */,
+				EF6955861ABCA15500707E61 /* bobMainViewController.m */,
 				EF6955881ABCA15500707E61 /* SecondViewController.h */,
 				EF6955891ABCA15500707E61 /* SecondViewController.m */,
 				EF69558B1ABCA15500707E61 /* Main.storyboard */,
@@ -326,7 +326,7 @@
 				EF69558A1ABCA15500707E61 /* SecondViewController.m in Sources */,
 				EF6955841ABCA15500707E61 /* AppDelegate.m in Sources */,
 				EF6955CE1ABE9D1C00707E61 /* initialViewController.m in Sources */,
-				EF6955871ABCA15500707E61 /* FirstViewController.m in Sources */,
+				EF6955871ABCA15500707E61 /* bobMainViewController.m in Sources */,
 				EF6955D41ABE9DB400707E61 /* bobSignUpViewController.m in Sources */,
 				EF6955D11ABE9D7A00707E61 /* bobLogInViewController.m in Sources */,
 				EF6955811ABCA15500707E61 /* main.m in Sources */,
