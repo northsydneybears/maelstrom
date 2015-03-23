@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Peter Gow. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "trendingQuestionsViewController.h"
 
-@interface SecondViewController ()
+@interface trendingQuestionsViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation trendingQuestionsViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];

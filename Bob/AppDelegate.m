@@ -11,6 +11,10 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <Twitter/Twitter.h>
 #import "initialViewController.h"
+#import "bobMainViewController.h"
+#import "trendingQuestionsViewController.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+
 
 @interface AppDelegate ()
 
@@ -25,7 +29,7 @@
 	// Enable Parse local datastore so the app can be used seamlessly when user is offline
 	[Parse enableLocalDatastore];
  
-	// Initialize Parse with Bob's unique keys
+	// Initialise Parse with Bob's unique keys
 	[Parse setApplicationId:@"iEYncbhxZ5GGYHLvQKGEhfFkV1AihTvnS98pSwSo"
 								clientKey:@"dpSEmTvPieJGS7J3fT5GLeE6q7HhugobvW12h5Xo"];
  
@@ -35,7 +39,24 @@
 	[PFTwitterUtils initializeWithConsumerKey:@"C73yi30lDbS4C8TF1BhCzquZm"
 														 consumerSecret:@"lrY11Ujj071MvE1G1bRZzJgekd07IjxwPFvQBwF48cvI3F4lmy"];
 	
-	self.window.rootViewController = [[initialViewController alloc] init];
+	// Initialise the view controllers for the tabs
+ 
+	// Bob main view controller
+	bobMainViewController *mainVC = [[bobMainViewController alloc]init];
+	mainVC.tabBarItem.title = @"Question and Answers";
+	
+	// Trending Questions view Controller
+	trendingQuestionsViewController *trendingVC = [[trendingQuestionsViewController alloc]init];
+	trendingVC.tabBarItem.title = @"Trending Questions";
+ 
+	// Intialise the UITabBarController
+ 
+	self.tabBarController = [[UITabBarController alloc] init];
+	self.tabBarController.viewControllers = @[mainVC,trendingVC];
+	
+	// Set the root view controller to the login/signup screen.
+	initialViewController	*initialVC = [[initialViewController alloc] init];
+	[self.window setRootViewController:initialVC];
 	
 	return YES;
 }

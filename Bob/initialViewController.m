@@ -11,6 +11,7 @@
 #import "bobLogInViewController.h"
 #import "bobSignUpViewController.h"
 #import "bobMainViewController.h"
+#import "AppDelegate.h"
 
 @interface initialViewController ()
 
@@ -28,7 +29,7 @@
 - (void)viewDidAppear:(BOOL)animated {
 		[super viewDidAppear:animated];
 
-		// Check if user is logged in
+		// Check if user is logged in, and if they're not, configure and present the login/signup
 			if (![PFUser currentUser]) {
 				// Customize the Log In View Controller
 				bobLogInViewController *logInViewController = [[bobLogInViewController alloc] init];
@@ -44,6 +45,16 @@
 		
 				// Present Log In View Controller
 				[self presentViewController:logInViewController animated:YES completion:NULL];
+				
+		// If they are logged in, welcome the user and present the main Bob screen
+			} else if ([PFUser currentUser]) {
+				[[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]] message:NSLocalizedString(@"Get your answers in Bob", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+				
+				NSLog(@"Login successful");
+				
+				// Show the main Bob screen now that the user has logged in successfully
+				AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+				[appDelegate.window setRootViewController:appDelegate.tabBarController];
 			}
 }
 
@@ -63,9 +74,7 @@
 
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-	//[self dismissViewControllerAnimated:YES completion:NULL];
-	bobMainViewController *bobMainVC = [[bobMainViewController alloc] init];
-	[self presentViewController:bobMainVC animated:YES completion:NULL];
+	[self dismissViewControllerAnimated:YES completion:NULL];
 	// Here is where you can load profile pictures etc later on
 }
 

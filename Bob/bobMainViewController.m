@@ -9,6 +9,9 @@
 #import "bobMainViewController.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "initialViewController.h"
+#import "bobLogInViewController.h"
+#import "bobSignUpViewController.h"
 
 @interface bobMainViewController ()
 
@@ -29,6 +32,12 @@
 	//FBLoginView *loginView = [[FBLoginView alloc] init];
 	//loginView.center = self.view.center;
 	//[self.view addSubview:loginView];
+	
+	[self.view setBackgroundColor:[UIColor whiteColor]];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
