@@ -7,8 +7,15 @@
 //
 
 #import "trendingQuestionsViewController.h"
+#import "bobMainViewController.h"
+#import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
+#import "initialViewController.h"
+#import "bobLogInViewController.h"
+#import "bobSignUpViewController.h"
 
 @interface trendingQuestionsViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *logOutButton;
 
 @end
 
@@ -22,6 +29,15 @@
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
+}
+
+- (IBAction)didTapLogOutButton:(id)sender {
+
+	[PFUser logOut];
+		
+	// Return to Login view controller
+	initialViewController *initialVC = [self.storyboard instantiateViewControllerWithIdentifier:@"initialViewController"];
+	[self presentViewController:initialVC animated:YES completion:NULL];
 }
 
 @end

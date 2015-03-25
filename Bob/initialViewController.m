@@ -52,9 +52,10 @@
 				
 				NSLog(@"Login successful");
 				
+				[self performSegueWithIdentifier:@"tabViewSegue" sender:self];
 				// Show the main Bob screen now that the user has logged in successfully
-				AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-				[appDelegate.window setRootViewController:appDelegate.tabBarController];
+//				AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+//				[appDelegate.window setRootViewController:appDelegate.tabBarController];
 			}
 }
 
@@ -130,14 +131,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	UITabBarController *tvc = [segue destinationViewController];
+	bobMainViewController *bvc = tvc.viewControllers[0];
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

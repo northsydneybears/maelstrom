@@ -39,37 +39,49 @@
 	[PFTwitterUtils initializeWithConsumerKey:@"C73yi30lDbS4C8TF1BhCzquZm"
 														 consumerSecret:@"lrY11Ujj071MvE1G1bRZzJgekd07IjxwPFvQBwF48cvI3F4lmy"];
 	
+	[PFFacebookUtils initializeFacebook];
+	
 	// Initialise the view controllers for the tabs
  
 	// Bob main view controller
-	bobMainViewController *mainVC = [[bobMainViewController alloc]init];
-	mainVC.tabBarItem.title = @"Question and Answers";
-	
-	// Trending Questions view Controller
-	trendingQuestionsViewController *trendingVC = [[trendingQuestionsViewController alloc]init];
-	trendingVC.tabBarItem.title = @"Trending Questions";
- 
+//	bobMainViewController *mainVC = [[bobMainViewController alloc]init];
+//	mainVC.tabBarItem.title = @"Question and Answers";
+//	
+//	// Trending Questions view Controller
+//	trendingQuestionsViewController *trendingVC = [[trendingQuestionsViewController alloc]init];
+//	trendingVC.tabBarItem.title = @"Trending Questions";
+// 
 	// Intialise the UITabBarController
  
-	self.tabBarController = [[UITabBarController alloc] init];
-	self.tabBarController.viewControllers = @[mainVC,trendingVC];
-	
-	// Set the root view controller to the login/signup screen.
-	initialViewController	*initialVC = [[initialViewController alloc] init];
-	[self.window setRootViewController:initialVC];
-	
+//	self.tabBarController = [[UITabBarController alloc] init];
+//	self.tabBarController.viewControllers = @[mainVC,trendingVC];
+//	
+//	// Set the root view controller to the login/signup screen.
+//	initialViewController	*initialVC = [[initialViewController alloc] init];
+//	[self.window setRootViewController:initialVC];
+//	
 	return YES;
 }
 
-// Facebook integration test
 - (BOOL)application:(UIApplication *)application
 						openURL:(NSURL *)url
 	sourceApplication:(NSString *)sourceApplication
 				 annotation:(id)annotation {
-	// attempt to extract a token from the url
-	return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+	return [FBAppCall handleOpenURL:url
+								sourceApplication:sourceApplication
+											withSession:[PFFacebookUtils session]];
 }
 
+
+// Facebook integration test
+//- (BOOL)application:(UIApplication *)application
+//						openURL:(NSURL *)url
+//	sourceApplication:(NSString *)sourceApplication
+//				 annotation:(id)annotation {
+//	// attempt to extract a token from the url
+//	return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+//}
+//
 - (void)applicationWillResignActive:(UIApplication *)application {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
 	// Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -89,10 +101,13 @@
 	
 	// Start Facebook analytics to track app events
 	[FBAppEvents activateApp];
+	[FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+	
+	[[PFFacebookUtils session] close];
 }
 
 @end

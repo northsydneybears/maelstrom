@@ -20,7 +20,7 @@
 - (void)viewDidLayoutSubviews {
 	[super viewDidLayoutSubviews];
 	
-	[self.logInView.logo setFrame:CGRectMake(66.5f, 150.0f, 187.0f, 58.5f)];
+	[self.logInView.logo setFrame:CGRectMake(66.5f, 130.0f, 187.0f, 58.5f)];
 }
 
 @end
