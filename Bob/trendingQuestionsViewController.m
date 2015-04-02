@@ -15,6 +15,7 @@
 #import "bobSignUpViewController.h"
 
 @interface trendingQuestionsViewController ()
+
 @property (weak, nonatomic) IBOutlet UIButton *logOutButton;
 
 @end
@@ -32,12 +33,11 @@
 }
 
 - (IBAction)didTapLogOutButton:(id)sender {
-
 	[PFUser logOut];
-		
-	// Return to Login view controller
+	
 	initialViewController *initialVC = [self.storyboard instantiateViewControllerWithIdentifier:@"initialViewController"];
 	[self presentViewController:initialVC animated:YES completion:NULL];
+	
 }
 
 @end

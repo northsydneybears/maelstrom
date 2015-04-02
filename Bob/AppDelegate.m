@@ -14,6 +14,7 @@
 #import "bobMainViewController.h"
 #import "trendingQuestionsViewController.h"
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <ParseCrashReporting/ParseCrashReporting.h>
 
 
 @interface AppDelegate ()
@@ -28,6 +29,9 @@
 	
 	// Enable Parse local datastore so the app can be used seamlessly when user is offline
 	[Parse enableLocalDatastore];
+	
+	// Enable Crash Reporting
+	//[ParseCrashReporting enable];
  
 	// Initialise Parse with Bob's unique keys
 	[Parse setApplicationId:@"iEYncbhxZ5GGYHLvQKGEhfFkV1AihTvnS98pSwSo"

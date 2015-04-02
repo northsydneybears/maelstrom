@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF0CF5DD1ACD46A7005B4EFA /* categoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0CF5DC1ACD46A7005B4EFA /* categoriesViewController.m */; };
 		EF6955811ABCA15500707E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955801ABCA15500707E61 /* main.m */; };
 		EF6955841ABCA15500707E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955831ABCA15500707E61 /* AppDelegate.m */; };
 		EF6955871ABCA15500707E61 /* bobMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955861ABCA15500707E61 /* bobMainViewController.m */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF0CF5DB1ACD46A7005B4EFA /* categoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = categoriesViewController.h; sourceTree = "<group>"; };
+		EF0CF5DC1ACD46A7005B4EFA /* categoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = categoriesViewController.m; sourceTree = "<group>"; };
 		EF69557B1ABCA15500707E61 /* Bob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF69557F1ABCA15500707E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF6955801ABCA15500707E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 		EF69557D1ABCA15500707E61 /* Bob */ = {
 			isa = PBXGroup;
 			children = (
+				EFE694421ACD926300B1131D /* Archived */,
 				EF6955DA1AC0054800707E61 /* Controllers */,
 				EF6955821ABCA15500707E61 /* AppDelegate.h */,
 				EF6955831ABCA15500707E61 /* AppDelegate.m */,
@@ -217,18 +221,27 @@
 		EF6955DA1AC0054800707E61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EF6955851ABCA15500707E61 /* bobMainViewController.h */,
-				EF6955861ABCA15500707E61 /* bobMainViewController.m */,
-				EF6955881ABCA15500707E61 /* trendingQuestionsViewController.h */,
-				EF6955891ABCA15500707E61 /* trendingQuestionsViewController.m */,
 				EF6955CC1ABE9D1C00707E61 /* initialViewController.h */,
 				EF6955CD1ABE9D1C00707E61 /* initialViewController.m */,
 				EF6955CF1ABE9D7A00707E61 /* bobLogInViewController.h */,
 				EF6955D01ABE9D7A00707E61 /* bobLogInViewController.m */,
 				EF6955D21ABE9DB400707E61 /* bobSignUpViewController.h */,
 				EF6955D31ABE9DB400707E61 /* bobSignUpViewController.m */,
+				EF0CF5DB1ACD46A7005B4EFA /* categoriesViewController.h */,
+				EF0CF5DC1ACD46A7005B4EFA /* categoriesViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EFE694421ACD926300B1131D /* Archived */ = {
+			isa = PBXGroup;
+			children = (
+				EF6955851ABCA15500707E61 /* bobMainViewController.h */,
+				EF6955861ABCA15500707E61 /* bobMainViewController.m */,
+				EF6955881ABCA15500707E61 /* trendingQuestionsViewController.h */,
+				EF6955891ABCA15500707E61 /* trendingQuestionsViewController.m */,
+			);
+			name = Archived;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +346,7 @@
 			files = (
 				EF69558A1ABCA15500707E61 /* trendingQuestionsViewController.m in Sources */,
 				EF6955841ABCA15500707E61 /* AppDelegate.m in Sources */,
+				EF0CF5DD1ACD46A7005B4EFA /* categoriesViewController.m in Sources */,
 				EF6955CE1ABE9D1C00707E61 /* initialViewController.m in Sources */,
 				EF6955871ABCA15500707E61 /* bobMainViewController.m in Sources */,
 				EF6955D41ABE9DB400707E61 /* bobSignUpViewController.m in Sources */,
@@ -538,6 +552,7 @@
 				EF6955A31ABCA15500707E61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF6955A41ABCA15500707E61 /* Build configuration list for PBXNativeTarget "BobTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +561,7 @@
 				EF6955A61ABCA15500707E61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

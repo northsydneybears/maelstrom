@@ -11,7 +11,13 @@
 #import "bobLogInViewController.h"
 #import "bobSignUpViewController.h"
 #import "bobMainViewController.h"
+#import "trendingQuestionsViewController.h"
 #import "AppDelegate.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <QuartzCore/QuartzCore.h>
+#import <Parse/PFFile.h>
+#import <parse/PFTwitterUtils.h>
+#import "categoriesViewController.h"
 
 @interface initialViewController ()
 
@@ -48,16 +54,64 @@
 				
 		// If they are logged in, welcome the user and present the main Bob screen
 			} else if ([PFUser currentUser]) {
-				[[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]] message:NSLocalizedString(@"Get your answers in Bob", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
-				
-				NSLog(@"Login successful");
-				
-				[self performSegueWithIdentifier:@"tabViewSegue" sender:self];
-				// Show the main Bob screen now that the user has logged in successfully
-//				AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-//				[appDelegate.window setRootViewController:appDelegate.tabBarController];
+
+				// If user is linked to Twitter, we'll use their Twitter screen name
+				if ([PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
+
+					[[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [PFTwitterUtils twitter].screenName] message:NSLocalizedString(@"Get your answers in Bob", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+					
+				// If user is linked to Facebook, we'll use their Facebook name and store their Facebook email in Parse
+				} else if ([PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+					
+					// Create an asychronous Facebook request for user's details
+					PFUser *user = [PFUser currentUser];
+					FBRequest *request = [FBRequest requestForMe];
+					[request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+						
+								// When Facebook responds, if there are no errors, we'll update the Welcome UIAlertView with their Facebook name
+								if (!error) {
+							
+								// User data as a dictionary, may be useful later!
+								NSDictionary *userData = (NSDictionary *)result;
+								NSString *name = userData[@"name"];
+								user.username = name;
+								NSLog(@"Facebook user:%@", name);
+								[user saveEventually];
+							
+								NSString *displayName = result[@"name"];
+									if (displayName) {
+									[[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), displayName] message:NSLocalizedString(@"Get your answers in the Bob", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+									}
+								}
+					}];
+					
+					// Store the user's Facebook email in Parse
+					
+					NSArray *permissionsArray = @[@"user_about_me", @"email"];
+					[PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+						if (!error && user) {
+							[FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+								if (!error) {
+									[[PFUser currentUser] setObject:[result objectForKey:@"email"]
+																					 forKey:@"email"];
+									[[PFUser currentUser] saveInBackground];
+								}
+							}];
+						}
+					}];
+
+				} else {
+					// If user is linked to neither, let's use their username for the Welcome label.
+					[[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]] message:NSLocalizedString(@"Get your answers in Bob", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+				}
 			}
-}
+				
+			NSLog(@"Login successful");
+				
+			// Move to the tab view controller on successful login
+			[self performSegueWithIdentifier:@"loginToNavigationController" sender:self];
+		}
+
 
 #pragma mark - PFLogInViewControllerDelegate
 
@@ -136,8 +190,10 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-	UITabBarController *tvc = [segue destinationViewController];
-	bobMainViewController *bvc = tvc.viewControllers[0];
+
+	UINavigationController *navigationController = [segue destinationViewController];
+	categoriesViewController *categoriesVC = navigationController.viewControllers[0];
+	
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
