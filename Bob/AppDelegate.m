@@ -17,6 +17,8 @@
 #import <ParseCrashReporting/ParseCrashReporting.h>
 
 
+
+
 @interface AppDelegate ()
 
 @end
@@ -26,6 +28,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+	
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 	
 	// Enable Parse local datastore so the app can be used seamlessly when user is offline
 	[Parse enableLocalDatastore];

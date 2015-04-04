@@ -109,7 +109,7 @@
 			NSLog(@"Login successful");
 				
 			// Move to the tab view controller on successful login
-			[self performSegueWithIdentifier:@"loginToNavigationController" sender:self];
+			[self performSegueWithIdentifier:@"loginToCategories" sender:self];
 		}
 
 
@@ -191,8 +191,27 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-	UINavigationController *navigationController = [segue destinationViewController];
-	categoriesViewController *categoriesVC = navigationController.viewControllers[0];
+	UITabBarController *tabBarController = [segue destinationViewController];
+	categoriesViewController *categoriesVC = tabBarController.viewControllers[0];
+	
+	UITabBar *tabBar = tabBarController.tabBar;
+	UITabBarItem *categories = [tabBar.items objectAtIndex:0];
+	UITabBarItem *favourites = [tabBar.items objectAtIndex:1];
+	UITabBarItem *activity = [tabBar.items objectAtIndex:2];
+	UITabBarItem *profile = [tabBar.items objectAtIndex:3];
+	
+//	categories.title = @"Categories";
+//	favourites.title = @"Favourites";
+//	activity.title = @"Activity";
+//	profile.title = @"Profile";
+	
+	[categories initWithTitle:@"Categories" image:[UIImage imageNamed:@"TabBar_Categories_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Categories_Selected.png"]];
+	[favourites initWithTitle:@"Favourites" image:[UIImage imageNamed:@"TabBar_Favourites_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Favourites_Selected.png"]];
+	[activity initWithTitle:@"Activity" image:[UIImage imageNamed:@"TabBar_Activity_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Activity_Selected.png"]];
+	[profile initWithTitle:@"Profile" image:[UIImage imageNamed:@"TabBar_Profile_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Profile_Selected.png"]];
+	
+
+
 	
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.

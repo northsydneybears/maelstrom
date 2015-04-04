@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,22 +11,46 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bob!" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="100" width="441" height="121"/>
-                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="88"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="SmK-QI-xhn">
+                    <rect key="frame" x="92" y="210" width="297" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="SmK-QI-xhn" secondAttribute="height" multiplier="329:86" id="0k4-MV-RMG"/>
+                        <constraint firstAttribute="width" secondItem="SmK-QI-xhn" secondAttribute="height" multiplier="329:67" id="HSk-Km-ZqN"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0k4-MV-RMG"/>
+                        </mask>
+                    </variation>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.094117647060000004" green="0.47843137250000001" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.094117790460586548" green="0.4784313440322876" blue="0.95294111967086792" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstAttribute="centerX" secondItem="SmK-QI-xhn" secondAttribute="centerX" id="DdJ-TX-1mR"/>
+                <constraint firstAttribute="centerY" secondItem="SmK-QI-xhn" secondAttribute="centerY" id="ErJ-KJ-c2Y"/>
+                <constraint firstItem="SmK-QI-xhn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="76" id="FSY-JD-n3F"/>
+                <constraint firstAttribute="bottom" secondItem="SmK-QI-xhn" secondAttribute="bottom" constant="197" id="W5y-So-lD9"/>
+                <constraint firstAttribute="trailing" secondItem="SmK-QI-xhn" secondAttribute="trailing" constant="75" id="Wa4-0k-FQo"/>
+                <constraint firstItem="SmK-QI-xhn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="197" id="Z4P-IG-12V"/>
+                <constraint firstAttribute="centerX" secondItem="SmK-QI-xhn" secondAttribute="centerX" id="hMa-3s-09A"/>
+                <constraint firstAttribute="centerY" secondItem="SmK-QI-xhn" secondAttribute="centerY" id="lzR-aF-YFy"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="ErJ-KJ-c2Y"/>
+                    <exclude reference="FSY-JD-n3F"/>
+                    <exclude reference="W5y-So-lD9"/>
+                    <exclude reference="Wa4-0k-FQo"/>
+                    <exclude reference="Z4P-IG-12V"/>
+                    <exclude reference="hMa-3s-09A"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="LaunchImage.png" width="297" height="58"/>
+    </resources>
 </document>

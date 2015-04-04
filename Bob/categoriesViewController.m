@@ -15,8 +15,19 @@
 @implementation categoriesViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+	//[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+	
+	[super viewDidLoad];
+	
+	// Set a non-existent background and shadow image to get rid of the line between the navigation bar and the view
+	[self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+	self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
+	
+	// Add the custom title to the navigation bar
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	
+	
+	
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +35,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+
+/*
 - (id)initWithCoder:(NSCoder *)aCoder
 {
 	self = [super initWithCoder:aCoder];

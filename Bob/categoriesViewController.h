@@ -9,6 +9,6 @@
 #import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
 
-@interface categoriesViewController : PFQueryTableViewController
+@interface categoriesViewController : UIViewController
 
 @end
