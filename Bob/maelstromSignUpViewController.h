@@ -10,6 +10,6 @@
 #import <ParseUI/PFLogInViewController.h>
 #import <ParseUI/PFSignUpViewController.h>
 
-@interface bobSignUpViewController : PFSignUpViewController
+@interface maelstromSignUpViewController : PFSignUpViewController
 
 @end

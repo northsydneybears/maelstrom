@@ -11,8 +11,8 @@
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "initialViewController.h"
-#import "bobLogInViewController.h"
-#import "bobSignUpViewController.h"
+#import "maelstromLogInViewController.h"
+#import "maelstromSignUpViewController.h"
 
 @interface trendingQuestionsViewController ()
 

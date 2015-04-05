@@ -8,8 +8,8 @@
 
 #import "initialViewController.h"
 #import <Parse/PFUser.h>
-#import "bobLogInViewController.h"
-#import "bobSignUpViewController.h"
+#import "maelstromLogInViewController.h"
+#import "maelstromSignUpViewController.h"
 #import "bobMainViewController.h"
 #import "trendingQuestionsViewController.h"
 #import "AppDelegate.h"
@@ -38,13 +38,13 @@
 		// Check if user is logged in, and if they're not, configure and present the login/signup
 			if (![PFUser currentUser]) {
 				// Customize the Log In View Controller
-				bobLogInViewController *logInViewController = [[bobLogInViewController alloc] init];
+				maelstromLogInViewController *logInViewController = [[maelstromLogInViewController alloc] init];
 				logInViewController.delegate = self;
 				logInViewController.facebookPermissions = @[@"friends_about_me"];
 				logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
 		
 				// Customize the Sign Up View Controller
-				bobSignUpViewController *signUpViewController = [[bobSignUpViewController alloc] init];
+				maelstromSignUpViewController *signUpViewController = [[maelstromSignUpViewController alloc] init];
 				signUpViewController.delegate = self;
 				signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
 				logInViewController.signUpController = signUpViewController;

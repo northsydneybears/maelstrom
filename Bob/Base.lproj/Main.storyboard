@@ -197,7 +197,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrB-yI-Xt8" userLabel="Sport">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrB-yI-Xt8" userLabel="Sports">
                                 <rect key="frame" x="0.0" y="120" width="150" height="115.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Sports" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngh-kf-frU">
@@ -206,8 +206,8 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" misplaced="YES" image="Sports.png" translatesAutoresizingMaskIntoConstraints="NO" id="FSQ-AT-u2F">
-                                        <rect key="frame" x="44" y="20" width="62" height="60"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="Sports.png" translatesAutoresizingMaskIntoConstraints="NO" id="FSQ-AT-u2F">
+                                        <rect key="frame" x="44.5" y="20" width="61" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="FSQ-AT-u2F" secondAttribute="height" multiplier="71:70" id="CZ4-hQ-gVT"/>
                                             <constraint firstAttribute="width" secondItem="FSQ-AT-u2F" secondAttribute="height" multiplier="25:19" id="Emw-hb-I4o"/>
@@ -259,11 +259,11 @@
                                     <constraint firstAttribute="centerX" secondItem="50l-OA-EeB" secondAttribute="centerX" id="zdQ-Gi-fUs"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZa-N2-R1a" userLabel="Automotive">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZa-N2-R1a" userLabel="Drive">
                                 <rect key="frame" x="0.0" y="351" width="150" height="115.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" misplaced="YES" image="Automotive.png" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-dn-61l">
-                                        <rect key="frame" x="42.5" y="8" width="66" height="64"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="Automotive.png" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-dn-61l">
+                                        <rect key="frame" x="43" y="8" width="65" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="H4g-dn-61l" secondAttribute="height" multiplier="25:19" id="TJg-x6-B4z"/>
                                             <constraint firstAttribute="width" secondItem="H4g-dn-61l" secondAttribute="height" multiplier="71:70" id="UAF-EU-78F"/>
@@ -321,11 +321,11 @@
                                     <constraint firstItem="3eJ-Hr-b0B" firstAttribute="top" secondItem="IAO-UM-rCK" secondAttribute="top" constant="8" id="xBU-66-hf1"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGr-Ta-O8b" userLabel="Home &amp; DIY">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGr-Ta-O8b" userLabel="Home">
                                 <rect key="frame" x="150" y="351" width="150.5" height="115.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" misplaced="YES" image="Home_DIY.png" translatesAutoresizingMaskIntoConstraints="NO" id="agV-ID-AoY">
-                                        <rect key="frame" x="42.5" y="8" width="66" height="64"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="Home_DIY.png" translatesAutoresizingMaskIntoConstraints="NO" id="agV-ID-AoY">
+                                        <rect key="frame" x="43" y="8" width="65" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="agV-ID-AoY" secondAttribute="height" multiplier="71:70" id="PDH-gB-WaB"/>
                                             <constraint firstAttribute="width" secondItem="agV-ID-AoY" secondAttribute="height" multiplier="25:19" id="v57-VQ-ZTA"/>
@@ -392,8 +392,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enp-0F-G0u" userLabel="Electronics">
                                 <rect key="frame" x="300" y="351" width="150" height="115.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" misplaced="YES" image="Electronics.png" translatesAutoresizingMaskIntoConstraints="NO" id="jE8-Ev-Dhg">
-                                        <rect key="frame" x="42.5" y="8" width="66" height="64"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="Electronics.png" translatesAutoresizingMaskIntoConstraints="NO" id="jE8-Ev-Dhg">
+                                        <rect key="frame" x="43" y="8" width="65" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="jE8-Ev-Dhg" secondAttribute="height" multiplier="25:19" id="8am-wT-sMK"/>
                                             <constraint firstAttribute="width" secondItem="jE8-Ev-Dhg" secondAttribute="height" multiplier="71:70" id="wgR-MC-7pi"/>
@@ -429,8 +429,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tf-yL-1LA" userLabel="Travel">
                                 <rect key="frame" x="450" y="235.5" width="149.5" height="115.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" misplaced="YES" image="Travel.png" translatesAutoresizingMaskIntoConstraints="NO" id="NNt-q2-jXg">
-                                        <rect key="frame" x="41.5" y="14" width="66.5" height="64.5"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="Travel.png" translatesAutoresizingMaskIntoConstraints="NO" id="NNt-q2-jXg">
+                                        <rect key="frame" x="42" y="14" width="65.5" height="64.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="NNt-q2-jXg" secondAttribute="height" multiplier="25:19" id="dhZ-iq-4Xp"/>
                                             <constraint firstAttribute="width" secondItem="NNt-q2-jXg" secondAttribute="height" multiplier="71:70" id="sC1-5V-JWe"/>
@@ -460,8 +460,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGX-eb-pw8" userLabel="Hobbies">
                                 <rect key="frame" x="450" y="351" width="149.5" height="115.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" misplaced="YES" image="Hobbies.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sna-1N-tEO">
-                                        <rect key="frame" x="41.5" y="8" width="66" height="64"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="Hobbies.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sna-1N-tEO">
+                                        <rect key="frame" x="42" y="8" width="65" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Sna-1N-tEO" secondAttribute="height" multiplier="25:19" id="GDD-ox-HS2"/>
                                             <constraint firstAttribute="width" secondItem="Sna-1N-tEO" secondAttribute="height" multiplier="71:70" id="eFo-h7-HXW"/>
@@ -497,8 +497,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jww-AY-rcX" userLabel="Music">
                                 <rect key="frame" x="300" y="120" width="150" height="115.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" misplaced="YES" image="Music.png" translatesAutoresizingMaskIntoConstraints="NO" id="HWa-ny-qGm">
-                                        <rect key="frame" x="41.5" y="12" width="67" height="65"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="Music.png" translatesAutoresizingMaskIntoConstraints="NO" id="HWa-ny-qGm">
+                                        <rect key="frame" x="42" y="12" width="66" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HWa-ny-qGm" secondAttribute="height" multiplier="71:70" id="iaH-GV-WmM"/>
                                             <constraint firstAttribute="width" secondItem="HWa-ny-qGm" secondAttribute="height" multiplier="25:19" id="qqZ-ls-aZ5"/>
@@ -528,8 +528,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwY-Kq-MKn" userLabel="Movies">
                                 <rect key="frame" x="450" y="120.5" width="149.5" height="115.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" misplaced="YES" image="Movies.png" translatesAutoresizingMaskIntoConstraints="NO" id="x8Y-lg-wf8">
-                                        <rect key="frame" x="43.5" y="12" width="62" height="60"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="Movies.png" translatesAutoresizingMaskIntoConstraints="NO" id="x8Y-lg-wf8">
+                                        <rect key="frame" x="44" y="12" width="61" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="x8Y-lg-wf8" secondAttribute="height" multiplier="71:70" id="BN0-v7-MYR"/>
                                             <constraint firstAttribute="width" secondItem="x8Y-lg-wf8" secondAttribute="height" multiplier="25:19" id="jkm-Sp-LCR"/>
@@ -903,29 +903,29 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="XD7-8P-GM9"/>
+                    <navigationItem key="navigationItem" id="XD7-8P-GM9"/>
+                    <connections>
+                        <outlet property="drive" destination="UZa-N2-R1a" id="0aP-fv-BEu"/>
+                        <outlet property="education" destination="u7C-Ni-UQc" id="flM-BW-EYv"/>
+                        <outlet property="electronics" destination="enp-0F-G0u" id="fHl-50-Qtt"/>
+                        <outlet property="fitness" destination="IAO-UM-rCK" id="jP4-qr-PNn"/>
+                        <outlet property="food" destination="kvA-4F-hsh" id="6c9-1y-ZdW"/>
+                        <outlet property="games" destination="6aL-dk-EVr" id="rvm-ab-m8Y"/>
+                        <outlet property="graduates" destination="qZ2-Wm-c4p" id="GVz-ro-w9v"/>
+                        <outlet property="hobbies" destination="SGX-eb-pw8" id="KvJ-ck-Ucb"/>
+                        <outlet property="home" destination="nGr-Ta-O8b" id="fne-hr-kMD"/>
+                        <outlet property="jobs" destination="4cq-lT-UDl" id="5Lj-Nf-U38"/>
+                        <outlet property="money" destination="NDR-Vq-wt4" id="AQg-0a-vov"/>
+                        <outlet property="movies" destination="xwY-Kq-MKn" id="zeJ-TV-XIu"/>
+                        <outlet property="music" destination="jww-AY-rcX" id="ay7-kh-4sg"/>
+                        <outlet property="sports" destination="yrB-yI-Xt8" id="bvv-56-zrg"/>
+                        <outlet property="travel" destination="5tf-yL-1LA" id="KAl-YN-Yx5"/>
+                        <outlet property="tvshows" destination="fJd-uT-qng" id="OB1-pl-2Vh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fk7-60-J3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="483" y="-647"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="NCz-Aq-Ga1">
-            <objects>
-                <viewController id="bxI-xV-NgQ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Owz-UB-Yp5"/>
-                        <viewControllerLayoutGuide type="bottom" id="cKA-bD-dOf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gPf-Qt-R2c">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wau-dZ-9ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1540" y="-496"/>
+            <point key="canvasLocation" x="503" y="-647"/>
         </scene>
     </scenes>
     <resources>

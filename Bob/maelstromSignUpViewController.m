@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Peter Gow. All rights reserved.
 //
 
-#import "bobSignUpViewController.h"
+#import "maelstromSignUpViewController.h"
 
-@implementation bobSignUpViewController
+@implementation maelstromSignUpViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];

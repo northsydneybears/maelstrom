@@ -37,7 +37,7 @@
 		EF69558D1ABCA15500707E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF69558B1ABCA15500707E61 /* Main.storyboard */; };
 		EF69558F1ABCA15500707E61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF69558E1ABCA15500707E61 /* Images.xcassets */; };
 		EF6955921ABCA15500707E61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6955901ABCA15500707E61 /* LaunchScreen.xib */; };
-		EF69559E1ABCA15500707E61 /* BobTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69559D1ABCA15500707E61 /* BobTests.m */; };
+		EF69559E1ABCA15500707E61 /* MaelstromTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69559D1ABCA15500707E61 /* MaelstromTests.m */; };
 		EF6955AD1ABCA20500707E61 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955A81ABCA20500707E61 /* Bolts.framework */; };
 		EF6955AE1ABCA20500707E61 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955A91ABCA20500707E61 /* Parse.framework */; };
 		EF6955AF1ABCA20500707E61 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955AA1ABCA20500707E61 /* ParseCrashReporting.framework */; };
@@ -56,8 +56,8 @@
 		EF6955C71ABCA26700707E61 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955BC1ABCA26700707E61 /* SystemConfiguration.framework */; };
 		EF6955C91ABCA3C200707E61 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955C81ABCA3C200707E61 /* FacebookSDK.framework */; };
 		EF6955CE1ABE9D1C00707E61 /* initialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955CD1ABE9D1C00707E61 /* initialViewController.m */; };
-		EF6955D11ABE9D7A00707E61 /* bobLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955D01ABE9D7A00707E61 /* bobLogInViewController.m */; };
-		EF6955D41ABE9DB400707E61 /* bobSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955D31ABE9DB400707E61 /* bobSignUpViewController.m */; };
+		EF6955D11ABE9D7A00707E61 /* maelstromLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955D01ABE9D7A00707E61 /* maelstromLogInViewController.m */; };
+		EF6955D41ABE9DB400707E61 /* maelstromSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955D31ABE9DB400707E61 /* maelstromSignUpViewController.m */; };
 		EF6955D61ABF217D00707E61 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955D51ABF217D00707E61 /* Social.framework */; };
 		EF6955D81ABF218C00707E61 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955D71ABF218C00707E61 /* Accounts.framework */; };
 		EF7696D71AD0494800F2AA8C /* LargeLogoNavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7696D61AD0494800F2AA8C /* LargeLogoNavigationBar@2x.png */; };
@@ -70,6 +70,34 @@
 		EFA1226C1AD0624400D524EE /* TabBar_Profile_Normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122641AD0624400D524EE /* TabBar_Profile_Normal@2x.png */; };
 		EFA1226D1AD0624400D524EE /* TabBar_Profile_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122651AD0624400D524EE /* TabBar_Profile_Selected@2x.png */; };
 		EFA122711AD065F800D524EE /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122701AD065F800D524EE /* LaunchImage@2x.png */; };
+		EFA122731AD0856900D524EE /* threadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA122721AD0856900D524EE /* threadCell.xib */; };
+		EFA1227E1AD094C900D524EE /* ThreadCell_AddFavourite_Normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122751AD094C900D524EE /* ThreadCell_AddFavourite_Normal@2x.png */; };
+		EFA1227F1AD094C900D524EE /* ThreadCell_AddFavourite_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122761AD094C900D524EE /* ThreadCell_AddFavourite_Selected@2x.png */; };
+		EFA122801AD094C900D524EE /* ThreadCell_LastPostUser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122771AD094C900D524EE /* ThreadCell_LastPostUser@2x.png */; };
+		EFA122811AD094C900D524EE /* ThreadCell_NumberOfFavourites@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122781AD094C900D524EE /* ThreadCell_NumberOfFavourites@2x.png */; };
+		EFA122821AD094C900D524EE /* ThreadCell_NumberOfPosts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122791AD094C900D524EE /* ThreadCell_NumberOfPosts@2x.png */; };
+		EFA122831AD094C900D524EE /* ThreadCell_NumberOfViews@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA1227A1AD094C900D524EE /* ThreadCell_NumberOfViews@2x.png */; };
+		EFA122841AD094C900D524EE /* ThreadCell_Time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA1227B1AD094C900D524EE /* ThreadCell_Time@2x.png */; };
+		EFA122851AD094C900D524EE /* threadCellHorizontalLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA1227C1AD094C900D524EE /* threadCellHorizontalLine@2x.png */; };
+		EFA122861AD094C900D524EE /* threadCellVerticalLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA1227D1AD094C900D524EE /* threadCellVerticalLine@2x.png */; };
+		EFA1228A1AD09BE800D524EE /* threadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA122891AD09BE800D524EE /* threadCell.m */; };
+		EFA122971AD113DD00D524EE /* threadsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA122961AD113DD00D524EE /* threadsViewController.m */; };
+		EFA122BD1AD162C900D524EE /* navigationBar_Jobs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122BC1AD162C900D524EE /* navigationBar_Jobs@2x.png */; };
+		EFA122CD1AD1662D00D524EE /* navigationBar_Drive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122BE1AD1662D00D524EE /* navigationBar_Drive@2x.png */; };
+		EFA122CE1AD1662D00D524EE /* navigationBar_Education@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122BF1AD1662D00D524EE /* navigationBar_Education@2x.png */; };
+		EFA122CF1AD1662D00D524EE /* navigationBar_Electronics@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122C01AD1662D00D524EE /* navigationBar_Electronics@2x.png */; };
+		EFA122D01AD1662D00D524EE /* navigationBar_Fitness@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122C11AD1662D00D524EE /* navigationBar_Fitness@2x.png */; };
+		EFA122D11AD1662D00D524EE /* navigationBar_Food@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122C21AD1662D00D524EE /* navigationBar_Food@2x.png */; };
+		EFA122D21AD1662D00D524EE /* navigationBar_Games@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122C31AD1662D00D524EE /* navigationBar_Games@2x.png */; };
+		EFA122D31AD1662D00D524EE /* navigationBar_Graduates@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122C41AD1662D00D524EE /* navigationBar_Graduates@2x.png */; };
+		EFA122D41AD1662D00D524EE /* navigationBar_Hobbies@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122C51AD1662D00D524EE /* navigationBar_Hobbies@2x.png */; };
+		EFA122D51AD1662D00D524EE /* navigationBar_Home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122C61AD1662D00D524EE /* navigationBar_Home@2x.png */; };
+		EFA122D61AD1662D00D524EE /* navigationBar_Money@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122C71AD1662D00D524EE /* navigationBar_Money@2x.png */; };
+		EFA122D71AD1662D00D524EE /* navigationBar_Movies@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122C81AD1662D00D524EE /* navigationBar_Movies@2x.png */; };
+		EFA122D81AD1662D00D524EE /* navigationBar_Music@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122C91AD1662D00D524EE /* navigationBar_Music@2x.png */; };
+		EFA122D91AD1662D00D524EE /* navigationBar_Sports@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122CA1AD1662D00D524EE /* navigationBar_Sports@2x.png */; };
+		EFA122DA1AD1662D00D524EE /* navigationBar_Travel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122CB1AD1662D00D524EE /* navigationBar_Travel@2x.png */; };
+		EFA122DB1AD1662D00D524EE /* navigationBar_TVShows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122CC1AD1662D00D524EE /* navigationBar_TVShows@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +135,7 @@
 		EF19DC931ACF22EA002C75FC /* Travel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Travel.png; path = Assets/category_icons/Travel.png; sourceTree = "<group>"; };
 		EF19DC941ACF22EA002C75FC /* TV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TV.png; path = Assets/category_icons/TV.png; sourceTree = "<group>"; };
 		EF19DCA51ACF3336002C75FC /* NavigationBarShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NavigationBarShadow@2x.png"; path = "Assets/NavigationBarShadow@2x.png"; sourceTree = "<group>"; };
-		EF69557B1ABCA15500707E61 /* Bob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bob.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF69557B1ABCA15500707E61 /* Maelstrom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maelstrom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF69557F1ABCA15500707E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF6955801ABCA15500707E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF6955821ABCA15500707E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,9 +147,9 @@
 		EF69558C1ABCA15500707E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF69558E1ABCA15500707E61 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EF6955911ABCA15500707E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		EF6955971ABCA15500707E61 /* BobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF6955971ABCA15500707E61 /* MaelstromTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaelstromTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF69559C1ABCA15500707E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF69559D1ABCA15500707E61 /* BobTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BobTests.m; sourceTree = "<group>"; };
+		EF69559D1ABCA15500707E61 /* MaelstromTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaelstromTests.m; sourceTree = "<group>"; };
 		EF6955A81ABCA20500707E61 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		EF6955A91ABCA20500707E61 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		EF6955AA1ABCA20500707E61 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -141,10 +169,10 @@
 		EF6955C81ABCA3C200707E61 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		EF6955CC1ABE9D1C00707E61 /* initialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = initialViewController.h; sourceTree = "<group>"; };
 		EF6955CD1ABE9D1C00707E61 /* initialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = initialViewController.m; sourceTree = "<group>"; };
-		EF6955CF1ABE9D7A00707E61 /* bobLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bobLogInViewController.h; sourceTree = "<group>"; };
-		EF6955D01ABE9D7A00707E61 /* bobLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bobLogInViewController.m; sourceTree = "<group>"; };
-		EF6955D21ABE9DB400707E61 /* bobSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bobSignUpViewController.h; sourceTree = "<group>"; };
-		EF6955D31ABE9DB400707E61 /* bobSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bobSignUpViewController.m; sourceTree = "<group>"; };
+		EF6955CF1ABE9D7A00707E61 /* maelstromLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maelstromLogInViewController.h; sourceTree = "<group>"; };
+		EF6955D01ABE9D7A00707E61 /* maelstromLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maelstromLogInViewController.m; sourceTree = "<group>"; };
+		EF6955D21ABE9DB400707E61 /* maelstromSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maelstromSignUpViewController.h; sourceTree = "<group>"; };
+		EF6955D31ABE9DB400707E61 /* maelstromSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maelstromSignUpViewController.m; sourceTree = "<group>"; };
 		EF6955D51ABF217D00707E61 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		EF6955D71ABF218C00707E61 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		EF7696D61AD0494800F2AA8C /* LargeLogoNavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LargeLogoNavigationBar@2x.png"; path = "Assets/LargeLogoNavigationBar@2x.png"; sourceTree = "<group>"; };
@@ -157,6 +185,36 @@
 		EFA122641AD0624400D524EE /* TabBar_Profile_Normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBar_Profile_Normal@2x.png"; path = "Assets/TabBar_Profile_Normal@2x.png"; sourceTree = "<group>"; };
 		EFA122651AD0624400D524EE /* TabBar_Profile_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBar_Profile_Selected@2x.png"; path = "Assets/TabBar_Profile_Selected@2x.png"; sourceTree = "<group>"; };
 		EFA122701AD065F800D524EE /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage@2x.png"; path = "Assets/LaunchImage@2x.png"; sourceTree = "<group>"; };
+		EFA122721AD0856900D524EE /* threadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = threadCell.xib; sourceTree = "<group>"; };
+		EFA122751AD094C900D524EE /* ThreadCell_AddFavourite_Normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_AddFavourite_Normal@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_AddFavourite_Normal@2x.png"; sourceTree = "<group>"; };
+		EFA122761AD094C900D524EE /* ThreadCell_AddFavourite_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_AddFavourite_Selected@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_AddFavourite_Selected@2x.png"; sourceTree = "<group>"; };
+		EFA122771AD094C900D524EE /* ThreadCell_LastPostUser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_LastPostUser@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_LastPostUser@2x.png"; sourceTree = "<group>"; };
+		EFA122781AD094C900D524EE /* ThreadCell_NumberOfFavourites@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_NumberOfFavourites@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_NumberOfFavourites@2x.png"; sourceTree = "<group>"; };
+		EFA122791AD094C900D524EE /* ThreadCell_NumberOfPosts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_NumberOfPosts@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_NumberOfPosts@2x.png"; sourceTree = "<group>"; };
+		EFA1227A1AD094C900D524EE /* ThreadCell_NumberOfViews@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_NumberOfViews@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_NumberOfViews@2x.png"; sourceTree = "<group>"; };
+		EFA1227B1AD094C900D524EE /* ThreadCell_Time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_Time@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_Time@2x.png"; sourceTree = "<group>"; };
+		EFA1227C1AD094C900D524EE /* threadCellHorizontalLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "threadCellHorizontalLine@2x.png"; path = "Assets/thread_cell_icons/threadCellHorizontalLine@2x.png"; sourceTree = "<group>"; };
+		EFA1227D1AD094C900D524EE /* threadCellVerticalLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "threadCellVerticalLine@2x.png"; path = "Assets/thread_cell_icons/threadCellVerticalLine@2x.png"; sourceTree = "<group>"; };
+		EFA122881AD09BE800D524EE /* threadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threadCell.h; sourceTree = "<group>"; };
+		EFA122891AD09BE800D524EE /* threadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = threadCell.m; sourceTree = "<group>"; };
+		EFA122951AD113DD00D524EE /* threadsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threadsViewController.h; sourceTree = "<group>"; };
+		EFA122961AD113DD00D524EE /* threadsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = threadsViewController.m; sourceTree = "<group>"; };
+		EFA122BC1AD162C900D524EE /* navigationBar_Jobs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Jobs@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Jobs@2x.png"; sourceTree = "<group>"; };
+		EFA122BE1AD1662D00D524EE /* navigationBar_Drive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Drive@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Drive@2x.png"; sourceTree = "<group>"; };
+		EFA122BF1AD1662D00D524EE /* navigationBar_Education@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Education@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Education@2x.png"; sourceTree = "<group>"; };
+		EFA122C01AD1662D00D524EE /* navigationBar_Electronics@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Electronics@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Electronics@2x.png"; sourceTree = "<group>"; };
+		EFA122C11AD1662D00D524EE /* navigationBar_Fitness@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Fitness@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Fitness@2x.png"; sourceTree = "<group>"; };
+		EFA122C21AD1662D00D524EE /* navigationBar_Food@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Food@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Food@2x.png"; sourceTree = "<group>"; };
+		EFA122C31AD1662D00D524EE /* navigationBar_Games@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Games@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Games@2x.png"; sourceTree = "<group>"; };
+		EFA122C41AD1662D00D524EE /* navigationBar_Graduates@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Graduates@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Graduates@2x.png"; sourceTree = "<group>"; };
+		EFA122C51AD1662D00D524EE /* navigationBar_Hobbies@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Hobbies@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Hobbies@2x.png"; sourceTree = "<group>"; };
+		EFA122C61AD1662D00D524EE /* navigationBar_Home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Home@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Home@2x.png"; sourceTree = "<group>"; };
+		EFA122C71AD1662D00D524EE /* navigationBar_Money@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Money@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Money@2x.png"; sourceTree = "<group>"; };
+		EFA122C81AD1662D00D524EE /* navigationBar_Movies@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Movies@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Movies@2x.png"; sourceTree = "<group>"; };
+		EFA122C91AD1662D00D524EE /* navigationBar_Music@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Music@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Music@2x.png"; sourceTree = "<group>"; };
+		EFA122CA1AD1662D00D524EE /* navigationBar_Sports@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Sports@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Sports@2x.png"; sourceTree = "<group>"; };
+		EFA122CB1AD1662D00D524EE /* navigationBar_Travel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Travel@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Travel@2x.png"; sourceTree = "<group>"; };
+		EFA122CC1AD1662D00D524EE /* navigationBar_TVShows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_TVShows@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_TVShows@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +257,8 @@
 		EF19DC751ACEA268002C75FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				EFA122991AD1604D00D524EE /* Nav Bar Titles */,
+				EFA122741AD094B700D524EE /* Thread Cell Images */,
 				EFA1223D1AD0579F00D524EE /* Tab Bar Icons */,
 				EF19DC841ACF22D9002C75FC /* Category Icons */,
 				EF19DC821ACF1FCF002C75FC /* LogoNavigationBar@2x.png */,
@@ -240,8 +300,8 @@
 			isa = PBXGroup;
 			children = (
 				EF6955A71ABCA1EC00707E61 /* Frameworks */,
-				EF69557D1ABCA15500707E61 /* Bob */,
-				EF69559A1ABCA15500707E61 /* BobTests */,
+				EF69557D1ABCA15500707E61 /* Maelstrom */,
+				EF69559A1ABCA15500707E61 /* MaelstromTests */,
 				EF69557C1ABCA15500707E61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -249,15 +309,16 @@
 		EF69557C1ABCA15500707E61 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF69557B1ABCA15500707E61 /* Bob.app */,
-				EF6955971ABCA15500707E61 /* BobTests.xctest */,
+				EF69557B1ABCA15500707E61 /* Maelstrom.app */,
+				EF6955971ABCA15500707E61 /* MaelstromTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EF69557D1ABCA15500707E61 /* Bob */ = {
+		EF69557D1ABCA15500707E61 /* Maelstrom */ = {
 			isa = PBXGroup;
 			children = (
+				EFA122871AD09A6F00D524EE /* Views */,
 				EFE694421ACD926300B1131D /* Archived */,
 				EF6955DA1AC0054800707E61 /* Controllers */,
 				EF6955821ABCA15500707E61 /* AppDelegate.h */,
@@ -265,9 +326,11 @@
 				EF69558B1ABCA15500707E61 /* Main.storyboard */,
 				EF69558E1ABCA15500707E61 /* Images.xcassets */,
 				EF6955901ABCA15500707E61 /* LaunchScreen.xib */,
+				EFA122721AD0856900D524EE /* threadCell.xib */,
 				EF19DC751ACEA268002C75FC /* Assets */,
 				EF69557E1ABCA15500707E61 /* Supporting Files */,
 			);
+			name = Maelstrom;
 			path = Bob;
 			sourceTree = "<group>";
 		};
@@ -280,12 +343,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EF69559A1ABCA15500707E61 /* BobTests */ = {
+		EF69559A1ABCA15500707E61 /* MaelstromTests */ = {
 			isa = PBXGroup;
 			children = (
-				EF69559D1ABCA15500707E61 /* BobTests.m */,
+				EF69559D1ABCA15500707E61 /* MaelstromTests.m */,
 				EF69559B1ABCA15500707E61 /* Supporting Files */,
 			);
+			name = MaelstromTests;
 			path = BobTests;
 			sourceTree = "<group>";
 		};
@@ -328,12 +392,14 @@
 			children = (
 				EF6955CC1ABE9D1C00707E61 /* initialViewController.h */,
 				EF6955CD1ABE9D1C00707E61 /* initialViewController.m */,
-				EF6955CF1ABE9D7A00707E61 /* bobLogInViewController.h */,
-				EF6955D01ABE9D7A00707E61 /* bobLogInViewController.m */,
-				EF6955D21ABE9DB400707E61 /* bobSignUpViewController.h */,
-				EF6955D31ABE9DB400707E61 /* bobSignUpViewController.m */,
+				EF6955CF1ABE9D7A00707E61 /* maelstromLogInViewController.h */,
+				EF6955D01ABE9D7A00707E61 /* maelstromLogInViewController.m */,
+				EF6955D21ABE9DB400707E61 /* maelstromSignUpViewController.h */,
+				EF6955D31ABE9DB400707E61 /* maelstromSignUpViewController.m */,
 				EF0CF5DB1ACD46A7005B4EFA /* categoriesViewController.h */,
 				EF0CF5DC1ACD46A7005B4EFA /* categoriesViewController.m */,
+				EFA122951AD113DD00D524EE /* threadsViewController.h */,
+				EFA122961AD113DD00D524EE /* threadsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -353,6 +419,54 @@
 			name = "Tab Bar Icons";
 			sourceTree = "<group>";
 		};
+		EFA122741AD094B700D524EE /* Thread Cell Images */ = {
+			isa = PBXGroup;
+			children = (
+				EFA122751AD094C900D524EE /* ThreadCell_AddFavourite_Normal@2x.png */,
+				EFA122761AD094C900D524EE /* ThreadCell_AddFavourite_Selected@2x.png */,
+				EFA122771AD094C900D524EE /* ThreadCell_LastPostUser@2x.png */,
+				EFA122781AD094C900D524EE /* ThreadCell_NumberOfFavourites@2x.png */,
+				EFA122791AD094C900D524EE /* ThreadCell_NumberOfPosts@2x.png */,
+				EFA1227A1AD094C900D524EE /* ThreadCell_NumberOfViews@2x.png */,
+				EFA1227B1AD094C900D524EE /* ThreadCell_Time@2x.png */,
+				EFA1227C1AD094C900D524EE /* threadCellHorizontalLine@2x.png */,
+				EFA1227D1AD094C900D524EE /* threadCellVerticalLine@2x.png */,
+			);
+			name = "Thread Cell Images";
+			sourceTree = "<group>";
+		};
+		EFA122871AD09A6F00D524EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFA122881AD09BE800D524EE /* threadCell.h */,
+				EFA122891AD09BE800D524EE /* threadCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EFA122991AD1604D00D524EE /* Nav Bar Titles */ = {
+			isa = PBXGroup;
+			children = (
+				EFA122BE1AD1662D00D524EE /* navigationBar_Drive@2x.png */,
+				EFA122BF1AD1662D00D524EE /* navigationBar_Education@2x.png */,
+				EFA122C01AD1662D00D524EE /* navigationBar_Electronics@2x.png */,
+				EFA122C11AD1662D00D524EE /* navigationBar_Fitness@2x.png */,
+				EFA122C21AD1662D00D524EE /* navigationBar_Food@2x.png */,
+				EFA122C31AD1662D00D524EE /* navigationBar_Games@2x.png */,
+				EFA122C41AD1662D00D524EE /* navigationBar_Graduates@2x.png */,
+				EFA122C51AD1662D00D524EE /* navigationBar_Hobbies@2x.png */,
+				EFA122C61AD1662D00D524EE /* navigationBar_Home@2x.png */,
+				EFA122C71AD1662D00D524EE /* navigationBar_Money@2x.png */,
+				EFA122C81AD1662D00D524EE /* navigationBar_Movies@2x.png */,
+				EFA122C91AD1662D00D524EE /* navigationBar_Music@2x.png */,
+				EFA122CA1AD1662D00D524EE /* navigationBar_Sports@2x.png */,
+				EFA122CB1AD1662D00D524EE /* navigationBar_Travel@2x.png */,
+				EFA122CC1AD1662D00D524EE /* navigationBar_TVShows@2x.png */,
+				EFA122BC1AD162C900D524EE /* navigationBar_Jobs@2x.png */,
+			);
+			name = "Nav Bar Titles";
+			sourceTree = "<group>";
+		};
 		EFE694421ACD926300B1131D /* Archived */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,9 +481,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EF69557A1ABCA15500707E61 /* Bob */ = {
+		EF69557A1ABCA15500707E61 /* Maelstrom */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF6955A11ABCA15500707E61 /* Build configuration list for PBXNativeTarget "Bob" */;
+			buildConfigurationList = EF6955A11ABCA15500707E61 /* Build configuration list for PBXNativeTarget "Maelstrom" */;
 			buildPhases = (
 				EF6955771ABCA15500707E61 /* Sources */,
 				EF6955781ABCA15500707E61 /* Frameworks */,
@@ -379,14 +493,14 @@
 			);
 			dependencies = (
 			);
-			name = Bob;
+			name = Maelstrom;
 			productName = Bob;
-			productReference = EF69557B1ABCA15500707E61 /* Bob.app */;
+			productReference = EF69557B1ABCA15500707E61 /* Maelstrom.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EF6955961ABCA15500707E61 /* BobTests */ = {
+		EF6955961ABCA15500707E61 /* MaelstromTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF6955A41ABCA15500707E61 /* Build configuration list for PBXNativeTarget "BobTests" */;
+			buildConfigurationList = EF6955A41ABCA15500707E61 /* Build configuration list for PBXNativeTarget "MaelstromTests" */;
 			buildPhases = (
 				EF6955931ABCA15500707E61 /* Sources */,
 				EF6955941ABCA15500707E61 /* Frameworks */,
@@ -397,9 +511,9 @@
 			dependencies = (
 				EF6955991ABCA15500707E61 /* PBXTargetDependency */,
 			);
-			name = BobTests;
+			name = MaelstromTests;
 			productName = BobTests;
-			productReference = EF6955971ABCA15500707E61 /* BobTests.xctest */;
+			productReference = EF6955971ABCA15500707E61 /* MaelstromTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -420,7 +534,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EF6955761ABCA15500707E61 /* Build configuration list for PBXProject "Bob" */;
+			buildConfigurationList = EF6955761ABCA15500707E61 /* Build configuration list for PBXProject "Maelstrom" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -433,8 +547,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EF69557A1ABCA15500707E61 /* Bob */,
-				EF6955961ABCA15500707E61 /* BobTests */,
+				EF69557A1ABCA15500707E61 /* Maelstrom */,
+				EF6955961ABCA15500707E61 /* MaelstromTests */,
 			);
 		};
 /* End PBXProject section */
@@ -445,31 +559,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF19DC9E1ACF22EA002C75FC /* Money.png in Resources */,
+				EFA122801AD094C900D524EE /* ThreadCell_LastPostUser@2x.png in Resources */,
 				EF19DC961ACF22EA002C75FC /* Education.png in Resources */,
 				EFA1226D1AD0624400D524EE /* TabBar_Profile_Selected@2x.png in Resources */,
 				EF19DC971ACF22EA002C75FC /* Electronics.png in Resources */,
+				EFA122D71AD1662D00D524EE /* navigationBar_Movies@2x.png in Resources */,
+				EFA1227F1AD094C900D524EE /* ThreadCell_AddFavourite_Selected@2x.png in Resources */,
 				EF19DCA61ACF3336002C75FC /* NavigationBarShadow@2x.png in Resources */,
 				EF19DC801ACEA29A002C75FC /* Threads.png in Resources */,
 				EF69558D1ABCA15500707E61 /* Main.storyboard in Resources */,
 				EF19DC951ACF22EA002C75FC /* Automotive.png in Resources */,
 				EF19DC991ACF22EA002C75FC /* Food.png in Resources */,
 				EF19DC7D1ACEA29A002C75FC /* Categories@2x.png in Resources */,
+				EFA122DA1AD1662D00D524EE /* navigationBar_Travel@2x.png in Resources */,
+				EFA122D01AD1662D00D524EE /* navigationBar_Fitness@2x.png in Resources */,
 				EF19DC981ACF22EA002C75FC /* Fitness.png in Resources */,
+				EFA122731AD0856900D524EE /* threadCell.xib in Resources */,
+				EFA122D51AD1662D00D524EE /* navigationBar_Home@2x.png in Resources */,
+				EFA122D21AD1662D00D524EE /* navigationBar_Games@2x.png in Resources */,
 				EF19DC831ACF1FCF002C75FC /* LogoNavigationBar@2x.png in Resources */,
+				EFA122CF1AD1662D00D524EE /* navigationBar_Electronics@2x.png in Resources */,
+				EFA122D91AD1662D00D524EE /* navigationBar_Sports@2x.png in Resources */,
 				EF6955921ABCA15500707E61 /* LaunchScreen.xib in Resources */,
+				EFA122CD1AD1662D00D524EE /* navigationBar_Drive@2x.png in Resources */,
+				EFA122D31AD1662D00D524EE /* navigationBar_Graduates@2x.png in Resources */,
 				EFA1226B1AD0624400D524EE /* TabBar_Favourites_Selected@2x.png in Resources */,
 				EF19DCA41ACF22EA002C75FC /* TV.png in Resources */,
 				EFA1226C1AD0624400D524EE /* TabBar_Profile_Normal@2x.png in Resources */,
 				EF19DC9B1ACF22EA002C75FC /* Graduate.png in Resources */,
 				EF19DC9A1ACF22EA002C75FC /* Gaming.png in Resources */,
+				EFA122D41AD1662D00D524EE /* navigationBar_Hobbies@2x.png in Resources */,
 				EFA1226A1AD0624400D524EE /* TabBar_Favourites_Normal@2x.png in Resources */,
 				EF7696D71AD0494800F2AA8C /* LargeLogoNavigationBar@2x.png in Resources */,
+				EFA122841AD094C900D524EE /* ThreadCell_Time@2x.png in Resources */,
 				EFA122691AD0624400D524EE /* TabBar_Categories_Selected@2x.png in Resources */,
+				EFA122DB1AD1662D00D524EE /* navigationBar_TVShows@2x.png in Resources */,
+				EFA1227E1AD094C900D524EE /* ThreadCell_AddFavourite_Normal@2x.png in Resources */,
 				EF69558F1ABCA15500707E61 /* Images.xcassets in Resources */,
+				EFA122821AD094C900D524EE /* ThreadCell_NumberOfPosts@2x.png in Resources */,
 				EF19DC9D1ACF22EA002C75FC /* Jobs.png in Resources */,
+				EFA122CE1AD1662D00D524EE /* navigationBar_Education@2x.png in Resources */,
+				EFA122811AD094C900D524EE /* ThreadCell_NumberOfFavourites@2x.png in Resources */,
 				EF19DC9C1ACF22EA002C75FC /* Home_DIY.png in Resources */,
 				EFA122671AD0624400D524EE /* TabBar_Activity_Selected@2x.png in Resources */,
 				EF19DC7C1ACEA29A002C75FC /* Categories.png in Resources */,
+				EFA122BD1AD162C900D524EE /* navigationBar_Jobs@2x.png in Resources */,
+				EFA122D11AD1662D00D524EE /* navigationBar_Food@2x.png in Resources */,
+				EFA122851AD094C900D524EE /* threadCellHorizontalLine@2x.png in Resources */,
+				EFA122861AD094C900D524EE /* threadCellVerticalLine@2x.png in Resources */,
+				EFA122831AD094C900D524EE /* ThreadCell_NumberOfViews@2x.png in Resources */,
+				EFA122D61AD1662D00D524EE /* navigationBar_Money@2x.png in Resources */,
 				EFA122681AD0624400D524EE /* TabBar_Categories_Normal@2x.png in Resources */,
 				EF19DCA01ACF22EA002C75FC /* Music.png in Resources */,
 				EF19DCA21ACF22EA002C75FC /* Sports.png in Resources */,
@@ -479,6 +618,7 @@
 				EF19DCA11ACF22EA002C75FC /* Hobbies.png in Resources */,
 				EF19DC811ACEA29A002C75FC /* Threads@2x.png in Resources */,
 				EFA122661AD0624400D524EE /* TabBar_Activity_Normal@2x.png in Resources */,
+				EFA122D81AD1662D00D524EE /* navigationBar_Music@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,8 +641,10 @@
 				EF0CF5DD1ACD46A7005B4EFA /* categoriesViewController.m in Sources */,
 				EF6955CE1ABE9D1C00707E61 /* initialViewController.m in Sources */,
 				EF6955871ABCA15500707E61 /* bobMainViewController.m in Sources */,
-				EF6955D41ABE9DB400707E61 /* bobSignUpViewController.m in Sources */,
-				EF6955D11ABE9D7A00707E61 /* bobLogInViewController.m in Sources */,
+				EFA1228A1AD09BE800D524EE /* threadCell.m in Sources */,
+				EFA122971AD113DD00D524EE /* threadsViewController.m in Sources */,
+				EF6955D41ABE9DB400707E61 /* maelstromSignUpViewController.m in Sources */,
+				EF6955D11ABE9D7A00707E61 /* maelstromLogInViewController.m in Sources */,
 				EF6955811ABCA15500707E61 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,7 +653,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF69559E1ABCA15500707E61 /* BobTests.m in Sources */,
+				EF69559E1ABCA15500707E61 /* MaelstromTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,7 +662,7 @@
 /* Begin PBXTargetDependency section */
 		EF6955991ABCA15500707E61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EF69557A1ABCA15500707E61 /* Bob */;
+			target = EF69557A1ABCA15500707E61 /* Maelstrom */;
 			targetProxy = EF6955981ABCA15500707E61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -633,7 +775,7 @@
 				);
 				INFOPLIST_FILE = Bob/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Maelstrom;
 			};
 			name = Debug;
 		};
@@ -647,7 +789,7 @@
 				);
 				INFOPLIST_FILE = Bob/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Maelstrom;
 			};
 			name = Release;
 		};
@@ -665,8 +807,8 @@
 				);
 				INFOPLIST_FILE = BobTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bob.app/Bob";
+				PRODUCT_NAME = MaelstromTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maelstrom.app/Maelstrom";
 			};
 			name = Debug;
 		};
@@ -680,15 +822,15 @@
 				);
 				INFOPLIST_FILE = BobTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bob.app/Bob";
+				PRODUCT_NAME = MaelstromTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maelstrom.app/Maelstrom";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EF6955761ABCA15500707E61 /* Build configuration list for PBXProject "Bob" */ = {
+		EF6955761ABCA15500707E61 /* Build configuration list for PBXProject "Maelstrom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF69559F1ABCA15500707E61 /* Debug */,
@@ -697,7 +839,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF6955A11ABCA15500707E61 /* Build configuration list for PBXNativeTarget "Bob" */ = {
+		EF6955A11ABCA15500707E61 /* Build configuration list for PBXNativeTarget "Maelstrom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF6955A21ABCA15500707E61 /* Debug */,
@@ -706,7 +848,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF6955A41ABCA15500707E61 /* Build configuration list for PBXNativeTarget "BobTests" */ = {
+		EF6955A41ABCA15500707E61 /* Build configuration list for PBXNativeTarget "MaelstromTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF6955A51ABCA15500707E61 /* Debug */,
