@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EF8A31C9-2333-45CF-9709-3BA6D3782974</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Bob</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>305937FAE2374362B9E5F930898E43A1F79DC69E</key>
+		<string>https://github.com/northsydneybears/bob-project.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Bob.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>305937FAE2374362B9E5F930898E43A1F79DC69E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/northsydneybears/bob-project.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>305937FAE2374362B9E5F930898E43A1F79DC69E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>305937FAE2374362B9E5F930898E43A1F79DC69E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Bob</string>
+		</dict>
+	</array>
+</dict>
+</plist>

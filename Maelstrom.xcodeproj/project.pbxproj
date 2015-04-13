@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4FE6D4213C78289648ADE4A /* libPods-Maelstrom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECF89F7A84FEE42DE49B929 /* libPods-Maelstrom.a */; };
 		EF0CF5DD1ACD46A7005B4EFA /* categoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0CF5DC1ACD46A7005B4EFA /* categoriesViewController.m */; };
 		EF19DC7C1ACEA29A002C75FC /* Categories.png in Resources */ = {isa = PBXBuildFile; fileRef = EF19DC761ACEA29A002C75FC /* Categories.png */; };
 		EF19DC7D1ACEA29A002C75FC /* Categories@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF19DC771ACEA29A002C75FC /* Categories@2x.png */; };
@@ -38,11 +39,6 @@
 		EF69558F1ABCA15500707E61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF69558E1ABCA15500707E61 /* Images.xcassets */; };
 		EF6955921ABCA15500707E61 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6955901ABCA15500707E61 /* LaunchScreen.xib */; };
 		EF69559E1ABCA15500707E61 /* MaelstromTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF69559D1ABCA15500707E61 /* MaelstromTests.m */; };
-		EF6955AD1ABCA20500707E61 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955A81ABCA20500707E61 /* Bolts.framework */; };
-		EF6955AE1ABCA20500707E61 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955A91ABCA20500707E61 /* Parse.framework */; };
-		EF6955AF1ABCA20500707E61 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955AA1ABCA20500707E61 /* ParseCrashReporting.framework */; };
-		EF6955B01ABCA20500707E61 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955AB1ABCA20500707E61 /* ParseFacebookUtils.framework */; };
-		EF6955B11ABCA20500707E61 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955AC1ABCA20500707E61 /* ParseUI.framework */; };
 		EF6955BD1ABCA26700707E61 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955B21ABCA26700707E61 /* AudioToolbox.framework */; };
 		EF6955BE1ABCA26700707E61 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955B31ABCA26700707E61 /* CFNetwork.framework */; };
 		EF6955BF1ABCA26700707E61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955B41ABCA26700707E61 /* CoreGraphics.framework */; };
@@ -54,7 +50,6 @@
 		EF6955C51ABCA26700707E61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955BA1ABCA26700707E61 /* Security.framework */; };
 		EF6955C61ABCA26700707E61 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955BB1ABCA26700707E61 /* StoreKit.framework */; };
 		EF6955C71ABCA26700707E61 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955BC1ABCA26700707E61 /* SystemConfiguration.framework */; };
-		EF6955C91ABCA3C200707E61 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6955C81ABCA3C200707E61 /* FacebookSDK.framework */; };
 		EF6955CE1ABE9D1C00707E61 /* initialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955CD1ABE9D1C00707E61 /* initialViewController.m */; };
 		EF6955D11ABE9D7A00707E61 /* maelstromLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955D01ABE9D7A00707E61 /* maelstromLogInViewController.m */; };
 		EF6955D41ABE9DB400707E61 /* maelstromSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955D31ABE9DB400707E61 /* maelstromSignUpViewController.m */; };
@@ -69,12 +64,10 @@
 		EFA1226B1AD0624400D524EE /* TabBar_Favourites_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122631AD0624400D524EE /* TabBar_Favourites_Selected@2x.png */; };
 		EFA1226C1AD0624400D524EE /* TabBar_Profile_Normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122641AD0624400D524EE /* TabBar_Profile_Normal@2x.png */; };
 		EFA1226D1AD0624400D524EE /* TabBar_Profile_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122651AD0624400D524EE /* TabBar_Profile_Selected@2x.png */; };
-		EFA122711AD065F800D524EE /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122701AD065F800D524EE /* LaunchImage@2x.png */; };
 		EFA122731AD0856900D524EE /* threadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA122721AD0856900D524EE /* threadCell.xib */; };
 		EFA1227E1AD094C900D524EE /* ThreadCell_AddFavourite_Normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122751AD094C900D524EE /* ThreadCell_AddFavourite_Normal@2x.png */; };
 		EFA1227F1AD094C900D524EE /* ThreadCell_AddFavourite_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122761AD094C900D524EE /* ThreadCell_AddFavourite_Selected@2x.png */; };
 		EFA122801AD094C900D524EE /* ThreadCell_LastPostUser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122771AD094C900D524EE /* ThreadCell_LastPostUser@2x.png */; };
-		EFA122811AD094C900D524EE /* ThreadCell_NumberOfFavourites@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122781AD094C900D524EE /* ThreadCell_NumberOfFavourites@2x.png */; };
 		EFA122821AD094C900D524EE /* ThreadCell_NumberOfPosts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122791AD094C900D524EE /* ThreadCell_NumberOfPosts@2x.png */; };
 		EFA122831AD094C900D524EE /* ThreadCell_NumberOfViews@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA1227A1AD094C900D524EE /* ThreadCell_NumberOfViews@2x.png */; };
 		EFA122841AD094C900D524EE /* ThreadCell_Time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA1227B1AD094C900D524EE /* ThreadCell_Time@2x.png */; };
@@ -98,6 +91,13 @@
 		EFA122D91AD1662D00D524EE /* navigationBar_Sports@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122CA1AD1662D00D524EE /* navigationBar_Sports@2x.png */; };
 		EFA122DA1AD1662D00D524EE /* navigationBar_Travel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122CB1AD1662D00D524EE /* navigationBar_Travel@2x.png */; };
 		EFA122DB1AD1662D00D524EE /* navigationBar_TVShows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122CC1AD1662D00D524EE /* navigationBar_TVShows@2x.png */; };
+		EFA122DE1AD5BB9300D524EE /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122DC1AD5BB9300D524EE /* background@2x.png */; };
+		EFA122DF1AD5BB9300D524EE /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122DD1AD5BB9300D524EE /* background@3x.png */; };
+		EFA122E31AD5C61F00D524EE /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122E11AD5C61F00D524EE /* LaunchImage@2x.png */; };
+		EFA122E41AD5C61F00D524EE /* maelstrom_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122E21AD5C61F00D524EE /* maelstrom_icon.png */; };
+		EFA122E61AD5C78900D524EE /* LaunchImageWithIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122E51AD5C78900D524EE /* LaunchImageWithIcon@2x.png */; };
+		EFC7F49D1AD86B73008A1975 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC7F49C1AD86B73008A1975 /* libstdc++.6.dylib */; };
+		EFC7F49F1ADB5E50008A1975 /* ThreadCellBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EFC7F49E1ADB5E50008A1975 /* ThreadCellBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,11 +106,14 @@
 			containerPortal = EF6955731ABCA15500707E61 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EF69557A1ABCA15500707E61;
-			remoteInfo = Bob;
+			remoteInfo = Maelstrom;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		630C515D8E80320001BDC73B /* Pods-Maelstrom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maelstrom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Maelstrom/Pods-Maelstrom.debug.xcconfig"; sourceTree = "<group>"; };
+		893320EE70A67331EEF90DC5 /* Pods-Maelstrom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maelstrom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Maelstrom/Pods-Maelstrom.release.xcconfig"; sourceTree = "<group>"; };
+		8ECF89F7A84FEE42DE49B929 /* libPods-Maelstrom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Maelstrom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0CF5DB1ACD46A7005B4EFA /* categoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = categoriesViewController.h; sourceTree = "<group>"; };
 		EF0CF5DC1ACD46A7005B4EFA /* categoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = categoriesViewController.m; sourceTree = "<group>"; };
 		EF19DC761ACEA29A002C75FC /* Categories.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Categories.png; path = Assets/Categories.png; sourceTree = "<group>"; };
@@ -150,11 +153,6 @@
 		EF6955971ABCA15500707E61 /* MaelstromTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaelstromTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF69559C1ABCA15500707E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF69559D1ABCA15500707E61 /* MaelstromTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaelstromTests.m; sourceTree = "<group>"; };
-		EF6955A81ABCA20500707E61 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		EF6955A91ABCA20500707E61 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		EF6955AA1ABCA20500707E61 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
-		EF6955AB1ABCA20500707E61 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		EF6955AC1ABCA20500707E61 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		EF6955B21ABCA26700707E61 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EF6955B31ABCA26700707E61 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		EF6955B41ABCA26700707E61 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -166,7 +164,6 @@
 		EF6955BA1ABCA26700707E61 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EF6955BB1ABCA26700707E61 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EF6955BC1ABCA26700707E61 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		EF6955C81ABCA3C200707E61 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		EF6955CC1ABE9D1C00707E61 /* initialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = initialViewController.h; sourceTree = "<group>"; };
 		EF6955CD1ABE9D1C00707E61 /* initialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = initialViewController.m; sourceTree = "<group>"; };
 		EF6955CF1ABE9D7A00707E61 /* maelstromLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maelstromLogInViewController.h; sourceTree = "<group>"; };
@@ -184,12 +181,10 @@
 		EFA122631AD0624400D524EE /* TabBar_Favourites_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBar_Favourites_Selected@2x.png"; path = "Assets/TabBar_Favourites_Selected@2x.png"; sourceTree = "<group>"; };
 		EFA122641AD0624400D524EE /* TabBar_Profile_Normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBar_Profile_Normal@2x.png"; path = "Assets/TabBar_Profile_Normal@2x.png"; sourceTree = "<group>"; };
 		EFA122651AD0624400D524EE /* TabBar_Profile_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBar_Profile_Selected@2x.png"; path = "Assets/TabBar_Profile_Selected@2x.png"; sourceTree = "<group>"; };
-		EFA122701AD065F800D524EE /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage@2x.png"; path = "Assets/LaunchImage@2x.png"; sourceTree = "<group>"; };
 		EFA122721AD0856900D524EE /* threadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = threadCell.xib; sourceTree = "<group>"; };
 		EFA122751AD094C900D524EE /* ThreadCell_AddFavourite_Normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_AddFavourite_Normal@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_AddFavourite_Normal@2x.png"; sourceTree = "<group>"; };
 		EFA122761AD094C900D524EE /* ThreadCell_AddFavourite_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_AddFavourite_Selected@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_AddFavourite_Selected@2x.png"; sourceTree = "<group>"; };
 		EFA122771AD094C900D524EE /* ThreadCell_LastPostUser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_LastPostUser@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_LastPostUser@2x.png"; sourceTree = "<group>"; };
-		EFA122781AD094C900D524EE /* ThreadCell_NumberOfFavourites@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_NumberOfFavourites@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_NumberOfFavourites@2x.png"; sourceTree = "<group>"; };
 		EFA122791AD094C900D524EE /* ThreadCell_NumberOfPosts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_NumberOfPosts@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_NumberOfPosts@2x.png"; sourceTree = "<group>"; };
 		EFA1227A1AD094C900D524EE /* ThreadCell_NumberOfViews@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_NumberOfViews@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_NumberOfViews@2x.png"; sourceTree = "<group>"; };
 		EFA1227B1AD094C900D524EE /* ThreadCell_Time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ThreadCell_Time@2x.png"; path = "Assets/thread_cell_icons/ThreadCell_Time@2x.png"; sourceTree = "<group>"; };
@@ -215,6 +210,13 @@
 		EFA122CA1AD1662D00D524EE /* navigationBar_Sports@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Sports@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Sports@2x.png"; sourceTree = "<group>"; };
 		EFA122CB1AD1662D00D524EE /* navigationBar_Travel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_Travel@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_Travel@2x.png"; sourceTree = "<group>"; };
 		EFA122CC1AD1662D00D524EE /* navigationBar_TVShows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigationBar_TVShows@2x.png"; path = "Assets/navigation_bar_titles/navigationBar_TVShows@2x.png"; sourceTree = "<group>"; };
+		EFA122DC1AD5BB9300D524EE /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "Assets/background_images/background@2x.png"; sourceTree = "<group>"; };
+		EFA122DD1AD5BB9300D524EE /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@3x.png"; path = "Assets/background_images/background@3x.png"; sourceTree = "<group>"; };
+		EFA122E11AD5C61F00D524EE /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage@2x.png"; path = "Assets/launch_screen/LaunchImage@2x.png"; sourceTree = "<group>"; };
+		EFA122E21AD5C61F00D524EE /* maelstrom_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maelstrom_icon.png; path = Assets/launch_screen/maelstrom_icon.png; sourceTree = "<group>"; };
+		EFA122E51AD5C78900D524EE /* LaunchImageWithIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImageWithIcon@2x.png"; path = "Assets/launch_screen/LaunchImageWithIcon@2x.png"; sourceTree = "<group>"; };
+		EFC7F49C1AD86B73008A1975 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		EFC7F49E1ADB5E50008A1975 /* ThreadCellBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ThreadCellBackground.png; path = Assets/thread_cell_icons/ThreadCellBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC7F49D1AD86B73008A1975 /* libstdc++.6.dylib in Frameworks */,
 				EF6955D81ABF218C00707E61 /* Accounts.framework in Frameworks */,
 				EF6955D61ABF217D00707E61 /* Social.framework in Frameworks */,
 				EF6955BD1ABCA26700707E61 /* AudioToolbox.framework in Frameworks */,
@@ -232,15 +235,10 @@
 				EF6955C21ABCA26700707E61 /* libz.dylib in Frameworks */,
 				EF6955C31ABCA26700707E61 /* MobileCoreServices.framework in Frameworks */,
 				EF6955C41ABCA26700707E61 /* QuartzCore.framework in Frameworks */,
-				EF6955C91ABCA3C200707E61 /* FacebookSDK.framework in Frameworks */,
 				EF6955C51ABCA26700707E61 /* Security.framework in Frameworks */,
 				EF6955C61ABCA26700707E61 /* StoreKit.framework in Frameworks */,
 				EF6955C71ABCA26700707E61 /* SystemConfiguration.framework in Frameworks */,
-				EF6955AE1ABCA20500707E61 /* Parse.framework in Frameworks */,
-				EF6955AF1ABCA20500707E61 /* ParseCrashReporting.framework in Frameworks */,
-				EF6955B11ABCA20500707E61 /* ParseUI.framework in Frameworks */,
-				EF6955B01ABCA20500707E61 /* ParseFacebookUtils.framework in Frameworks */,
-				EF6955AD1ABCA20500707E61 /* Bolts.framework in Frameworks */,
+				A4FE6D4213C78289648ADE4A /* libPods-Maelstrom.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +255,15 @@
 		EF19DC751ACEA268002C75FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				EFA122E01AD5C60B00D524EE /* Launch Screen */,
 				EFA122991AD1604D00D524EE /* Nav Bar Titles */,
 				EFA122741AD094B700D524EE /* Thread Cell Images */,
 				EFA1223D1AD0579F00D524EE /* Tab Bar Icons */,
 				EF19DC841ACF22D9002C75FC /* Category Icons */,
 				EF19DC821ACF1FCF002C75FC /* LogoNavigationBar@2x.png */,
+				EFA122DC1AD5BB9300D524EE /* background@2x.png */,
+				EFA122DD1AD5BB9300D524EE /* background@3x.png */,
 				EF7696D61AD0494800F2AA8C /* LargeLogoNavigationBar@2x.png */,
-				EFA122701AD065F800D524EE /* LaunchImage@2x.png */,
 				EF19DCA51ACF3336002C75FC /* NavigationBarShadow@2x.png */,
 				EF19DC761ACEA29A002C75FC /* Categories.png */,
 				EF19DC771ACEA29A002C75FC /* Categories@2x.png */,
@@ -303,6 +303,7 @@
 				EF69557D1ABCA15500707E61 /* Maelstrom */,
 				EF69559A1ABCA15500707E61 /* MaelstromTests */,
 				EF69557C1ABCA15500707E61 /* Products */,
+				F845657C6B7C0AFEE3F1629D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -326,12 +327,10 @@
 				EF69558B1ABCA15500707E61 /* Main.storyboard */,
 				EF69558E1ABCA15500707E61 /* Images.xcassets */,
 				EF6955901ABCA15500707E61 /* LaunchScreen.xib */,
-				EFA122721AD0856900D524EE /* threadCell.xib */,
 				EF19DC751ACEA268002C75FC /* Assets */,
 				EF69557E1ABCA15500707E61 /* Supporting Files */,
 			);
-			name = Maelstrom;
-			path = Bob;
+			path = Maelstrom;
 			sourceTree = "<group>";
 		};
 		EF69557E1ABCA15500707E61 /* Supporting Files */ = {
@@ -349,8 +348,7 @@
 				EF69559D1ABCA15500707E61 /* MaelstromTests.m */,
 				EF69559B1ABCA15500707E61 /* Supporting Files */,
 			);
-			name = MaelstromTests;
-			path = BobTests;
+			path = MaelstromTests;
 			sourceTree = "<group>";
 		};
 		EF69559B1ABCA15500707E61 /* Supporting Files */ = {
@@ -364,9 +362,9 @@
 		EF6955A71ABCA1EC00707E61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFC7F49C1AD86B73008A1975 /* libstdc++.6.dylib */,
 				EF6955D71ABF218C00707E61 /* Accounts.framework */,
 				EF6955D51ABF217D00707E61 /* Social.framework */,
-				EF6955C81ABCA3C200707E61 /* FacebookSDK.framework */,
 				EF6955B21ABCA26700707E61 /* AudioToolbox.framework */,
 				EF6955B31ABCA26700707E61 /* CFNetwork.framework */,
 				EF6955B41ABCA26700707E61 /* CoreGraphics.framework */,
@@ -378,11 +376,7 @@
 				EF6955BA1ABCA26700707E61 /* Security.framework */,
 				EF6955BB1ABCA26700707E61 /* StoreKit.framework */,
 				EF6955BC1ABCA26700707E61 /* SystemConfiguration.framework */,
-				EF6955A81ABCA20500707E61 /* Bolts.framework */,
-				EF6955A91ABCA20500707E61 /* Parse.framework */,
-				EF6955AA1ABCA20500707E61 /* ParseCrashReporting.framework */,
-				EF6955AB1ABCA20500707E61 /* ParseFacebookUtils.framework */,
-				EF6955AC1ABCA20500707E61 /* ParseUI.framework */,
+				8ECF89F7A84FEE42DE49B929 /* libPods-Maelstrom.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -422,10 +416,10 @@
 		EFA122741AD094B700D524EE /* Thread Cell Images */ = {
 			isa = PBXGroup;
 			children = (
+				EFC7F49E1ADB5E50008A1975 /* ThreadCellBackground.png */,
 				EFA122751AD094C900D524EE /* ThreadCell_AddFavourite_Normal@2x.png */,
 				EFA122761AD094C900D524EE /* ThreadCell_AddFavourite_Selected@2x.png */,
 				EFA122771AD094C900D524EE /* ThreadCell_LastPostUser@2x.png */,
-				EFA122781AD094C900D524EE /* ThreadCell_NumberOfFavourites@2x.png */,
 				EFA122791AD094C900D524EE /* ThreadCell_NumberOfPosts@2x.png */,
 				EFA1227A1AD094C900D524EE /* ThreadCell_NumberOfViews@2x.png */,
 				EFA1227B1AD094C900D524EE /* ThreadCell_Time@2x.png */,
@@ -440,6 +434,7 @@
 			children = (
 				EFA122881AD09BE800D524EE /* threadCell.h */,
 				EFA122891AD09BE800D524EE /* threadCell.m */,
+				EFA122721AD0856900D524EE /* threadCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -467,6 +462,16 @@
 			name = "Nav Bar Titles";
 			sourceTree = "<group>";
 		};
+		EFA122E01AD5C60B00D524EE /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EFA122E51AD5C78900D524EE /* LaunchImageWithIcon@2x.png */,
+				EFA122E11AD5C61F00D524EE /* LaunchImage@2x.png */,
+				EFA122E21AD5C61F00D524EE /* maelstrom_icon.png */,
+			);
+			name = "Launch Screen";
+			sourceTree = "<group>";
+		};
 		EFE694421ACD926300B1131D /* Archived */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +483,15 @@
 			name = Archived;
 			sourceTree = "<group>";
 		};
+		F845657C6B7C0AFEE3F1629D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				630C515D8E80320001BDC73B /* Pods-Maelstrom.debug.xcconfig */,
+				893320EE70A67331EEF90DC5 /* Pods-Maelstrom.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -485,16 +499,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF6955A11ABCA15500707E61 /* Build configuration list for PBXNativeTarget "Maelstrom" */;
 			buildPhases = (
+				B683CCEDEE49201598FA27CF /* Check Pods Manifest.lock */,
 				EF6955771ABCA15500707E61 /* Sources */,
 				EF6955781ABCA15500707E61 /* Frameworks */,
 				EF6955791ABCA15500707E61 /* Resources */,
+				04B6B3B2D0046FD8EA63649B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Maelstrom;
-			productName = Bob;
+			productName = Maelstrom;
 			productReference = EF69557B1ABCA15500707E61 /* Maelstrom.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -512,7 +528,7 @@
 				EF6955991ABCA15500707E61 /* PBXTargetDependency */,
 			);
 			name = MaelstromTests;
-			productName = BobTests;
+			productName = MaelstromTests;
 			productReference = EF6955971ABCA15500707E61 /* MaelstromTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -586,20 +602,25 @@
 				EFA1226B1AD0624400D524EE /* TabBar_Favourites_Selected@2x.png in Resources */,
 				EF19DCA41ACF22EA002C75FC /* TV.png in Resources */,
 				EFA1226C1AD0624400D524EE /* TabBar_Profile_Normal@2x.png in Resources */,
+				EFA122E31AD5C61F00D524EE /* LaunchImage@2x.png in Resources */,
+				EFC7F49F1ADB5E50008A1975 /* ThreadCellBackground.png in Resources */,
 				EF19DC9B1ACF22EA002C75FC /* Graduate.png in Resources */,
 				EF19DC9A1ACF22EA002C75FC /* Gaming.png in Resources */,
 				EFA122D41AD1662D00D524EE /* navigationBar_Hobbies@2x.png in Resources */,
 				EFA1226A1AD0624400D524EE /* TabBar_Favourites_Normal@2x.png in Resources */,
+				EFA122E41AD5C61F00D524EE /* maelstrom_icon.png in Resources */,
 				EF7696D71AD0494800F2AA8C /* LargeLogoNavigationBar@2x.png in Resources */,
 				EFA122841AD094C900D524EE /* ThreadCell_Time@2x.png in Resources */,
 				EFA122691AD0624400D524EE /* TabBar_Categories_Selected@2x.png in Resources */,
 				EFA122DB1AD1662D00D524EE /* navigationBar_TVShows@2x.png in Resources */,
 				EFA1227E1AD094C900D524EE /* ThreadCell_AddFavourite_Normal@2x.png in Resources */,
+				EFA122DF1AD5BB9300D524EE /* background@3x.png in Resources */,
 				EF69558F1ABCA15500707E61 /* Images.xcassets in Resources */,
 				EFA122821AD094C900D524EE /* ThreadCell_NumberOfPosts@2x.png in Resources */,
 				EF19DC9D1ACF22EA002C75FC /* Jobs.png in Resources */,
+				EFA122DE1AD5BB9300D524EE /* background@2x.png in Resources */,
 				EFA122CE1AD1662D00D524EE /* navigationBar_Education@2x.png in Resources */,
-				EFA122811AD094C900D524EE /* ThreadCell_NumberOfFavourites@2x.png in Resources */,
+				EFA122E61AD5C78900D524EE /* LaunchImageWithIcon@2x.png in Resources */,
 				EF19DC9C1ACF22EA002C75FC /* Home_DIY.png in Resources */,
 				EFA122671AD0624400D524EE /* TabBar_Activity_Selected@2x.png in Resources */,
 				EF19DC7C1ACEA29A002C75FC /* Categories.png in Resources */,
@@ -614,7 +635,6 @@
 				EF19DCA21ACF22EA002C75FC /* Sports.png in Resources */,
 				EF19DC9F1ACF22EA002C75FC /* Movies.png in Resources */,
 				EF19DCA31ACF22EA002C75FC /* Travel.png in Resources */,
-				EFA122711AD065F800D524EE /* LaunchImage@2x.png in Resources */,
 				EF19DCA11ACF22EA002C75FC /* Hobbies.png in Resources */,
 				EF19DC811ACEA29A002C75FC /* Threads@2x.png in Resources */,
 				EFA122661AD0624400D524EE /* TabBar_Activity_Normal@2x.png in Resources */,
@@ -630,6 +650,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04B6B3B2D0046FD8EA63649B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Maelstrom/Pods-Maelstrom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B683CCEDEE49201598FA27CF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF6955771ABCA15500707E61 /* Sources */ = {
@@ -767,13 +820,14 @@
 		};
 		EF6955A21ABCA15500707E61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 630C515D8E80320001BDC73B /* Pods-Maelstrom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = Bob/Info.plist;
+				INFOPLIST_FILE = Maelstrom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Maelstrom;
 			};
@@ -781,13 +835,14 @@
 		};
 		EF6955A31ABCA15500707E61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 893320EE70A67331EEF90DC5 /* Pods-Maelstrom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = Bob/Info.plist;
+				INFOPLIST_FILE = Maelstrom/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = Maelstrom;
 			};
@@ -805,7 +860,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BobTests/Info.plist;
+				INFOPLIST_FILE = MaelstromTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = MaelstromTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maelstrom.app/Maelstrom";
@@ -820,7 +875,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BobTests/Info.plist;
+				INFOPLIST_FILE = MaelstromTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = MaelstromTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maelstrom.app/Maelstrom";
