@@ -98,6 +98,8 @@
 		EFA122E61AD5C78900D524EE /* LaunchImageWithIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122E51AD5C78900D524EE /* LaunchImageWithIcon@2x.png */; };
 		EFC7F49D1AD86B73008A1975 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC7F49C1AD86B73008A1975 /* libstdc++.6.dylib */; };
 		EFC7F49F1ADB5E50008A1975 /* ThreadCellBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EFC7F49E1ADB5E50008A1975 /* ThreadCellBackground.png */; };
+		EFC7F4A21ADC7644008A1975 /* postsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4A11ADC7644008A1975 /* postsViewController.m */; };
+		EFC7F4A51ADC9E91008A1975 /* addThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4A41ADC9E91008A1975 /* addThreadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +219,10 @@
 		EFA122E51AD5C78900D524EE /* LaunchImageWithIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImageWithIcon@2x.png"; path = "Assets/launch_screen/LaunchImageWithIcon@2x.png"; sourceTree = "<group>"; };
 		EFC7F49C1AD86B73008A1975 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		EFC7F49E1ADB5E50008A1975 /* ThreadCellBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ThreadCellBackground.png; path = Assets/thread_cell_icons/ThreadCellBackground.png; sourceTree = "<group>"; };
+		EFC7F4A01ADC7644008A1975 /* postsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = postsViewController.h; sourceTree = "<group>"; };
+		EFC7F4A11ADC7644008A1975 /* postsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = postsViewController.m; sourceTree = "<group>"; };
+		EFC7F4A31ADC9E91008A1975 /* addThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addThreadViewController.h; sourceTree = "<group>"; };
+		EFC7F4A41ADC9E91008A1975 /* addThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addThreadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +400,10 @@
 				EF0CF5DC1ACD46A7005B4EFA /* categoriesViewController.m */,
 				EFA122951AD113DD00D524EE /* threadsViewController.h */,
 				EFA122961AD113DD00D524EE /* threadsViewController.m */,
+				EFC7F4A01ADC7644008A1975 /* postsViewController.h */,
+				EFC7F4A11ADC7644008A1975 /* postsViewController.m */,
+				EFC7F4A31ADC9E91008A1975 /* addThreadViewController.h */,
+				EFC7F4A41ADC9E91008A1975 /* addThreadViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -697,7 +707,9 @@
 				EFA1228A1AD09BE800D524EE /* threadCell.m in Sources */,
 				EFA122971AD113DD00D524EE /* threadsViewController.m in Sources */,
 				EF6955D41ABE9DB400707E61 /* maelstromSignUpViewController.m in Sources */,
+				EFC7F4A51ADC9E91008A1975 /* addThreadViewController.m in Sources */,
 				EF6955D11ABE9D7A00707E61 /* maelstromLogInViewController.m in Sources */,
+				EFC7F4A21ADC7644008A1975 /* postsViewController.m in Sources */,
 				EF6955811ABCA15500707E61 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
