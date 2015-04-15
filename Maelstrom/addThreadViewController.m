@@ -18,6 +18,10 @@
 	
 	// Set the text field's delegate to enable use of the keyboard hide delegate method
 	self.threadTitleTextField.delegate = self;
+	
+	// Tape gesture recogniser to hide the keyboard when user taps outside of the keyboard
+	UITapGestureRecognizer *tapOutsideKeyboardRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+	[[self view] addGestureRecognizer:tapOutsideKeyboardRecognizer];
 }
 
 #pragma mark - Buttons
@@ -46,16 +50,11 @@
 			NSLog(@"No new thread created.");
 		}
 	}];
-	
-//		NSLog(@"Contents of text field: %@", self.threadTitleTextField.text);
-//		[self performSegueWithIdentifier:@"addThreadToThreadsWithAddedThread" sender:@"Thread Added"];
 }
 
 - (IBAction)cancelAddThreadTapped:(id)sender {
 	[self.delegate addThreadViewControllerDidCancel:self];
-
-//	NSLog(@"User canceled adding thread");
-//	[self performSegueWithIdentifier:@"cancelAddThreadToThreads" sender:@"Cancel Adding Thread"];
+	NSLog(@"User canceled adding thread");
 }
 
 
@@ -72,10 +71,17 @@
 	return YES;
 }
 
+#pragma mark - Hiding the keyboard
+
 // Keyboard hide delegate method. Hides keyboard when user taps done.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	[textField resignFirstResponder];
 	return NO;
+}
+
+// Hide the keyboard when a user taps outside it
+-(void)hideKeyboard {
+	[[self view] endEditing:YES];
 }
 
 @end
