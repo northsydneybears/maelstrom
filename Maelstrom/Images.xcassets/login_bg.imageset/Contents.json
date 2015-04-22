@@ -1,9 +1,23 @@
 {
   "images" : [
     {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "fill",
+          "width" : 1,
+          "height" : 1
+        },
+        "capInsets" : {
+          "bottom" : 450,
+          "top" : 449,
+          "right" : 320,
+          "left" : 319
+        }
+      },
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "login_bg.png"
+      "filename" : "login_bg.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

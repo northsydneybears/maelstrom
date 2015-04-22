@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AEF7E99FD7264C37A5B4E524"
+               BlueprintIdentifier = "470E93A442D59FF97DE55764"
                BuildableName = "libPods-Maelstrom-ParseUI.a"
                BlueprintName = "Pods-Maelstrom-ParseUI"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AEF7E99FD7264C37A5B4E524"
+            BlueprintIdentifier = "470E93A442D59FF97DE55764"
             BuildableName = "libPods-Maelstrom-ParseUI.a"
             BlueprintName = "Pods-Maelstrom-ParseUI"
             ReferencedContainer = "container:Pods.xcodeproj">

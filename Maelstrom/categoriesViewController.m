@@ -9,6 +9,7 @@
 #import "categoriesViewController.h"
 #import <UIKit/UIKit.h>
 #import "threadsViewController.h"
+#import	"UIDeviceHardware.h"
 
 @interface categoriesViewController ()
 
@@ -28,6 +29,23 @@
 @property (nonatomic, strong) UITapGestureRecognizer *tapHome;
 @property (nonatomic, strong) UITapGestureRecognizer *tapElectronics;
 @property (nonatomic, strong) UITapGestureRecognizer *tapHobbies;
+
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressJobs;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressGraduates;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressMoney;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressEducation;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressSports;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressTVShows;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressMusic;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressMovies;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressGames;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressFitness;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressFood;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressTravel;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressDrive;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressHome;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressElectronics;
+@property (nonatomic, strong) UILongPressGestureRecognizer *pressHobbies;
 
 @property (weak, nonatomic) IBOutlet UIView *jobs;
 @property (weak, nonatomic) IBOutlet UIView *graduates;
@@ -67,10 +85,30 @@
 	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
 	
 	// Add the background and send it to the back behind the buttons
-	UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
-	[self.view addSubview:backgroundView];
-	[self.view sendSubviewToBack:backgroundView];
+	NSString *platform = [UIDeviceHardware platform];
+	NSLog(@"%@", platform);
 	
+	if ([platform isEqualToString:@"iPhone5,1"] || [platform isEqualToString:@"iPhone5,2"] || [platform isEqualToString:@"iPhone5,3"] || [platform isEqualToString:@"iPhone5,4"] || [platform isEqualToString:@"iPhone6,1"] || [platform isEqualToString:@"iPhone6,2"] || [platform isEqualToString:@"iPod5,1"]) {
+		// iPhone 5 and iPod touch
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-bg-iphone5.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	} else if ([platform isEqualToString:@"iPhone7,2"]) {
+		// iPhone 6
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-bg-iphone6.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	} else if ([platform isEqualToString:@"iPhone7,1"] || [platform isEqualToString:@"x86_64"]) {
+		// iPhone 6 Plus
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-bg-iphone6plus.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	} else if ([platform isEqualToString:@"iPhone3,1"] || [platform isEqualToString:@"iPhone3,3"] || [platform isEqualToString:@"iPhone4,1"] || [platform isEqualToString:@"iPod4,1"]) {
+		// iPhone 4/4S and older iPod Touch
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-bg-iphone5.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	}
 	
 	self.tapJobs = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapJobsFired:)];
 	self.tapGraduates = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGraduatesFired:)];
@@ -89,7 +127,6 @@
 	self.tapElectronics = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapElectronicsFired:)];
 	self.tapHobbies = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapHobbiesFired:)];
 	
-	
 	[self.jobs addGestureRecognizer:self.tapJobs];
 	[self.graduates addGestureRecognizer:self.tapGraduates];
 	[self.money addGestureRecognizer:self.tapMoney];
@@ -106,6 +143,40 @@
 	[self.home addGestureRecognizer:self.tapHome];
 	[self.electronics addGestureRecognizer:self.tapElectronics];
 	[self.hobbies addGestureRecognizer:self.tapHobbies];
+	
+	self.pressJobs = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressJobsFired:)];
+	self.pressGraduates = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressGraduatesFired:)];
+	self.pressMoney = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressMoneyFired:)];
+	self.pressEducation = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressEducationFired:)];
+	self.pressSports = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressSportsFired:)];
+	self.pressTVShows = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressTVShowsFired:)];
+	self.pressMusic = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressMusicFired:)];
+	self.pressMovies = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressMoviesFired:)];
+	self.pressGames = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressGamesFired:)];
+	self.pressFitness = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressFitnessFired:)];
+	self.pressFood = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressFoodFired:)];
+	self.pressTravel = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressTravelFired:)];
+	self.pressDrive = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressDriveFired:)];
+	self.pressHome = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressHomeFired:)];
+	self.pressElectronics = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressElectronicsFired:)];
+	self.pressHobbies = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressHobbiesFired:)];
+	
+	[self.jobs addGestureRecognizer:self.pressJobs];
+	[self.graduates addGestureRecognizer:self.pressGraduates];
+	[self.money addGestureRecognizer:self.pressMoney];
+	[self.education addGestureRecognizer:self.pressEducation];
+	[self.sports addGestureRecognizer:self.pressSports];
+	[self.tvshows addGestureRecognizer:self.pressTVShows];
+	[self.music addGestureRecognizer:self.pressMusic];
+	[self.movies addGestureRecognizer:self.pressMovies];
+	[self.games addGestureRecognizer:self.pressGames];
+	[self.fitness addGestureRecognizer:self.pressFitness];
+	[self.food addGestureRecognizer:self.pressFood];
+	[self.travel addGestureRecognizer:self.pressTravel];
+	[self.drive addGestureRecognizer:self.pressDrive];
+	[self.home addGestureRecognizer:self.pressHome];
+	[self.electronics addGestureRecognizer:self.pressElectronics];
+	[self.hobbies addGestureRecognizer:self.pressHobbies];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -228,6 +299,138 @@
 	[self performSegueWithIdentifier:@"categoryToThreads" sender:@"Hobbies"];
 }
 
+#pragma mark - UILongPressGestureRecognizer
+
+- (void)pressJobsFired:(UILongPressGestureRecognizer *)pressJobs {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-jobs-title.png"]];
+	
+	if (self.pressJobs.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressGraduatesFired:(UILongPressGestureRecognizer *)pressGraduates {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-graduates-title.png"]];
+	
+	if (self.pressGraduates.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressMoneyFired:(UILongPressGestureRecognizer *)pressMoney {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-money-title.png"]];
+	
+	if (self.pressMoney.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressEducationFired:(UILongPressGestureRecognizer *)pressEducation {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-education-title.png"]];
+	
+	if (self.pressEducation.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressSportsFired:(UILongPressGestureRecognizer *)pressSports {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-sports-title.png"]];
+	
+	if (self.pressSports.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressTVShowsFired:(UILongPressGestureRecognizer *)pressTVShows {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-tvshows-title.png"]];
+	
+	if (self.pressTVShows.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressMusicFired:(UILongPressGestureRecognizer *)pressMusic {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-music-title.png"]];
+	
+	if (self.pressMusic.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressMoviesFired:(UILongPressGestureRecognizer *)pressMovies {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-movies-title.png"]];
+	
+	if (self.pressMovies.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressGamesFired:(UILongPressGestureRecognizer *)pressGames {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-games-title.png"]];
+	
+	if (self.pressGames.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressFitnessFired:(UILongPressGestureRecognizer *)pressFitness {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-fitness-title.png"]];
+	
+	if (self.pressFitness.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressFoodFired:(UILongPressGestureRecognizer *)pressFood {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-food-title.png"]];
+	
+	if (self.pressFood.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressTravelFired:(UILongPressGestureRecognizer *)pressTravel {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-travel-title.png"]];
+	
+	if (self.pressTravel.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressDriveFired:(UILongPressGestureRecognizer *)pressDrive {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-drive-title.png"]];
+	
+	if (self.pressDrive.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressHomeFired:(UILongPressGestureRecognizer *)pressHome {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-home-title.png"]];
+	
+	if (self.pressHome.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressElectronicsFired:(UILongPressGestureRecognizer *)pressElectronics {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-electronics-title.png"]];
+	
+	if (self.pressElectronics.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+- (void)pressHobbiesFired:(UILongPressGestureRecognizer *)pressHobbies {
+	self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"categories-hobbies-title.png"]];
+	
+	if (self.pressHobbies.state == UIGestureRecognizerStateEnded) {
+		self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LargeLogoNavigationBar.png"]];
+	}
+}
+
+#pragma mark - Prepare for Segue, set category type selected by user
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	
 	if ([sender isEqualToString:@"Jobs"]) {
@@ -285,28 +488,7 @@
 	[self performSegueWithIdentifier:@"categoryToThreads" sender:sender];
 }
 
-
 /*
-- (id)initWithCoder:(NSCoder *)aCoder
-{
-	self = [super initWithCoder:aCoder];
-	if (self) {
-		// The className to query on
-		self.parseClassName = @"Category";
-		
-		// The key of the PFObject to display in the label of the default cell style
-		self.textKey = @"title";
-		
-		// Whether the built-in pull-to-refresh is enabled
-		self.pullToRefreshEnabled = YES;
-		
-		// Whether the built-in pagination is enabled
-		self.paginationEnabled = NO;
-		//self.objectsPerPage = 8;
-	}
-	return self;
-}
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

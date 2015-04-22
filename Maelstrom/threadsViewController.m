@@ -14,16 +14,18 @@
 #import "threadCell.h"
 #import "addThreadViewController.h"
 #import "postsViewController.h"
+#import	"UIDeviceHardware.h"
 
 @interface threadsViewController ()
 
-
+@property	(strong, nonatomic) NSString *fromThreadValueForPostsVC;
 
 @end
 
 @implementation threadsViewController
 
 @synthesize threadsTable;
+@synthesize fromThreadValueForPostsVC;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
 	self = [super initWithCoder:aDecoder];
@@ -63,38 +65,53 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+
 	// Set a non-existent background and shadow image to get rid of the line between the navigation bar and the view
-	[self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar-bg"] forBarMetrics:UIBarMetricsDefault];
 	self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
 	
 	// Make the navigation bar transparent
-	self.navigationController.navigationBar.translucent = YES;
-	self.navigationController.view.backgroundColor = [UIColor blueColor];
+	self.navigationController.navigationBar.translucent = NO;
+	self.navigationController.view.backgroundColor = [UIColor clearColor];
+	
 	
 	// Add the background and send it to the back behind the buttons
-//	UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
-//	[self.view addSubview:backgroundView];
-//	[self.view sendSubviewToBack:backgroundView];
+	NSString *platform = [UIDeviceHardware platform];
+	
+	if ([platform isEqualToString:@"iPhone5,1"] || [platform isEqualToString:@"iPhone5,2"] || [platform isEqualToString:@"iPhone5,3"] || [platform isEqualToString:@"iPhone5,4"] || [platform isEqualToString:@"iPhone6,1"] || [platform isEqualToString:@"iPhone6,2"] || [platform isEqualToString:@"iPod5,1"]) {
+		// iPhone 5 and iPod touch
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"threads-posts-bg-iphone5.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	} else if ([platform isEqualToString:@"iPhone7,2"]) {
+		// iPhone 6
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"threads-posts-bg-iphone6.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	} else if ([platform isEqualToString:@"iPhone7,1"] || [platform isEqualToString:@"x86_64"]) {
+		// iPhone 6 Plus
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"threads-posts-bg-iphone6plus.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	} else if ([platform isEqualToString:@"iPhone3,1"] || [platform isEqualToString:@"iPhone3,3"] || [platform isEqualToString:@"iPhone4,1"] || [platform isEqualToString:@"iPod4,1"]) {
+		// iPhone 4/4S and older iPod Touch
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"threads-posts-bg-iphone5.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	}
 	
 	// Set the Navigation Bar back button to white and just an arrow without text
-	self.navigationController.navigationBar.tintColor = [UIColor redColor];
+	self.navigationController.navigationBar.tintColor = [UIColor orangeColor];
 	[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
 	
 	// Setup self-sizing cells
 	threadsTable.estimatedRowHeight = 80.0;
 	threadsTable.rowHeight = UITableViewAutomaticDimension;
 
-	// Uncomment the following line to preserve selection between presentations.
-	// self.clearsSelectionOnViewWillAppear = NO;
-	
-	// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-	//self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload {
 	[super viewDidUnload];
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -132,47 +149,14 @@
 
 - (void)objectsDidLoad:(NSError *)error {
 	[super objectsDidLoad:error];
-	
 	// This method is called every time objects are loaded from Parse via the PFQuery
 }
-
-//// Get number of sections in tableview
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//	// Return the number of sections.
-//	return 1;
-//}
-//
-//// Get number of rows by counting number of threads
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//	return threadsArray.count;
-//}
 
 // Query Parse for the table data
 - (PFQuery *)queryForTable {
 		
 	PFQuery *query = [PFQuery queryWithClassName:@"Thread"];
 	[query whereKey:@"fromCategory" equalTo:self.categoryType];
-//	[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//  if (!error) {
-//		// The find succeeded.
-//		NSLog(@"Successfully retrieved %d threads.", objects.count);
-//		// Do something with the found objects
-//		for (PFObject *object in objects) {
-//			NSLog(@"%@", object.objectId);
-//		}
-//	} else {
-//		// Log details of the failure
-//		NSLog(@"Error: %@ %@", error, [error userInfo]);
-//	}
-//	
-//	}];
-	
-//	[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//		if (!error) {
-//			threadsArray = [[NSArray alloc] initWithArray:objects];
-//		}
-//		[threadsTable reloadData];
-//	}];
 	
 	// If Pull To Refresh is enabled, query against the network by default.
 	if (self.pullToRefreshEnabled) {
@@ -291,7 +275,7 @@
 	PFObject *fromThread = [self objectAtIndexPath:indexPath];
 	
 	// Set the value for the thread title in order to call from Parse only those posts related to thread that was tapped
-	self.fromThreadValueForPostsVC = [fromThread objectForKey:@"title"];
+	//self.fromThreadValueForPostsVC = [fromThread objectForKey:@"title"];
 	
 	NSNumber *views = [fromThread objectForKey:@"numberOfViews"];
 	int value = [views intValue];
@@ -303,6 +287,14 @@
 			NSLog(@"Error: Number of views not incremented");
 		}
 	}];
+}
+
+// This method returns the name/title of the thread that the user tapped in order to set the fromThread property of the postsViewController. See prepareForSegue below.
+- (NSString *)threadTitleString {
+	NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+	PFObject *fromThread = [self objectAtIndexPath:indexPath];
+	NSString *threadTitle = [fromThread objectForKey:@"title"];
+	return threadTitle;
 }
 
 
@@ -322,9 +314,10 @@
 		newThreadVC.addThreadToCategory = self.categoryType;
 	} else if ([segue.identifier isEqualToString:@"threadsToPosts"]) {
 		postsViewController *postsVC = segue.destinationViewController;
-		postsVC.fromThread = self.fromThreadValueForPostsVC;
-		NSLog(@"%@", postsVC);
+		postsVC.fromThread = [self threadTitleString];
+		NSLog(@"User tapped thread: %@", [self threadTitleString]);
 	}
 }
+
 
 @end

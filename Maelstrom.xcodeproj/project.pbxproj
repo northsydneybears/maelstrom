@@ -96,6 +96,31 @@
 		EFA122E31AD5C61F00D524EE /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122E11AD5C61F00D524EE /* LaunchImage@2x.png */; };
 		EFA122E41AD5C61F00D524EE /* maelstrom_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122E21AD5C61F00D524EE /* maelstrom_icon.png */; };
 		EFA122E61AD5C78900D524EE /* LaunchImageWithIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122E51AD5C78900D524EE /* LaunchImageWithIcon@2x.png */; };
+		EFB57B0A1ADF8B4C001DDBB8 /* addThreadQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB57B091ADF8B4C001DDBB8 /* addThreadQuestionViewController.m */; };
+		EFB57B171AE637DC001DDBB8 /* UIDeviceHardware.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB57B161AE637DC001DDBB8 /* UIDeviceHardware.m */; };
+		EFB57B1B1AE63FF7001DDBB8 /* categories-bg-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B181AE63FF7001DDBB8 /* categories-bg-iphone5@2x.png */; };
+		EFB57B1C1AE63FF7001DDBB8 /* categories-bg-iphone6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B191AE63FF7001DDBB8 /* categories-bg-iphone6@2x.png */; };
+		EFB57B1D1AE63FF7001DDBB8 /* categories-bg-iphone6plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B1A1AE63FF7001DDBB8 /* categories-bg-iphone6plus@2x.png */; };
+		EFB57B321AE65689001DDBB8 /* categories-drive-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B221AE65689001DDBB8 /* categories-drive-title@2x.png */; };
+		EFB57B331AE65689001DDBB8 /* categories-education-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B231AE65689001DDBB8 /* categories-education-title@2x.png */; };
+		EFB57B341AE65689001DDBB8 /* categories-electronics-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B241AE65689001DDBB8 /* categories-electronics-title@2x.png */; };
+		EFB57B351AE65689001DDBB8 /* categories-fitness-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B251AE65689001DDBB8 /* categories-fitness-title@2x.png */; };
+		EFB57B361AE65689001DDBB8 /* categories-food-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B261AE65689001DDBB8 /* categories-food-title@2x.png */; };
+		EFB57B371AE65689001DDBB8 /* categories-games-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B271AE65689001DDBB8 /* categories-games-title@2x.png */; };
+		EFB57B391AE65689001DDBB8 /* categories-hobbies-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B291AE65689001DDBB8 /* categories-hobbies-title@2x.png */; };
+		EFB57B3A1AE65689001DDBB8 /* categories-home-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B2A1AE65689001DDBB8 /* categories-home-title@2x.png */; };
+		EFB57B3B1AE65689001DDBB8 /* categories-jobs-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B2B1AE65689001DDBB8 /* categories-jobs-title@2x.png */; };
+		EFB57B3C1AE65689001DDBB8 /* categories-money-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B2C1AE65689001DDBB8 /* categories-money-title@2x.png */; };
+		EFB57B3D1AE65689001DDBB8 /* categories-movies-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B2D1AE65689001DDBB8 /* categories-movies-title@2x.png */; };
+		EFB57B3E1AE65689001DDBB8 /* categories-music-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B2E1AE65689001DDBB8 /* categories-music-title@2x.png */; };
+		EFB57B3F1AE65689001DDBB8 /* categories-sports-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B2F1AE65689001DDBB8 /* categories-sports-title@2x.png */; };
+		EFB57B401AE65689001DDBB8 /* categories-travel-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B301AE65689001DDBB8 /* categories-travel-title@2x.png */; };
+		EFB57B411AE65689001DDBB8 /* categories-tvshows-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B311AE65689001DDBB8 /* categories-tvshows-title@2x.png */; };
+		EFB57B431AE656DD001DDBB8 /* categories-graduates-title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B421AE656DD001DDBB8 /* categories-graduates-title@2x.png */; };
+		EFB57B471AE6658C001DDBB8 /* threads-posts-bg-iphone6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B451AE6658C001DDBB8 /* threads-posts-bg-iphone6@2x.png */; };
+		EFB57B481AE6658C001DDBB8 /* threads-posts-bg-iphone6plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B461AE6658C001DDBB8 /* threads-posts-bg-iphone6plus@2x.png */; };
+		EFB57B4A1AE6667A001DDBB8 /* threads-posts-bg-iphone5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB57B491AE6667A001DDBB8 /* threads-posts-bg-iphone5@2x.png */; };
+		EFB57B4E1AE76B67001DDBB8 /* tabBarControllerUniversal.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB57B4D1AE76B67001DDBB8 /* tabBarControllerUniversal.m */; };
 		EFC7F49D1AD86B73008A1975 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC7F49C1AD86B73008A1975 /* libstdc++.6.dylib */; };
 		EFC7F49F1ADB5E50008A1975 /* ThreadCellBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EFC7F49E1ADB5E50008A1975 /* ThreadCellBackground.png */; };
 		EFC7F4A21ADC7644008A1975 /* postsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4A11ADC7644008A1975 /* postsViewController.m */; };
@@ -217,6 +242,34 @@
 		EFA122E11AD5C61F00D524EE /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImage@2x.png"; path = "Assets/launch_screen/LaunchImage@2x.png"; sourceTree = "<group>"; };
 		EFA122E21AD5C61F00D524EE /* maelstrom_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maelstrom_icon.png; path = Assets/launch_screen/maelstrom_icon.png; sourceTree = "<group>"; };
 		EFA122E51AD5C78900D524EE /* LaunchImageWithIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "LaunchImageWithIcon@2x.png"; path = "Assets/launch_screen/LaunchImageWithIcon@2x.png"; sourceTree = "<group>"; };
+		EFB57B081ADF8B4C001DDBB8 /* addThreadQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addThreadQuestionViewController.h; sourceTree = "<group>"; };
+		EFB57B091ADF8B4C001DDBB8 /* addThreadQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addThreadQuestionViewController.m; sourceTree = "<group>"; };
+		EFB57B151AE637DC001DDBB8 /* UIDeviceHardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDeviceHardware.h; sourceTree = "<group>"; };
+		EFB57B161AE637DC001DDBB8 /* UIDeviceHardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDeviceHardware.m; sourceTree = "<group>"; };
+		EFB57B181AE63FF7001DDBB8 /* categories-bg-iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-bg-iphone5@2x.png"; path = "Assets/category_icons/categories-bg-iphone5@2x.png"; sourceTree = "<group>"; };
+		EFB57B191AE63FF7001DDBB8 /* categories-bg-iphone6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-bg-iphone6@2x.png"; path = "Assets/category_icons/categories-bg-iphone6@2x.png"; sourceTree = "<group>"; };
+		EFB57B1A1AE63FF7001DDBB8 /* categories-bg-iphone6plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-bg-iphone6plus@2x.png"; path = "Assets/category_icons/categories-bg-iphone6plus@2x.png"; sourceTree = "<group>"; };
+		EFB57B221AE65689001DDBB8 /* categories-drive-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-drive-title@2x.png"; path = "Assets/category_icons/category-titles/categories-drive-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B231AE65689001DDBB8 /* categories-education-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-education-title@2x.png"; path = "Assets/category_icons/category-titles/categories-education-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B241AE65689001DDBB8 /* categories-electronics-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-electronics-title@2x.png"; path = "Assets/category_icons/category-titles/categories-electronics-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B251AE65689001DDBB8 /* categories-fitness-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-fitness-title@2x.png"; path = "Assets/category_icons/category-titles/categories-fitness-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B261AE65689001DDBB8 /* categories-food-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-food-title@2x.png"; path = "Assets/category_icons/category-titles/categories-food-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B271AE65689001DDBB8 /* categories-games-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-games-title@2x.png"; path = "Assets/category_icons/category-titles/categories-games-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B291AE65689001DDBB8 /* categories-hobbies-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-hobbies-title@2x.png"; path = "Assets/category_icons/category-titles/categories-hobbies-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B2A1AE65689001DDBB8 /* categories-home-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-home-title@2x.png"; path = "Assets/category_icons/category-titles/categories-home-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B2B1AE65689001DDBB8 /* categories-jobs-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-jobs-title@2x.png"; path = "Assets/category_icons/category-titles/categories-jobs-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B2C1AE65689001DDBB8 /* categories-money-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-money-title@2x.png"; path = "Assets/category_icons/category-titles/categories-money-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B2D1AE65689001DDBB8 /* categories-movies-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-movies-title@2x.png"; path = "Assets/category_icons/category-titles/categories-movies-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B2E1AE65689001DDBB8 /* categories-music-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-music-title@2x.png"; path = "Assets/category_icons/category-titles/categories-music-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B2F1AE65689001DDBB8 /* categories-sports-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-sports-title@2x.png"; path = "Assets/category_icons/category-titles/categories-sports-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B301AE65689001DDBB8 /* categories-travel-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-travel-title@2x.png"; path = "Assets/category_icons/category-titles/categories-travel-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B311AE65689001DDBB8 /* categories-tvshows-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-tvshows-title@2x.png"; path = "Assets/category_icons/category-titles/categories-tvshows-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B421AE656DD001DDBB8 /* categories-graduates-title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "categories-graduates-title@2x.png"; path = "Assets/category_icons/category-titles/categories-graduates-title@2x.png"; sourceTree = "<group>"; };
+		EFB57B451AE6658C001DDBB8 /* threads-posts-bg-iphone6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "threads-posts-bg-iphone6@2x.png"; path = "Assets/background_images/threads-posts-bg-iphone6@2x.png"; sourceTree = "<group>"; };
+		EFB57B461AE6658C001DDBB8 /* threads-posts-bg-iphone6plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "threads-posts-bg-iphone6plus@2x.png"; path = "Assets/background_images/threads-posts-bg-iphone6plus@2x.png"; sourceTree = "<group>"; };
+		EFB57B491AE6667A001DDBB8 /* threads-posts-bg-iphone5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "threads-posts-bg-iphone5@2x.png"; path = "Assets/background_images/threads-posts-bg-iphone5@2x.png"; sourceTree = "<group>"; };
+		EFB57B4C1AE76B67001DDBB8 /* tabBarControllerUniversal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tabBarControllerUniversal.h; sourceTree = "<group>"; };
+		EFB57B4D1AE76B67001DDBB8 /* tabBarControllerUniversal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tabBarControllerUniversal.m; sourceTree = "<group>"; };
 		EFC7F49C1AD86B73008A1975 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		EFC7F49E1ADB5E50008A1975 /* ThreadCellBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ThreadCellBackground.png; path = Assets/thread_cell_icons/ThreadCellBackground.png; sourceTree = "<group>"; };
 		EFC7F4A01ADC7644008A1975 /* postsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = postsViewController.h; sourceTree = "<group>"; };
@@ -261,14 +314,14 @@
 		EF19DC751ACEA268002C75FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				EFB57B441AE6655B001DDBB8 /* Backgrounds */,
+				EFB57B211AE64AEC001DDBB8 /* Category Titles */,
 				EFA122E01AD5C60B00D524EE /* Launch Screen */,
 				EFA122991AD1604D00D524EE /* Nav Bar Titles */,
 				EFA122741AD094B700D524EE /* Thread Cell Images */,
 				EFA1223D1AD0579F00D524EE /* Tab Bar Icons */,
 				EF19DC841ACF22D9002C75FC /* Category Icons */,
 				EF19DC821ACF1FCF002C75FC /* LogoNavigationBar@2x.png */,
-				EFA122DC1AD5BB9300D524EE /* background@2x.png */,
-				EFA122DD1AD5BB9300D524EE /* background@3x.png */,
 				EF7696D61AD0494800F2AA8C /* LargeLogoNavigationBar@2x.png */,
 				EF19DCA51ACF3336002C75FC /* NavigationBarShadow@2x.png */,
 				EF19DC761ACEA29A002C75FC /* Categories.png */,
@@ -325,6 +378,7 @@
 		EF69557D1ABCA15500707E61 /* Maelstrom */ = {
 			isa = PBXGroup;
 			children = (
+				EFB57B111AE6362B001DDBB8 /* Vendors */,
 				EFA122871AD09A6F00D524EE /* Views */,
 				EFE694421ACD926300B1131D /* Archived */,
 				EF6955DA1AC0054800707E61 /* Controllers */,
@@ -390,20 +444,13 @@
 		EF6955DA1AC0054800707E61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EFB57B4B1AE76B3A001DDBB8 /* Tabs */,
 				EF6955CC1ABE9D1C00707E61 /* initialViewController.h */,
 				EF6955CD1ABE9D1C00707E61 /* initialViewController.m */,
 				EF6955CF1ABE9D7A00707E61 /* maelstromLogInViewController.h */,
 				EF6955D01ABE9D7A00707E61 /* maelstromLogInViewController.m */,
 				EF6955D21ABE9DB400707E61 /* maelstromSignUpViewController.h */,
 				EF6955D31ABE9DB400707E61 /* maelstromSignUpViewController.m */,
-				EF0CF5DB1ACD46A7005B4EFA /* categoriesViewController.h */,
-				EF0CF5DC1ACD46A7005B4EFA /* categoriesViewController.m */,
-				EFA122951AD113DD00D524EE /* threadsViewController.h */,
-				EFA122961AD113DD00D524EE /* threadsViewController.m */,
-				EFC7F4A01ADC7644008A1975 /* postsViewController.h */,
-				EFC7F4A11ADC7644008A1975 /* postsViewController.m */,
-				EFC7F4A31ADC9E91008A1975 /* addThreadViewController.h */,
-				EFC7F4A41ADC9E91008A1975 /* addThreadViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -480,6 +527,120 @@
 				EFA122E21AD5C61F00D524EE /* maelstrom_icon.png */,
 			);
 			name = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		EFB57B111AE6362B001DDBB8 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				EFB57B1E1AE64374001DDBB8 /* Device Identifier */,
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
+		EFB57B1E1AE64374001DDBB8 /* Device Identifier */ = {
+			isa = PBXGroup;
+			children = (
+				EFB57B161AE637DC001DDBB8 /* UIDeviceHardware.m */,
+				EFB57B151AE637DC001DDBB8 /* UIDeviceHardware.h */,
+			);
+			name = "Device Identifier";
+			sourceTree = "<group>";
+		};
+		EFB57B211AE64AEC001DDBB8 /* Category Titles */ = {
+			isa = PBXGroup;
+			children = (
+				EFB57B221AE65689001DDBB8 /* categories-drive-title@2x.png */,
+				EFB57B231AE65689001DDBB8 /* categories-education-title@2x.png */,
+				EFB57B241AE65689001DDBB8 /* categories-electronics-title@2x.png */,
+				EFB57B251AE65689001DDBB8 /* categories-fitness-title@2x.png */,
+				EFB57B261AE65689001DDBB8 /* categories-food-title@2x.png */,
+				EFB57B421AE656DD001DDBB8 /* categories-graduates-title@2x.png */,
+				EFB57B271AE65689001DDBB8 /* categories-games-title@2x.png */,
+				EFB57B291AE65689001DDBB8 /* categories-hobbies-title@2x.png */,
+				EFB57B2A1AE65689001DDBB8 /* categories-home-title@2x.png */,
+				EFB57B2B1AE65689001DDBB8 /* categories-jobs-title@2x.png */,
+				EFB57B2C1AE65689001DDBB8 /* categories-money-title@2x.png */,
+				EFB57B2D1AE65689001DDBB8 /* categories-movies-title@2x.png */,
+				EFB57B2E1AE65689001DDBB8 /* categories-music-title@2x.png */,
+				EFB57B2F1AE65689001DDBB8 /* categories-sports-title@2x.png */,
+				EFB57B301AE65689001DDBB8 /* categories-travel-title@2x.png */,
+				EFB57B311AE65689001DDBB8 /* categories-tvshows-title@2x.png */,
+			);
+			name = "Category Titles";
+			sourceTree = "<group>";
+		};
+		EFB57B441AE6655B001DDBB8 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				EFB57B491AE6667A001DDBB8 /* threads-posts-bg-iphone5@2x.png */,
+				EFB57B451AE6658C001DDBB8 /* threads-posts-bg-iphone6@2x.png */,
+				EFB57B461AE6658C001DDBB8 /* threads-posts-bg-iphone6plus@2x.png */,
+				EFB57B181AE63FF7001DDBB8 /* categories-bg-iphone5@2x.png */,
+				EFB57B191AE63FF7001DDBB8 /* categories-bg-iphone6@2x.png */,
+				EFB57B1A1AE63FF7001DDBB8 /* categories-bg-iphone6plus@2x.png */,
+				EFA122DC1AD5BB9300D524EE /* background@2x.png */,
+				EFA122DD1AD5BB9300D524EE /* background@3x.png */,
+			);
+			name = Backgrounds;
+			sourceTree = "<group>";
+		};
+		EFB57B4B1AE76B3A001DDBB8 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				EFB57B531AE7740B001DDBB8 /* Tab Bar Controller */,
+				EFB57B4F1AE77399001DDBB8 /* 01 Categories */,
+				EFB57B501AE773A7001DDBB8 /* 02 Favourites */,
+				EFB57B511AE773B3001DDBB8 /* 03 Activity */,
+				EFB57B521AE773BB001DDBB8 /* 04 Profile */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+		EFB57B4F1AE77399001DDBB8 /* 01 Categories */ = {
+			isa = PBXGroup;
+			children = (
+				EF0CF5DB1ACD46A7005B4EFA /* categoriesViewController.h */,
+				EF0CF5DC1ACD46A7005B4EFA /* categoriesViewController.m */,
+				EFA122951AD113DD00D524EE /* threadsViewController.h */,
+				EFA122961AD113DD00D524EE /* threadsViewController.m */,
+				EFC7F4A01ADC7644008A1975 /* postsViewController.h */,
+				EFC7F4A11ADC7644008A1975 /* postsViewController.m */,
+				EFC7F4A31ADC9E91008A1975 /* addThreadViewController.h */,
+				EFC7F4A41ADC9E91008A1975 /* addThreadViewController.m */,
+				EFB57B081ADF8B4C001DDBB8 /* addThreadQuestionViewController.h */,
+				EFB57B091ADF8B4C001DDBB8 /* addThreadQuestionViewController.m */,
+			);
+			name = "01 Categories";
+			sourceTree = "<group>";
+		};
+		EFB57B501AE773A7001DDBB8 /* 02 Favourites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "02 Favourites";
+			sourceTree = "<group>";
+		};
+		EFB57B511AE773B3001DDBB8 /* 03 Activity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "03 Activity";
+			sourceTree = "<group>";
+		};
+		EFB57B521AE773BB001DDBB8 /* 04 Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "04 Profile";
+			sourceTree = "<group>";
+		};
+		EFB57B531AE7740B001DDBB8 /* Tab Bar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EFB57B4C1AE76B67001DDBB8 /* tabBarControllerUniversal.h */,
+				EFB57B4D1AE76B67001DDBB8 /* tabBarControllerUniversal.m */,
+			);
+			name = "Tab Bar Controller";
 			sourceTree = "<group>";
 		};
 		EFE694421ACD926300B1131D /* Archived */ = {
@@ -584,18 +745,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB57B321AE65689001DDBB8 /* categories-drive-title@2x.png in Resources */,
+				EFB57B4A1AE6667A001DDBB8 /* threads-posts-bg-iphone5@2x.png in Resources */,
 				EF19DC9E1ACF22EA002C75FC /* Money.png in Resources */,
 				EFA122801AD094C900D524EE /* ThreadCell_LastPostUser@2x.png in Resources */,
+				EFB57B3D1AE65689001DDBB8 /* categories-movies-title@2x.png in Resources */,
 				EF19DC961ACF22EA002C75FC /* Education.png in Resources */,
 				EFA1226D1AD0624400D524EE /* TabBar_Profile_Selected@2x.png in Resources */,
 				EF19DC971ACF22EA002C75FC /* Electronics.png in Resources */,
 				EFA122D71AD1662D00D524EE /* navigationBar_Movies@2x.png in Resources */,
+				EFB57B1D1AE63FF7001DDBB8 /* categories-bg-iphone6plus@2x.png in Resources */,
 				EFA1227F1AD094C900D524EE /* ThreadCell_AddFavourite_Selected@2x.png in Resources */,
 				EF19DCA61ACF3336002C75FC /* NavigationBarShadow@2x.png in Resources */,
 				EF19DC801ACEA29A002C75FC /* Threads.png in Resources */,
 				EF69558D1ABCA15500707E61 /* Main.storyboard in Resources */,
 				EF19DC951ACF22EA002C75FC /* Automotive.png in Resources */,
 				EF19DC991ACF22EA002C75FC /* Food.png in Resources */,
+				EFB57B471AE6658C001DDBB8 /* threads-posts-bg-iphone6@2x.png in Resources */,
+				EFB57B1B1AE63FF7001DDBB8 /* categories-bg-iphone5@2x.png in Resources */,
 				EF19DC7D1ACEA29A002C75FC /* Categories@2x.png in Resources */,
 				EFA122DA1AD1662D00D524EE /* navigationBar_Travel@2x.png in Resources */,
 				EFA122D01AD1662D00D524EE /* navigationBar_Fitness@2x.png in Resources */,
@@ -604,12 +771,17 @@
 				EFA122D51AD1662D00D524EE /* navigationBar_Home@2x.png in Resources */,
 				EFA122D21AD1662D00D524EE /* navigationBar_Games@2x.png in Resources */,
 				EF19DC831ACF1FCF002C75FC /* LogoNavigationBar@2x.png in Resources */,
+				EFB57B3C1AE65689001DDBB8 /* categories-money-title@2x.png in Resources */,
 				EFA122CF1AD1662D00D524EE /* navigationBar_Electronics@2x.png in Resources */,
 				EFA122D91AD1662D00D524EE /* navigationBar_Sports@2x.png in Resources */,
+				EFB57B1C1AE63FF7001DDBB8 /* categories-bg-iphone6@2x.png in Resources */,
 				EF6955921ABCA15500707E61 /* LaunchScreen.xib in Resources */,
 				EFA122CD1AD1662D00D524EE /* navigationBar_Drive@2x.png in Resources */,
 				EFA122D31AD1662D00D524EE /* navigationBar_Graduates@2x.png in Resources */,
 				EFA1226B1AD0624400D524EE /* TabBar_Favourites_Selected@2x.png in Resources */,
+				EFB57B371AE65689001DDBB8 /* categories-games-title@2x.png in Resources */,
+				EFB57B481AE6658C001DDBB8 /* threads-posts-bg-iphone6plus@2x.png in Resources */,
+				EFB57B341AE65689001DDBB8 /* categories-electronics-title@2x.png in Resources */,
 				EF19DCA41ACF22EA002C75FC /* TV.png in Resources */,
 				EFA1226C1AD0624400D524EE /* TabBar_Profile_Normal@2x.png in Resources */,
 				EFA122E31AD5C61F00D524EE /* LaunchImage@2x.png in Resources */,
@@ -620,21 +792,30 @@
 				EFA1226A1AD0624400D524EE /* TabBar_Favourites_Normal@2x.png in Resources */,
 				EFA122E41AD5C61F00D524EE /* maelstrom_icon.png in Resources */,
 				EF7696D71AD0494800F2AA8C /* LargeLogoNavigationBar@2x.png in Resources */,
+				EFB57B401AE65689001DDBB8 /* categories-travel-title@2x.png in Resources */,
 				EFA122841AD094C900D524EE /* ThreadCell_Time@2x.png in Resources */,
 				EFA122691AD0624400D524EE /* TabBar_Categories_Selected@2x.png in Resources */,
+				EFB57B431AE656DD001DDBB8 /* categories-graduates-title@2x.png in Resources */,
+				EFB57B391AE65689001DDBB8 /* categories-hobbies-title@2x.png in Resources */,
 				EFA122DB1AD1662D00D524EE /* navigationBar_TVShows@2x.png in Resources */,
 				EFA1227E1AD094C900D524EE /* ThreadCell_AddFavourite_Normal@2x.png in Resources */,
 				EFA122DF1AD5BB9300D524EE /* background@3x.png in Resources */,
+				EFB57B361AE65689001DDBB8 /* categories-food-title@2x.png in Resources */,
 				EF69558F1ABCA15500707E61 /* Images.xcassets in Resources */,
 				EFA122821AD094C900D524EE /* ThreadCell_NumberOfPosts@2x.png in Resources */,
+				EFB57B411AE65689001DDBB8 /* categories-tvshows-title@2x.png in Resources */,
+				EFB57B3A1AE65689001DDBB8 /* categories-home-title@2x.png in Resources */,
 				EF19DC9D1ACF22EA002C75FC /* Jobs.png in Resources */,
 				EFA122DE1AD5BB9300D524EE /* background@2x.png in Resources */,
 				EFA122CE1AD1662D00D524EE /* navigationBar_Education@2x.png in Resources */,
 				EFA122E61AD5C78900D524EE /* LaunchImageWithIcon@2x.png in Resources */,
 				EF19DC9C1ACF22EA002C75FC /* Home_DIY.png in Resources */,
+				EFB57B351AE65689001DDBB8 /* categories-fitness-title@2x.png in Resources */,
 				EFA122671AD0624400D524EE /* TabBar_Activity_Selected@2x.png in Resources */,
+				EFB57B3B1AE65689001DDBB8 /* categories-jobs-title@2x.png in Resources */,
 				EF19DC7C1ACEA29A002C75FC /* Categories.png in Resources */,
 				EFA122BD1AD162C900D524EE /* navigationBar_Jobs@2x.png in Resources */,
+				EFB57B331AE65689001DDBB8 /* categories-education-title@2x.png in Resources */,
 				EFA122D11AD1662D00D524EE /* navigationBar_Food@2x.png in Resources */,
 				EFA122851AD094C900D524EE /* threadCellHorizontalLine@2x.png in Resources */,
 				EFA122861AD094C900D524EE /* threadCellVerticalLine@2x.png in Resources */,
@@ -645,6 +826,8 @@
 				EF19DCA21ACF22EA002C75FC /* Sports.png in Resources */,
 				EF19DC9F1ACF22EA002C75FC /* Movies.png in Resources */,
 				EF19DCA31ACF22EA002C75FC /* Travel.png in Resources */,
+				EFB57B3E1AE65689001DDBB8 /* categories-music-title@2x.png in Resources */,
+				EFB57B3F1AE65689001DDBB8 /* categories-sports-title@2x.png in Resources */,
 				EF19DCA11ACF22EA002C75FC /* Hobbies.png in Resources */,
 				EF19DC811ACEA29A002C75FC /* Threads@2x.png in Resources */,
 				EFA122661AD0624400D524EE /* TabBar_Activity_Normal@2x.png in Resources */,
@@ -699,6 +882,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB57B0A1ADF8B4C001DDBB8 /* addThreadQuestionViewController.m in Sources */,
+				EFB57B171AE637DC001DDBB8 /* UIDeviceHardware.m in Sources */,
 				EF69558A1ABCA15500707E61 /* trendingQuestionsViewController.m in Sources */,
 				EF6955841ABCA15500707E61 /* AppDelegate.m in Sources */,
 				EF0CF5DD1ACD46A7005B4EFA /* categoriesViewController.m in Sources */,
@@ -709,6 +894,7 @@
 				EF6955D41ABE9DB400707E61 /* maelstromSignUpViewController.m in Sources */,
 				EFC7F4A51ADC9E91008A1975 /* addThreadViewController.m in Sources */,
 				EF6955D11ABE9D7A00707E61 /* maelstromLogInViewController.m in Sources */,
+				EFB57B4E1AE76B67001DDBB8 /* tabBarControllerUniversal.m in Sources */,
 				EFC7F4A21ADC7644008A1975 /* postsViewController.m in Sources */,
 				EF6955811ABCA15500707E61 /* main.m in Sources */,
 			);

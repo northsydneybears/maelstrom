@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E05A5DF883036F649979BD78"
+               BlueprintIdentifier = "E67E1A9D5B71DAA8641FB3B7"
                BuildableName = "libPods-Maelstrom-Bolts.a"
                BlueprintName = "Pods-Maelstrom-Bolts"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E05A5DF883036F649979BD78"
+            BlueprintIdentifier = "E67E1A9D5B71DAA8641FB3B7"
             BuildableName = "libPods-Maelstrom-Bolts.a"
             BlueprintName = "Pods-Maelstrom-Bolts"
             ReferencedContainer = "container:Pods.xcodeproj">

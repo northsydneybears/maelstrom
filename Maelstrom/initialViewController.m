@@ -17,6 +17,7 @@
 #import <parse/PFTwitterUtils.h>
 #import "categoriesViewController.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "tabBarControllerUniversal.h"
 
 @interface initialViewController ()
 
@@ -61,30 +62,6 @@
 					
 				// If user is linked to Facebook, we'll use their Facebook name and store their Facebook email in Parse
 				} else if ([PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-					
-/***********************OLD FACEBOOK SDK*********************************
-					// Create an asychronous Facebook request for user's details
-					PFUser *user = [PFUser currentUser];
-					FBRequest *request = [FBRequest requestForMe];
-					[request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-						
-								// When Facebook responds, if there are no errors, we'll update the Welcome UIAlertView with their Facebook name
-								if (!error) {
-							
-								// User data as a dictionary, may be useful later!
-								NSDictionary *userData = (NSDictionary *)result;
-								NSString *name = userData[@"name"];
-								user.username = name;
-								NSLog(@"Facebook user:%@", name);
-								[user saveEventually];
-							
-								//NSString *displayName = result[@"name"];
-								//	if (displayName) {
-								//	[[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), displayName] message:NSLocalizedString(@"Get your answers in the Bob", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
-								//	}
-								}
-					}];
-***********************************************************************/
 					
 					// Store the user's Facebook email in Parse
 					
@@ -218,28 +195,39 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-	UITabBarController *tabBarController = [segue destinationViewController];
+	
+	tabBarControllerUniversal *tabBarController = [segue destinationViewController];
 	categoriesViewController *categoriesVC = tabBarController.viewControllers[0];
 
 	
-	UITabBar *tabBar = tabBarController.tabBar;
-	UITabBarItem *categories = [tabBar.items objectAtIndex:0];
-	UITabBarItem *favourites = [tabBar.items objectAtIndex:1];
-	UITabBarItem *activity = [tabBar.items objectAtIndex:2];
-	UITabBarItem *profile = [tabBar.items objectAtIndex:3];
-	
-	// Make the tab bar transparent
-	[[UITabBar appearance] setBarTintColor:[UIColor clearColor]];
-	[[UITabBar appearance] setBackgroundImage:[UIImage new]];
-	self.tabBarController.tabBar.shadowImage = [[UIImage alloc] init];
-	
-	
-	[categories initWithTitle:@"Categories" image:[UIImage imageNamed:@"TabBar_Categories_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Categories_Selected.png"]];
-	[favourites initWithTitle:@"Favourites" image:[UIImage imageNamed:@"TabBar_Favourites_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Favourites_Selected.png"]];
-	[activity initWithTitle:@"Activity" image:[UIImage imageNamed:@"TabBar_Activity_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Activity_Selected.png"]];
-	[profile initWithTitle:@"Profile" image:[UIImage imageNamed:@"TabBar_Profile_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Profile_Selected.png"]];
-	
-
+//	UITabBar *tabBar = tabBarController.tabBar;
+//	UITabBarItem *categories = [tabBar.items objectAtIndex:0];
+//	UITabBarItem *favourites = [tabBar.items objectAtIndex:1];
+//	UITabBarItem *activity = [tabBar.items objectAtIndex:2];
+//	UITabBarItem *profile = [tabBar.items objectAtIndex:3];
+//	
+//	// Set the tab bar colour attributes
+//	[[UITabBar appearance] setBarTintColor:[UIColor orangeColor]];
+//	[[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbar-bg"]];
+//	
+//	UIColor *appTintColor = [UIColor orangeColor];
+//	tabBarController.tabBar.tintColor = appTintColor;
+//	[[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
+//																											NSForegroundColorAttributeName : appTintColor
+//																											} forState:UIControlStateSelected];
+//	
+//	
+//	// Make the unselected state of the tab bar text easier to read
+//	[[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
+//																											NSForegroundColorAttributeName : [UIColor colorWithRed:.7 green:.7 blue:.7 alpha:1]
+//																											} forState:UIControlStateNormal];
+//	
+//	
+//	[categories initWithTitle:nil image:[UIImage imageNamed:@"TabBar_Categories_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Categories_Selected.png"]];
+//	categories.imageInsets = UIEdgeInsetsMake(-1, -4, -3, -2);
+//	[favourites initWithTitle:@"Favourites" image:[UIImage imageNamed:@"TabBar_Favourites_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Favourites_Selected.png"]];
+//	[activity initWithTitle:@"Activity" image:[UIImage imageNamed:@"TabBar_Activity_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Activity_Selected.png"]];
+//	[profile initWithTitle:@"Profile" image:[UIImage imageNamed:@"TabBar_Profile_Normal.png"] selectedImage:[UIImage imageNamed:@"TabBar_Profile_Selected.png"]];
 }
 
 

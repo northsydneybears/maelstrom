@@ -15,7 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addThreadBarButton;
 @property (weak, nonatomic) IBOutlet UITableView *threadsTable;
-@property (weak, nonatomic) NSString *categoryType;
-@property (weak, nonatomic) NSString *threadTitleForPosts;
-@property	(weak, nonatomic) NSString *fromThreadValueForPostsVC;
+@property (strong, nonatomic) NSString *categoryType;
+@property (strong, nonatomic) NSString *threadTitleForPosts;
 @end

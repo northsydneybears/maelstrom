@@ -16,6 +16,8 @@ PODS:
   - Facebook-iOS-SDK/ShareKit (4.0.1):
     - Bolts (~> 1.0)
     - Facebook-iOS-SDK/CoreKit
+  - IQKeyboardManager (3.2.2)
+  - MBProgressHUD (0.9.1)
   - Parse (1.7.1):
     - Bolts (~> 1.1)
   - ParseCrashReporting (1.7.1):
@@ -29,6 +31,8 @@ PODS:
 DEPENDENCIES:
   - Bolts (~> 1.1)
   - Facebook-iOS-SDK (~> 4.0)
+  - IQKeyboardManager (~> 3.2)
+  - MBProgressHUD (~> 0.9)
   - ParseCrashReporting (~> 1.7)
   - ParseFacebookUtilsV4 (~> 1.7)
   - ParseUI (~> 1.1)
@@ -36,6 +40,8 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
   Facebook-iOS-SDK: 6d05532c97e9c542f8d87f94b7f6ee217493d00b
+  IQKeyboardManager: 99df8006864663a4126a77b9a2f7ea70077eff31
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   Parse: fa8ec29de6d82035635986c11946299fb1b38316
   ParseCrashReporting: 9aeff8680d500e5e833564fca5b60333f7bb7403
   ParseFacebookUtilsV4: fc44a339e38513fb6fc0bafbef34f69df6559e06

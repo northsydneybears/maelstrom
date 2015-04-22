@@ -9,6 +9,8 @@
 #import "addThreadViewController.h"
 #import "threadsViewController.h"
 #import "categoriesViewController.h"
+#import "MBProgressHUD.h"
+#import "addThreadQuestionViewController.h"
 
 
 @implementation addThreadViewController
@@ -19,38 +21,12 @@
 	// Set the text field's delegate to enable use of the keyboard hide delegate method
 	self.threadTitleTextField.delegate = self;
 	
-	// Tape gesture recogniser to hide the keyboard when user taps outside of the keyboard
+	// Tap gesture recogniser to hide the keyboard when user taps outside of the keyboard
 	UITapGestureRecognizer *tapOutsideKeyboardRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
 	[[self view] addGestureRecognizer:tapOutsideKeyboardRecognizer];
 }
 
 #pragma mark - Buttons
-
-- (IBAction)addThreadTapped:(id)sender {
-	
-	// Add thread to Parse code here
-	PFObject *newThread = [PFObject objectWithClassName:@"Thread"];
-	newThread[@"title"] = self.threadTitleTextField.text;
-	newThread[@"fromCategory"] = self.addThreadToCategory;
-	newThread[@"lastPostUser"] = [PFUser currentUser];
-	
-	NSNumber *initialPost = @1;
-	newThread[@"numberOfPosts"] = initialPost;
-	newThread[@"numberOfViews"] = initialPost;
-	
-	NSDate * now = [NSDate date];
-	NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
-	[outputFormatter setDateFormat:@"HH:mm"];
-	newThread[@"lastPostTime"] = now;
-	
-	[newThread saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-		if (succeeded) {
-			NSLog(@"New thread created: %@", self.threadTitleTextField.text);
-		} else {
-			NSLog(@"No new thread created.");
-		}
-	}];
-}
 
 - (IBAction)cancelAddThreadTapped:(id)sender {
 	[self.delegate addThreadViewControllerDidCancel:self];
@@ -66,7 +42,7 @@
 	NSString *newText = [theTextField.text stringByReplacingCharactersInRange:range withString:string];
 	
 	// The enabled property will be equal to the Boolean value of whether there is any text in the field or not
-	self.addThreadButton.enabled = ([newText length] > 0);
+	self.addThreadTitleButton.enabled = ([newText length] > 0);
 	
 	return YES;
 }
@@ -82,6 +58,19 @@
 // Hide the keyboard when a user taps outside it
 -(void)hideKeyboard {
 	[[self view] endEditing:YES];
+}
+
+// Send the entered thread title to display in the next view controller
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"addThreadToAddQuestion"]) {
+		addThreadQuestionViewController *newThreadVC = segue.destinationViewController;
+		newThreadVC.userEnteredThreadTitle = self.threadTitleTextField.text;
+		newThreadVC.addThreadToCategory = self.addThreadToCategory;
+		}
+}
+
+#pragma mark - Unwind Segue
+-(IBAction)addThreadUserTappedBackButton:(UIStoryboardSegue *)segue {
 }
 
 @end

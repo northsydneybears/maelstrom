@@ -22,9 +22,11 @@
 
 @property (nonatomic, weak) id <addThreadViewControllerDelegate> delegate;
 
-@property (weak, nonatomic) IBOutlet UIButton *addThreadButton;
+@property (weak, nonatomic) IBOutlet UIButton *addThreadTitleButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelAddThreadButton;
 @property (weak, nonatomic) IBOutlet UITextField *threadTitleTextField;
-@property (weak, nonatomic) NSString *addThreadToCategory;
+
+// This is the property that allows threadsViewController to pass the thread category to this addThreadViewController
+@property (strong, nonatomic) NSString *addThreadToCategory;
 
 @end

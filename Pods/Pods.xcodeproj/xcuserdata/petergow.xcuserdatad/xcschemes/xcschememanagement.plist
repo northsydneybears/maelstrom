@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Maelstrom-IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Maelstrom-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Maelstrom-ParseUI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>84B7580E89CABF5B8BFD600B</key>
+		<key>470E93A442D59FF97DE55764</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEF7E99FD7264C37A5B4E524</key>
+		<key>49A2053A2D89A76D9DFC1216</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3C0326F922DF1186B8F7CBB</key>
+		<key>C0740B68178448C1611480F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E05A5DF883036F649979BD78</key>
+		<key>E0E33EF6DE8DEDFA9AD8D06B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E56CA38B4F0E58DEFA59B9EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E67E1A9D5B71DAA8641FB3B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
