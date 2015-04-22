@@ -9,7 +9,6 @@
 #import "addThreadViewController.h"
 #import "threadsViewController.h"
 #import "categoriesViewController.h"
-#import "MBProgressHUD.h"
 #import "addThreadQuestionViewController.h"
 
 
@@ -20,6 +19,9 @@
 	
 	// Set the text field's delegate to enable use of the keyboard hide delegate method
 	self.threadTitleTextField.delegate = self;
+	
+	// Initially, the add thread button should be disabled with no text yet entered
+	self.addThreadTitleButton.enabled = NO;
 	
 	// Tap gesture recogniser to hide the keyboard when user taps outside of the keyboard
 	UITapGestureRecognizer *tapOutsideKeyboardRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
@@ -33,18 +35,15 @@
 	NSLog(@"User canceled adding thread");
 }
 
-
 #pragma mark - UITextField Delegate
 
-// Don't enable the add thread button with no text entered.
-- (BOOL)textField:(UITextField *)theTextField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+	self.addThreadTitleButton.enabled = YES;
+}
 
-	NSString *newText = [theTextField.text stringByReplacingCharactersInRange:range withString:string];
-	
-	// The enabled property will be equal to the Boolean value of whether there is any text in the field or not
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+	NSString *newText = self.threadTitleTextField.text;
 	self.addThreadTitleButton.enabled = ([newText length] > 0);
-	
-	return YES;
 }
 
 #pragma mark - Hiding the keyboard

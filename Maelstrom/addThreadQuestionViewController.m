@@ -7,7 +7,7 @@
 //
 
 #import "addThreadQuestionViewController.h"
-#import "MBProgressHUD.h"
+#import "ProgressHUD.h"
 #import "IQKeyboardReturnKeyHandler.h"
 #import "IQTextView.h"
 
@@ -62,16 +62,14 @@
 	[firstPost setObject:[newThread self] forKey:@"fromThread"];
 
 	// Show progress
-	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-	hud.mode = MBProgressHUDModeIndeterminate;
-	hud.labelText = @"Adding Thread";
-	[hud show:YES];
+	[ProgressHUD show:@"Adding thread..."];
 	
 	[PFObject saveAllInBackground:@[newThread, firstPost] block:^(BOOL succeeded, NSError *error) {
-		[hud hide:YES];
 		if (succeeded) {
+			[ProgressHUD showSuccess:@"Added"];
 			NSLog(@"New thread created: %@", self.userEnteredThreadTitle);
 		} else {
+			[ProgressHUD showError:@"Network error."];
 			NSLog(@"No new thread created.");
 		}
 	}];
@@ -110,8 +108,6 @@
 	}
 	[textView resignFirstResponder];
 }
-
-
 
 // Required for the use of IQKeyboardManager. See documentation on GitHub.
 - (void)dealloc	{

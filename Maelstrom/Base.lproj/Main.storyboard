@@ -360,6 +360,8 @@
                                 <exclude reference="C3y-Wc-1eG"/>
                                 <exclude reference="KqW-yS-EQ4"/>
                                 <exclude reference="Pbw-ab-ywM"/>
+                                <exclude reference="H7A-Jf-amd"/>
+                                <exclude reference="gCX-Pv-CTM"/>
                                 <exclude reference="JNB-w5-QBl"/>
                                 <exclude reference="NWz-RB-ida"/>
                                 <exclude reference="OVr-s2-4X7"/>
@@ -368,8 +370,6 @@
                                 <exclude reference="ohA-ji-uQv"/>
                                 <exclude reference="ojJ-5r-N11"/>
                                 <exclude reference="rtm-bj-8Xe"/>
-                                <exclude reference="H7A-Jf-amd"/>
-                                <exclude reference="gCX-Pv-CTM"/>
                             </mask>
                         </variation>
                     </view>

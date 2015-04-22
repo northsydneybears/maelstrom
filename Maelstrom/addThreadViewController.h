@@ -21,7 +21,6 @@
 @interface addThreadViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, weak) id <addThreadViewControllerDelegate> delegate;
-
 @property (weak, nonatomic) IBOutlet UIButton *addThreadTitleButton;
 @property (weak, nonatomic) IBOutlet UIButton *cancelAddThreadButton;
 @property (weak, nonatomic) IBOutlet UITextField *threadTitleTextField;

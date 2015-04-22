@@ -8,7 +8,6 @@ pod 'ParseFacebookUtilsV4', '~> 1.7'
 pod 'ParseUI', '~> 1.1'
 pod 'ParseCrashReporting', '~> 1.7'
 pod 'Bolts', '~> 1.1'
-pod 'MBProgressHUD', '~> 0.9'
 pod 'IQKeyboardManager', '~> 3.2'
 
 end

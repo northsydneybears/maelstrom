@@ -31,6 +31,7 @@
 		EF19DCA31ACF22EA002C75FC /* Travel.png in Resources */ = {isa = PBXBuildFile; fileRef = EF19DC931ACF22EA002C75FC /* Travel.png */; };
 		EF19DCA41ACF22EA002C75FC /* TV.png in Resources */ = {isa = PBXBuildFile; fileRef = EF19DC941ACF22EA002C75FC /* TV.png */; };
 		EF19DCA61ACF3336002C75FC /* NavigationBarShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF19DCA51ACF3336002C75FC /* NavigationBarShadow@2x.png */; };
+		EF4BAB2C1AE7B44E00134BBE /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4BAB2B1AE7B44E00134BBE /* ProgressHUD.m */; };
 		EF6955811ABCA15500707E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955801ABCA15500707E61 /* main.m */; };
 		EF6955841ABCA15500707E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955831ABCA15500707E61 /* AppDelegate.m */; };
 		EF6955871ABCA15500707E61 /* bobMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6955861ABCA15500707E61 /* bobMainViewController.m */; };
@@ -165,6 +166,8 @@
 		EF19DC931ACF22EA002C75FC /* Travel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Travel.png; path = Assets/category_icons/Travel.png; sourceTree = "<group>"; };
 		EF19DC941ACF22EA002C75FC /* TV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TV.png; path = Assets/category_icons/TV.png; sourceTree = "<group>"; };
 		EF19DCA51ACF3336002C75FC /* NavigationBarShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NavigationBarShadow@2x.png"; path = "Assets/NavigationBarShadow@2x.png"; sourceTree = "<group>"; };
+		EF4BAB2A1AE7B44E00134BBE /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		EF4BAB2B1AE7B44E00134BBE /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		EF69557B1ABCA15500707E61 /* Maelstrom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maelstrom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF69557F1ABCA15500707E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF6955801ABCA15500707E61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -355,6 +358,26 @@
 			name = "Category Icons";
 			sourceTree = "<group>";
 		};
+		EF4BAB291AE7B43C00134BBE /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EF4BAB2A1AE7B44E00134BBE /* ProgressHUD.h */,
+				EF4BAB2B1AE7B44E00134BBE /* ProgressHUD.m */,
+			);
+			name = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		EF4BAB2D1AE7CF9600134BBE /* Login and Signup */ = {
+			isa = PBXGroup;
+			children = (
+				EF6955CF1ABE9D7A00707E61 /* maelstromLogInViewController.h */,
+				EF6955D01ABE9D7A00707E61 /* maelstromLogInViewController.m */,
+				EF6955D21ABE9DB400707E61 /* maelstromSignUpViewController.h */,
+				EF6955D31ABE9DB400707E61 /* maelstromSignUpViewController.m */,
+			);
+			name = "Login and Signup";
+			sourceTree = "<group>";
+		};
 		EF6955721ABCA15500707E61 = {
 			isa = PBXGroup;
 			children = (
@@ -444,13 +467,10 @@
 		EF6955DA1AC0054800707E61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EF4BAB2D1AE7CF9600134BBE /* Login and Signup */,
 				EFB57B4B1AE76B3A001DDBB8 /* Tabs */,
 				EF6955CC1ABE9D1C00707E61 /* initialViewController.h */,
 				EF6955CD1ABE9D1C00707E61 /* initialViewController.m */,
-				EF6955CF1ABE9D7A00707E61 /* maelstromLogInViewController.h */,
-				EF6955D01ABE9D7A00707E61 /* maelstromLogInViewController.m */,
-				EF6955D21ABE9DB400707E61 /* maelstromSignUpViewController.h */,
-				EF6955D31ABE9DB400707E61 /* maelstromSignUpViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -532,6 +552,7 @@
 		EFB57B111AE6362B001DDBB8 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				EF4BAB291AE7B43C00134BBE /* ProgressHUD */,
 				EFB57B1E1AE64374001DDBB8 /* Device Identifier */,
 			);
 			name = Vendors;
@@ -896,6 +917,7 @@
 				EF6955D11ABE9D7A00707E61 /* maelstromLogInViewController.m in Sources */,
 				EFB57B4E1AE76B67001DDBB8 /* tabBarControllerUniversal.m in Sources */,
 				EFC7F4A21ADC7644008A1975 /* postsViewController.m in Sources */,
+				EF4BAB2C1AE7B44E00134BBE /* ProgressHUD.m in Sources */,
 				EF6955811ABCA15500707E61 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
