@@ -10,10 +10,7 @@
 
 @interface threadCell : PFTableViewCell
 
-
-
 @property (weak, nonatomic) IBOutlet UILabel *threadTitle;
-//@property (weak, nonatomic) IBOutlet UILabel *threadDescription;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfPosts;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfViews;
 @property (weak, nonatomic) IBOutlet UILabel *lastPostUser;

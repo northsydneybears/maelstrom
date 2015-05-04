@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Maelstrom-JSQMessagesViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Maelstrom-JSQSystemSoundPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Maelstrom-ParseUI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2148FE1C4D2F1F682044C904</key>
+		<key>1664457416EF557755A2356B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>22414B214157B7E3A7DCABC1</key>
+		<key>25A5E5F0318A1E45981E5E85</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9AB4E9090F40A0E7130EF41B</key>
+		<key>43BCFBE3B42DB7099A25376B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E97323E2ADAC41B02B18DC2</key>
+		<key>7BBFFCB62DEB9523FABAC8A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E8FEE91B9993FAFB55E458B5</key>
+		<key>E6FC0C2F3C1949B4181A4C07</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC57A8FA0E17889D88CB8310</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EDD2CFFE1A80865AB00D085B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

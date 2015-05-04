@@ -273,10 +273,7 @@
 	[super tableView:tableView didSelectRowAtIndexPath:indexPath];
 	
 	PFObject *fromThread = [self objectAtIndexPath:indexPath];
-	
-	// Set the value for the thread title in order to call from Parse only those posts related to thread that was tapped
-	//self.fromThreadValueForPostsVC = [fromThread objectForKey:@"title"];
-	
+		
 	NSNumber *views = [fromThread objectForKey:@"numberOfViews"];
 	int value = [views intValue];
 	fromThread[@"numberOfViews"] = [NSNumber numberWithInt:value + 1];
@@ -314,7 +311,12 @@
 		newThreadVC.addThreadToCategory = self.categoryType;
 	} else if ([segue.identifier isEqualToString:@"threadsToPosts"]) {
 		postsViewController *postsVC = segue.destinationViewController;
-		postsVC.fromThread = [self threadTitleString];
+		
+		// Set the fromThread PFObject for the postsViewController to query
+		NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+		PFObject *fromThread = [self objectAtIndexPath:indexPath];
+		postsVC.fromThread = fromThread;
+		
 		NSLog(@"User tapped thread: %@", [self threadTitleString]);
 	}
 }

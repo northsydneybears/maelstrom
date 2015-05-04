@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zNA-yE-1Vm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zNA-yE-1Vm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -794,9 +794,88 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1WP-U1-479">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCellLeft" rowHeight="150" id="1WP-U1-479" customClass="postCellLeft">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1WP-U1-479" id="eUs-l5-bzh">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is somebody's boring post about something only they find interesting but they feel the need to share with the world." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOB-kP-zqL">
+                                            <rect key="frame" x="66" y="8" width="526" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="526" id="zNw-W4-lkX"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="zNw-W4-lkX"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-user-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="W7B-IM-QMa">
+                                            <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="2UD-00-ruX"/>
+                                                <constraint firstAttribute="height" constant="50" id="HLy-hf-rie"/>
+                                                <constraint firstAttribute="width" constant="50" id="Nau-HC-nHq"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="aES-Hz-7K2"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 months" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wl3-bL-lmX">
+                                            <rect key="frame" x="517" y="60" width="75" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="PXh-3j-4XO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23456" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRJ-ft-O7D">
+                                            <rect key="frame" x="96" y="60" width="60" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="hci-qq-ACF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyh-rA-ql4">
+                                            <rect key="frame" x="66" y="57" width="22" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="22" id="Zry-qh-DMB"/>
+                                                <constraint firstAttribute="height" constant="22" id="u3P-MQ-OoY"/>
+                                            </constraints>
+                                            <state key="normal" image="ThreadCell_AddFavourite_Normal.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fRJ-ft-O7D" firstAttribute="leading" secondItem="tyh-rA-ql4" secondAttribute="trailing" constant="8" id="9gu-s8-UKJ"/>
+                                        <constraint firstItem="pOB-kP-zqL" firstAttribute="leading" secondItem="W7B-IM-QMa" secondAttribute="trailing" constant="8" id="COP-ZL-yLR"/>
+                                        <constraint firstItem="wl3-bL-lmX" firstAttribute="trailing" secondItem="eUs-l5-bzh" secondAttribute="trailingMargin" id="Epc-eo-zcZ"/>
+                                        <constraint firstItem="fRJ-ft-O7D" firstAttribute="centerY" secondItem="tyh-rA-ql4" secondAttribute="centerY" constant="2.5" id="KZD-Nu-CuG"/>
+                                        <constraint firstItem="pOB-kP-zqL" firstAttribute="leading" secondItem="tyh-rA-ql4" secondAttribute="leading" id="LxR-4Y-yHd"/>
+                                        <constraint firstItem="W7B-IM-QMa" firstAttribute="leading" secondItem="eUs-l5-bzh" secondAttribute="leadingMargin" id="M7F-5I-g3I"/>
+                                        <constraint firstItem="tyh-rA-ql4" firstAttribute="top" secondItem="pOB-kP-zqL" secondAttribute="bottom" constant="8" id="Xbp-lB-eqd"/>
+                                        <constraint firstItem="W7B-IM-QMa" firstAttribute="top" secondItem="eUs-l5-bzh" secondAttribute="topMargin" id="bmG-LU-DgN"/>
+                                        <constraint firstItem="pOB-kP-zqL" firstAttribute="top" secondItem="eUs-l5-bzh" secondAttribute="topMargin" id="fqT-oC-YTJ"/>
+                                        <constraint firstItem="wl3-bL-lmX" firstAttribute="top" secondItem="pOB-kP-zqL" secondAttribute="bottom" constant="11" id="mgH-3z-MHt"/>
+                                        <constraint firstItem="pOB-kP-zqL" firstAttribute="trailing" secondItem="eUs-l5-bzh" secondAttribute="trailingMargin" id="pNw-ow-LHJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="actualPostLabel" destination="pOB-kP-zqL" id="z16-FE-H5C"/>
+                                    <outlet property="likePostButton" destination="tyh-rA-ql4" id="dmk-WM-q0p"/>
+                                    <outlet property="postedAtTimeLabel" destination="wl3-bL-lmX" id="0du-xK-Ksl"/>
+                                    <outlet property="postsNumberOfLikesLabel" destination="fRJ-ft-O7D" id="E68-Tm-Scc"/>
+                                    <outlet property="userThatPostedProfileImage" destination="W7B-IM-QMa" id="7Xk-Zd-wfa"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="7dR-8p-QwD">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7dR-8p-QwD" id="Y1b-UO-fXV">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -813,6 +892,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ThreadCell_AddFavourite_Normal.png" width="50" height="50"/>
         <image name="icon-add-thread" width="106" height="106"/>
         <image name="icon-back" width="106" height="106"/>
         <image name="icon-cancel-add-thread" width="106" height="106"/>

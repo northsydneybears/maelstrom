@@ -11,6 +11,9 @@
 #import <UIKit/UIKit.h>
 #import "Parse/Parse.h"
 #import "threadCell.h"
+#import	"UIDeviceHardware.h"
+#import "postCellLeft.h"
+#import "postCellRight.h"
 
 @interface postsViewController ()
 
@@ -19,6 +22,7 @@
 @implementation postsViewController
 
 @synthesize fromThread;
+@synthesize postsTable;
 
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -42,6 +46,7 @@
 		
 		// The number of objects to show per page
 		self.objectsPerPage = 25;
+	
 	}
 	return self;
 }
@@ -53,34 +58,57 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 
-
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	// Register custom post cell XIBs
+	//UINib *nib = [UINib nibWithNibName:@"postCellLeft" bundle:nil];
+	//[[self tableView] registerNib:nib forCellReuseIdentifier:@"postCellLeft"];
+	
 	// Set a non-existent background and shadow image to get rid of the line between the navigation bar and the view
-	[self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar-bg"] forBarMetrics:UIBarMetricsDefault];
 	self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
 	
 	// Make the navigation bar transparent
-	self.navigationController.navigationBar.translucent = YES;
+	self.navigationController.navigationBar.translucent = NO;
 	self.navigationController.view.backgroundColor = [UIColor clearColor];
 	
 	// Add the background and send it to the back behind the buttons
-	UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
-	[self.view addSubview:backgroundView];
-	[self.view sendSubviewToBack:backgroundView];
+	NSString *platform = [UIDeviceHardware platform];
+	
+	if ([platform isEqualToString:@"iPhone5,1"] || [platform isEqualToString:@"iPhone5,2"] || [platform isEqualToString:@"iPhone5,3"] || [platform isEqualToString:@"iPhone5,4"] || [platform isEqualToString:@"iPhone6,1"] || [platform isEqualToString:@"iPhone6,2"] || [platform isEqualToString:@"iPod5,1"]) {
+		// iPhone 5 and iPod touch
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"threads-posts-bg-iphone5.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	} else if ([platform isEqualToString:@"iPhone7,2"]) {
+		// iPhone 6
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"threads-posts-bg-iphone6.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	} else if ([platform isEqualToString:@"iPhone7,1"] || [platform isEqualToString:@"x86_64"]) {
+		// iPhone 6 Plus
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"threads-posts-bg-iphone6plus.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	} else if ([platform isEqualToString:@"iPhone3,1"] || [platform isEqualToString:@"iPhone3,3"] || [platform isEqualToString:@"iPhone4,1"] || [platform isEqualToString:@"iPod4,1"]) {
+		// iPhone 4/4S and older iPod Touch
+		UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"threads-posts-bg-iphone5.png"]];
+		[self.view addSubview:backgroundView];
+		[self.view sendSubviewToBack:backgroundView];
+	}
 	
 	// Set the Navigation Bar back button to white and just an arrow without text
-	self.navigationController.navigationBar.tintColor = [UIColor redColor];
+	self.navigationController.navigationBar.tintColor = [UIColor orangeColor];
 	[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
 	
-	// Uncomment the following line to preserve selection between presentations.
-	// self.clearsSelectionOnViewWillAppear = NO;
+	// Setup self-sizing cells
+	postsTable.estimatedRowHeight = 120.0;
+	postsTable.rowHeight = UITableViewAutomaticDimension;
 	
-	// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-	//self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	NSLog(@"From Thread is %@", self.fromThread);
 }
 
 - (void)viewDidUnload {
@@ -95,6 +123,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
+	
+	// Reload PFQueryTable data so that newly added threads appear immediately after unwind Segue from Add Thread view controller
+	[self loadObjects];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -110,7 +141,6 @@
 	return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-
 #pragma mark - PFQueryTableViewController
 
 - (void)objectsWillLoad {
@@ -121,121 +151,58 @@
 
 - (void)objectsDidLoad:(NSError *)error {
 	[super objectsDidLoad:error];
-	
 	// This method is called every time objects are loaded from Parse via the PFQuery
 }
 
-//// Get number of sections in tableview
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//	// Return the number of sections.
-//	return 1;
-//}
-//
-//// Get number of rows by counting number of threads
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//	return threadsArray.count;
-//}
-
 // Query Parse for the table data
-//- (PFQuery *)queryForTable {
+- (PFQuery *)queryForTable {
 	
-//	PFQuery *query = [PFQuery queryWithClassName:@"Post"];
-//	[query whereKey:@"fromCategory" equalTo:self.categoryType];
-	//	[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-	//  if (!error) {
-	//		// The find succeeded.
-	//		NSLog(@"Successfully retrieved %d threads.", objects.count);
-	//		// Do something with the found objects
-	//		for (PFObject *object in objects) {
-	//			NSLog(@"%@", object.objectId);
-	//		}
-	//	} else {
-	//		// Log details of the failure
-	//		NSLog(@"Error: %@ %@", error, [error userInfo]);
-	//	}
-	//
-	//	}];
-	
-	//	[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-	//		if (!error) {
-	//			threadsArray = [[NSArray alloc] initWithArray:objects];
-	//		}
-	//		[threadsTable reloadData];
-	//	}];
+	PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+	[query whereKey:@"fromThread" equalTo:fromThread];
 	
 	// If Pull To Refresh is enabled, query against the network by default.
-//	if (self.pullToRefreshEnabled) {
-//		query.cachePolicy = kPFCachePolicyNetworkOnly;
-//	}
+	if (self.pullToRefreshEnabled) {
+		query.cachePolicy = kPFCachePolicyNetworkOnly;
+	}
  
 	// If no objects are loaded in memory, we look to the cache first to fill the table
 	// and then subsequently do a query against the network.
-//	if (self.objects.count == 0) {
-//		query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-//	}
+	if (self.objects.count == 0) {
+		query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+	}
  
-//	[query orderByDescending:@"createdAt"];
+	[query orderByDescending:@"createdAt"];
 	
-//	return query;
+	return query;
 	
-// }
+}
 
 // Override to customize the look of a cell representing an object. The default is to display
 // a UITableViewCellStyleDefault style cell with the label being the textKey in the object,
 // and the imageView being the imageKey in the object.
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
-//	static NSString *CellIdentifier = @"threadCell";
-//	
-//	threadCell *cell = (threadCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//	if (cell == nil) {
-//		cell = [[threadCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-//	}
-//	
-//	// Configure the cell
-//	cell.threadTitle.text = [object objectForKey:@"title"];
-//	
-//	NSNumber *posts = [object objectForKey:@"numberOfPosts"];
-//	cell.numberOfPosts.text = [posts stringValue];
-//	
-//	NSNumber *views = [object objectForKey:@"numberOfViews"];
-//	cell.numberOfViews.text = [views stringValue];
-//	
-//	NSDate *lastPostTime = [object objectForKey:@"lastPostTime"];
-//	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//	[formatter setDateStyle:NSDateFormatterNoStyle];
-//	[formatter setTimeStyle:NSDateFormatterShortStyle];
-//	cell.lastPostTime.text = [formatter stringFromDate:lastPostTime];
-//	
-//	return cell;
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+	static NSString *CellIdentifier = @"postCellLeft";
+	
+	postCellLeft *cell = (postCellLeft *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[postCellLeft alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+	}
+	
+	// Configure the cell
+	cell.actualPostLabel.text = [object objectForKey:@"actualPost"];
+	
+	NSNumber *likes = [object objectForKey:@"numberOfLikes"];
+	cell.postsNumberOfLikesLabel.text = [likes stringValue];
+	
+	NSDate *lastPostTime = [object objectForKey:@"lastPostTime"];
+	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+	[formatter setDateStyle:NSDateFormatterNoStyle];
+	[formatter setTimeStyle:NSDateFormatterShortStyle];
+	cell.postedAtTimeLabel.text = [formatter stringFromDate:lastPostTime];
+	
+	return cell;
+}
 
-
-
-/*
- // Override if you need to change the ordering of objects in the table.
- - (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
- return [self.objects objectAtIndex:indexPath.row];
- }
- */
-
-/*
- // Override to customize the look of the cell that allows the user to load the next page of objects.
- // The default implementation is a UITableViewCellStyleDefault cell with simple labels.
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
- static NSString *CellIdentifier = @"NextPage";
- 
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
- 
- if (cell == nil) {
- cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
- }
- 
- cell.selectionStyle = UITableViewCellSelectionStyleNone;
- cell.textLabel.text = @"Load more...";
- 
- return cell;
- }
- */
 
 #pragma mark - UITableViewDataSource
 

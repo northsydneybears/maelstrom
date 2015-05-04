@@ -8,8 +8,11 @@
 
 #import "PFQueryTableViewController.h"
 
-@interface postsViewController : PFQueryTableViewController <UITableViewDelegate>
+@interface postsViewController : PFQueryTableViewController
 
-@property (weak, nonatomic) NSString *fromThread;
+//@property (weak, nonatomic) NSString *fromThread;
+@property (weak, nonatomic) PFObject *fromThread;
+@property (strong, nonatomic) IBOutlet UITableView *postsTable;
+
 
 @end
