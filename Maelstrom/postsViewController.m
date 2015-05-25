@@ -63,10 +63,6 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	// Register custom post cell XIBs
-	//UINib *nib = [UINib nibWithNibName:@"postCellLeft" bundle:nil];
-	//[[self tableView] registerNib:nib forCellReuseIdentifier:@"postCellLeft"];
-	
 	// Set a non-existent background and shadow image to get rid of the line between the navigation bar and the view
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar-bg"] forBarMetrics:UIBarMetricsDefault];
 	self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
@@ -108,7 +104,19 @@
 	postsTable.estimatedRowHeight = 120.0;
 	postsTable.rowHeight = UITableViewAutomaticDimension;
 	
-	NSLog(@"From Thread is %@", self.fromThread);
+	// Creating view for extending background color for pull to refresh so you don't see any white
+	CGRect frame = self.tableView.bounds;
+	frame.origin.y = -frame.size.height;
+	UIView* backgroundView = [[UIView alloc] initWithFrame:frame];
+	backgroundView.backgroundColor = [UIColor colorWithRed:1.0 green:0.5 blue:0.0 alpha:0.9];
+	
+	// Adding the background view below the refresh control
+	[self.tableView insertSubview:backgroundView atIndex:0]; // This has to be after self.refreshControl = refreshControl;
+}
+
+// Hide the tab bar in the posts view controller to make way for the posting text field
+-(BOOL)hidesBottomBarWhenPushed {
+	return YES;
 }
 
 - (void)viewDidUnload {
@@ -158,7 +166,7 @@
 - (PFQuery *)queryForTable {
 	
 	PFQuery *query = [PFQuery queryWithClassName:@"Post"];
-	[query whereKey:@"fromThread" equalTo:fromThread];
+	[query whereKey:@"fromThread" equalTo:self.fromThread];
 	
 	// If Pull To Refresh is enabled, query against the network by default.
 	if (self.pullToRefreshEnabled) {
@@ -189,16 +197,34 @@
 	}
 	
 	// Configure the cell
+	
+	// Make the cell background transparent
+	cell.backgroundColor = [UIColor clearColor];
+	cell.backgroundView = [[UIView alloc] init];
+	
+	// Display the content of the post
 	cell.actualPostLabel.text = [object objectForKey:@"actualPost"];
 	
+	// Show the number of likes for the post
 	NSNumber *likes = [object objectForKey:@"numberOfLikes"];
 	cell.postsNumberOfLikesLabel.text = [likes stringValue];
 	
-	NSDate *lastPostTime = [object objectForKey:@"lastPostTime"];
+	// Set the time of the post
+	NSDate *lastPostTime = [object objectForKey:@"postedAtTime"];
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 	[formatter setDateStyle:NSDateFormatterNoStyle];
 	[formatter setTimeStyle:NSDateFormatterShortStyle];
 	cell.postedAtTimeLabel.text = [formatter stringFromDate:lastPostTime];
+	
+	// Set the username for the post
+	cell.postUsernameLabel.text = [object objectForKey:@"usernameOfPoster"];
+	
+//	PFUser* user = [object valueForKey:@"userThatPosted"];
+//	[user fetchIfNeededInBackgroundWithBlock: ^(PFObject *object, NSError *error) {
+//		if (!error) {
+//			cell.postUsernameLabel.text = user.username;
+//		}
+//	}];
 	
 	return cell;
 }
@@ -245,5 +271,7 @@
 	[super tableView:tableView didSelectRowAtIndexPath:indexPath];
  }
  */
+
+		
 
 @end

@@ -61,6 +61,7 @@
 		EF950CAE1AF7283800DB5D71 /* postCellRight.m in Sources */ = {isa = PBXBuildFile; fileRef = EF950CAD1AF7283800DB5D71 /* postCellRight.m */; };
 		EF950CB01AF7289700DB5D71 /* postCellLeft.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF950CAF1AF7289700DB5D71 /* postCellLeft.xib */; };
 		EF950CB61AF72CA500DB5D71 /* postCellRight.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF950CB51AF72CA500DB5D71 /* postCellRight.xib */; };
+		EF950CBD1B00922A00DB5D71 /* icon-postscell-replyWithQuote.png in Resources */ = {isa = PBXBuildFile; fileRef = EF950CBC1B00922A00DB5D71 /* icon-postscell-replyWithQuote.png */; };
 		EFA122661AD0624400D524EE /* TabBar_Activity_Normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA1225E1AD0624400D524EE /* TabBar_Activity_Normal@2x.png */; };
 		EFA122671AD0624400D524EE /* TabBar_Activity_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA1225F1AD0624400D524EE /* TabBar_Activity_Selected@2x.png */; };
 		EFA122681AD0624400D524EE /* TabBar_Categories_Normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFA122601AD0624400D524EE /* TabBar_Categories_Normal@2x.png */; };
@@ -130,6 +131,7 @@
 		EFC7F49F1ADB5E50008A1975 /* ThreadCellBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EFC7F49E1ADB5E50008A1975 /* ThreadCellBackground.png */; };
 		EFC7F4A21ADC7644008A1975 /* postsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4A11ADC7644008A1975 /* postsViewController.m */; };
 		EFC7F4A51ADC9E91008A1975 /* addThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4A41ADC9E91008A1975 /* addThreadViewController.m */; };
+		EFF238761B0AA2A50009334B /* addPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF238751B0AA2A50009334B /* addPostViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +215,7 @@
 		EF950CAD1AF7283800DB5D71 /* postCellRight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = postCellRight.m; sourceTree = "<group>"; };
 		EF950CAF1AF7289700DB5D71 /* postCellLeft.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = postCellLeft.xib; sourceTree = "<group>"; };
 		EF950CB51AF72CA500DB5D71 /* postCellRight.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = postCellRight.xib; sourceTree = "<group>"; };
+		EF950CBC1B00922A00DB5D71 /* icon-postscell-replyWithQuote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-postscell-replyWithQuote.png"; path = "Assets/post_cell_icons/icon-postscell-replyWithQuote.png"; sourceTree = "<group>"; };
 		EFA1225E1AD0624400D524EE /* TabBar_Activity_Normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBar_Activity_Normal@2x.png"; path = "Assets/TabBar_Activity_Normal@2x.png"; sourceTree = "<group>"; };
 		EFA1225F1AD0624400D524EE /* TabBar_Activity_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBar_Activity_Selected@2x.png"; path = "Assets/TabBar_Activity_Selected@2x.png"; sourceTree = "<group>"; };
 		EFA122601AD0624400D524EE /* TabBar_Categories_Normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBar_Categories_Normal@2x.png"; path = "Assets/TabBar_Categories_Normal@2x.png"; sourceTree = "<group>"; };
@@ -289,6 +292,8 @@
 		EFC7F4A11ADC7644008A1975 /* postsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = postsViewController.m; sourceTree = "<group>"; };
 		EFC7F4A31ADC9E91008A1975 /* addThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addThreadViewController.h; sourceTree = "<group>"; };
 		EFC7F4A41ADC9E91008A1975 /* addThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addThreadViewController.m; sourceTree = "<group>"; };
+		EFF238741B0AA2A50009334B /* addPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addPostViewController.h; sourceTree = "<group>"; };
+		EFF238751B0AA2A50009334B /* addPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addPostViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +332,7 @@
 		EF19DC751ACEA268002C75FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				EF950CB71B008FF500DB5D71 /* Post Cell Images */,
 				EFB57B441AE6655B001DDBB8 /* Backgrounds */,
 				EFB57B211AE64AEC001DDBB8 /* Category Titles */,
 				EFA122E01AD5C60B00D524EE /* Launch Screen */,
@@ -483,6 +489,14 @@
 				EF6955CD1ABE9D1C00707E61 /* initialViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EF950CB71B008FF500DB5D71 /* Post Cell Images */ = {
+			isa = PBXGroup;
+			children = (
+				EF950CBC1B00922A00DB5D71 /* icon-postscell-replyWithQuote.png */,
+			);
+			name = "Post Cell Images";
 			sourceTree = "<group>";
 		};
 		EFA1223D1AD0579F00D524EE /* Tab Bar Icons */ = {
@@ -646,6 +660,8 @@
 				EFC7F4A41ADC9E91008A1975 /* addThreadViewController.m */,
 				EFB57B081ADF8B4C001DDBB8 /* addThreadQuestionViewController.h */,
 				EFB57B091ADF8B4C001DDBB8 /* addThreadQuestionViewController.m */,
+				EFF238741B0AA2A50009334B /* addPostViewController.h */,
+				EFF238751B0AA2A50009334B /* addPostViewController.m */,
 			);
 			name = "01 Categories";
 			sourceTree = "<group>";
@@ -864,6 +880,7 @@
 				EF19DCA21ACF22EA002C75FC /* Sports.png in Resources */,
 				EF19DC9F1ACF22EA002C75FC /* Movies.png in Resources */,
 				EF19DCA31ACF22EA002C75FC /* Travel.png in Resources */,
+				EF950CBD1B00922A00DB5D71 /* icon-postscell-replyWithQuote.png in Resources */,
 				EFB57B3E1AE65689001DDBB8 /* categories-music-title@2x.png in Resources */,
 				EF950CB61AF72CA500DB5D71 /* postCellRight.xib in Resources */,
 				EFB57B3F1AE65689001DDBB8 /* categories-sports-title@2x.png in Resources */,
@@ -931,6 +948,7 @@
 				EF6955871ABCA15500707E61 /* bobMainViewController.m in Sources */,
 				EFA1228A1AD09BE800D524EE /* threadCell.m in Sources */,
 				EFA122971AD113DD00D524EE /* threadsViewController.m in Sources */,
+				EFF238761B0AA2A50009334B /* addPostViewController.m in Sources */,
 				EF950CAE1AF7283800DB5D71 /* postCellRight.m in Sources */,
 				EF6955D41ABE9DB400707E61 /* maelstromSignUpViewController.m in Sources */,
 				EFC7F4A51ADC9E91008A1975 /* addThreadViewController.m in Sources */,

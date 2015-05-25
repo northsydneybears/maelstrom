@@ -9,9 +9,7 @@ pod 'ParseUI', '~> 1.1'
 pod 'ParseCrashReporting', '~> 1.7'
 pod 'Bolts', '~> 1.1'
 pod 'IQKeyboardManager', '~> 3.2'
-pod 'JSQMessagesViewController', '~> 7.0'
-pod 'JSQSystemSoundPlayer', '~> 2.0'
-
+pod 'LHSKeyboardAdjusting', '~> 0.0'
 
 end
 

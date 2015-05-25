@@ -48,17 +48,11 @@
 #define COCOAPODS_VERSION_MINOR_IQKeyboardManager 2
 #define COCOAPODS_VERSION_PATCH_IQKeyboardManager 2
 
-// JSQMessagesViewController
-#define COCOAPODS_POD_AVAILABLE_JSQMessagesViewController
-#define COCOAPODS_VERSION_MAJOR_JSQMessagesViewController 7
-#define COCOAPODS_VERSION_MINOR_JSQMessagesViewController 0
-#define COCOAPODS_VERSION_PATCH_JSQMessagesViewController 1
-
-// JSQSystemSoundPlayer
-#define COCOAPODS_POD_AVAILABLE_JSQSystemSoundPlayer
-#define COCOAPODS_VERSION_MAJOR_JSQSystemSoundPlayer 2
-#define COCOAPODS_VERSION_MINOR_JSQSystemSoundPlayer 0
-#define COCOAPODS_VERSION_PATCH_JSQSystemSoundPlayer 1
+// LHSKeyboardAdjusting
+#define COCOAPODS_POD_AVAILABLE_LHSKeyboardAdjusting
+#define COCOAPODS_VERSION_MAJOR_LHSKeyboardAdjusting 0
+#define COCOAPODS_VERSION_MINOR_LHSKeyboardAdjusting 0
+#define COCOAPODS_VERSION_PATCH_LHSKeyboardAdjusting 1
 
 // Parse
 #define COCOAPODS_POD_AVAILABLE_Parse

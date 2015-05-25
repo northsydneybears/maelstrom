@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *likePostButton;
 @property (weak, nonatomic) IBOutlet UILabel *postsNumberOfLikesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *postedAtTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *postUsernameLabel;
 
 @end

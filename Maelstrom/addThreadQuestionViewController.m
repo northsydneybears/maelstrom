@@ -60,6 +60,10 @@
 	[firstPost setObject:[self.questionTextView text] forKey:@"actualPost"];
 	[firstPost setObject:[PFUser currentUser] forKey:@"userThatPosted"];
 	[firstPost setObject:[newThread self] forKey:@"fromThread"];
+	[firstPost setObject:now forKey:@"postedAtTime"];
+	
+	NSString *usernameOfPoster = [PFUser currentUser].username;
+	[firstPost setObject:usernameOfPoster forKey:@"usernameOfPoster"];
 
 	// Show progress
 	[ProgressHUD show:@"Adding thread..."];

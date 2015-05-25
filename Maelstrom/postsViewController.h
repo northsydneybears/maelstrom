@@ -10,8 +10,7 @@
 
 @interface postsViewController : PFQueryTableViewController
 
-//@property (weak, nonatomic) NSString *fromThread;
-@property (weak, nonatomic) PFObject *fromThread;
+@property (strong, nonatomic) PFObject *fromThread;
 @property (strong, nonatomic) IBOutlet UITableView *postsTable;
 
 
