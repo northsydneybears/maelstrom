@@ -132,6 +132,7 @@
 		EFC7F4A21ADC7644008A1975 /* postsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4A11ADC7644008A1975 /* postsViewController.m */; };
 		EFC7F4A51ADC9E91008A1975 /* addThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7F4A41ADC9E91008A1975 /* addThreadViewController.m */; };
 		EFF238761B0AA2A50009334B /* addPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF238751B0AA2A50009334B /* addPostViewController.m */; };
+		EFF74DCC1B13FDFD00B8752E /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFF74DCB1B13FDFD00B8752E /* ProgressHUD.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +295,7 @@
 		EFC7F4A41ADC9E91008A1975 /* addThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addThreadViewController.m; sourceTree = "<group>"; };
 		EFF238741B0AA2A50009334B /* addPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addPostViewController.h; sourceTree = "<group>"; };
 		EFF238751B0AA2A50009334B /* addPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addPostViewController.m; sourceTree = "<group>"; };
+		EFF74DCB1B13FDFD00B8752E /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +379,7 @@
 		EF4BAB291AE7B43C00134BBE /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				EFF74DCB1B13FDFD00B8752E /* ProgressHUD.bundle */,
 				EF4BAB2A1AE7B44E00134BBE /* ProgressHUD.h */,
 				EF4BAB2B1AE7B44E00134BBE /* ProgressHUD.m */,
 			);
@@ -814,6 +817,7 @@
 				EF69558D1ABCA15500707E61 /* Main.storyboard in Resources */,
 				EF19DC951ACF22EA002C75FC /* Automotive.png in Resources */,
 				EF19DC991ACF22EA002C75FC /* Food.png in Resources */,
+				EFF74DCC1B13FDFD00B8752E /* ProgressHUD.bundle in Resources */,
 				EFB57B471AE6658C001DDBB8 /* threads-posts-bg-iphone6@2x.png in Resources */,
 				EFB57B1B1AE63FF7001DDBB8 /* categories-bg-iphone5@2x.png in Resources */,
 				EF19DC7D1ACEA29A002C75FC /* Categories@2x.png in Resources */,

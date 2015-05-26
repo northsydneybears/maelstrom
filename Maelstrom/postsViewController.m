@@ -10,10 +10,12 @@
 #import "threadsViewController.h"
 #import <UIKit/UIKit.h>
 #import "Parse/Parse.h"
+#import "ProgressHUD.h"
 #import "threadCell.h"
 #import	"UIDeviceHardware.h"
 #import "postCellLeft.h"
 #import "postCellRight.h"
+#import "addPostViewController.h"
 
 @interface postsViewController ()
 
@@ -46,6 +48,9 @@
 		
 		// The number of objects to show per page
 		self.objectsPerPage = 25;
+		
+		// Remove the Parse default loading view to allow for Progress HUD
+		self.loadingViewEnabled = NO;
 	
 	}
 	return self;
@@ -96,7 +101,7 @@
 		[self.view sendSubviewToBack:backgroundView];
 	}
 	
-	// Set the Navigation Bar back button to white and just an arrow without text
+	// Set the Navigation Bar back button to orange and just an arrow without text
 	self.navigationController.navigationBar.tintColor = [UIColor orangeColor];
 	[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
 	
@@ -114,10 +119,10 @@
 	[self.tableView insertSubview:backgroundView atIndex:0]; // This has to be after self.refreshControl = refreshControl;
 }
 
-// Hide the tab bar in the posts view controller to make way for the posting text field
--(BOOL)hidesBottomBarWhenPushed {
-	return YES;
-}
+// Hide the tab bar in the posts view controller
+//-(BOOL)hidesBottomBarWhenPushed {
+//	return YES;
+//}
 
 - (void)viewDidUnload {
 	[super viewDidUnload];
@@ -160,6 +165,7 @@
 - (void)objectsDidLoad:(NSError *)error {
 	[super objectsDidLoad:error];
 	// This method is called every time objects are loaded from Parse via the PFQuery
+	
 }
 
 // Query Parse for the table data
@@ -189,46 +195,69 @@
 // a UITableViewCellStyleDefault style cell with the label being the textKey in the object,
 // and the imageView being the imageKey in the object.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
-	static NSString *CellIdentifier = @"postCellLeft";
+	//static NSString *CellIdentifier = @"postCellLeft";
 	
-	postCellLeft *cell = (postCellLeft *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-	if (cell == nil) {
-		cell = [[postCellLeft alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+	if (indexPath.row % 2 == 0) {
+		postCellLeft *cell = (postCellLeft *)[tableView dequeueReusableCellWithIdentifier:@"postCellLeft"];
+		if (cell == nil) {
+				cell = [[postCellLeft alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"postCellLeft"];
+		}
+		
+		// Make the cell background transparent
+		cell.backgroundColor = [UIColor clearColor];
+		cell.backgroundView = [[UIView alloc] init];
+		
+		// Display the content of the post
+		cell.actualPostLabel.text = [object objectForKey:@"actualPost"];
+		
+		// Show the number of likes for the post
+		NSNumber *likes = [object objectForKey:@"numberOfLikes"];
+		cell.postsNumberOfLikesLabel.text = [likes stringValue];
+		
+		// Set the time of the post
+		NSDate *lastPostTime = [object objectForKey:@"postedAtTime"];
+		NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+		[formatter setDateStyle:NSDateFormatterNoStyle];
+		[formatter setTimeStyle:NSDateFormatterShortStyle];
+		cell.postedAtTimeLabel.text = [formatter stringFromDate:lastPostTime];
+		
+		// Set the username for the post
+		cell.postUsernameLabel.text = [object objectForKey:@"usernameOfPoster"];
+		
+		return cell;
+		
+	} else {
+		postCellRight *cell = (postCellRight *)[tableView dequeueReusableCellWithIdentifier:@"postCellRight"];
+		if (cell == nil) {
+			cell = [[postCellRight alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"postCellRight"];
+		}
+	
+		// Configure the cell
+	
+		// Make the cell background transparent
+		cell.backgroundColor = [UIColor clearColor];
+		cell.backgroundView = [[UIView alloc] init];
+	
+		// Display the content of the post
+		cell.actualPostLabel.text = [object objectForKey:@"actualPost"];
+	
+		// Show the number of likes for the post
+		NSNumber *likes = [object objectForKey:@"numberOfLikes"];
+		cell.postsNumberOfLikesLabel.text = [likes stringValue];
+	
+		// Set the time of the post
+		NSDate *lastPostTime = [object objectForKey:@"postedAtTime"];
+		NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+		[formatter setDateStyle:NSDateFormatterNoStyle];
+		[formatter setTimeStyle:NSDateFormatterShortStyle];
+		cell.postedAtTimeLabel.text = [formatter stringFromDate:lastPostTime];
+	
+		// Set the username for the post
+		cell.postUsernameLabel.text = [object objectForKey:@"usernameOfPoster"];
+		
+		return cell;
 	}
-	
-	// Configure the cell
-	
-	// Make the cell background transparent
-	cell.backgroundColor = [UIColor clearColor];
-	cell.backgroundView = [[UIView alloc] init];
-	
-	// Display the content of the post
-	cell.actualPostLabel.text = [object objectForKey:@"actualPost"];
-	
-	// Show the number of likes for the post
-	NSNumber *likes = [object objectForKey:@"numberOfLikes"];
-	cell.postsNumberOfLikesLabel.text = [likes stringValue];
-	
-	// Set the time of the post
-	NSDate *lastPostTime = [object objectForKey:@"postedAtTime"];
-	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-	[formatter setDateStyle:NSDateFormatterNoStyle];
-	[formatter setTimeStyle:NSDateFormatterShortStyle];
-	cell.postedAtTimeLabel.text = [formatter stringFromDate:lastPostTime];
-	
-	// Set the username for the post
-	cell.postUsernameLabel.text = [object objectForKey:@"usernameOfPoster"];
-	
-//	PFUser* user = [object valueForKey:@"userThatPosted"];
-//	[user fetchIfNeededInBackgroundWithBlock: ^(PFObject *object, NSError *error) {
-//		if (!error) {
-//			cell.postUsernameLabel.text = user.username;
-//		}
-//	}];
-	
-	return cell;
 }
-
 
 #pragma mark - UITableViewDataSource
 
@@ -272,6 +301,17 @@
  }
  */
 
-		
+#pragma mark - Segue Actions
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	if ([segue.identifier isEqualToString:@"postsToAddPosts"]) {
+		addPostViewController *newPostVC = segue.destinationViewController;
+		newPostVC.fromThread = self.fromThread;
+	}
+}
+
+// Unwind segue
+-(IBAction)addPostFinishedAddingPost:(UIStoryboardSegue *)segue {
+}
 
 @end

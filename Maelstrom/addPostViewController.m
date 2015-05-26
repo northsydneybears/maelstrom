@@ -7,9 +7,11 @@
 //
 
 #import "addPostViewController.h"
+#import "ProgressHUD.h"
 
 @interface addPostViewController ()
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *textViewBottomSpaceToContainer;
+@property (strong, nonatomic) IBOutlet UIView *greyBackground;
 
 @end
 
@@ -34,7 +36,7 @@
 	UIViewAnimationCurve curve = [note.userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue];
 	
 	CGRect keyboardEndFrame = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-	keyboardEndFrame = [self.view convertRect:keyboardEndFrame fromView:nil];
+	keyboardEndFrame = [self.greyBackground convertRect:keyboardEndFrame fromView:nil];
 	
 	[UIView beginAnimations:nil context:nil];
 	[UIView setAnimationDuration:duration];
@@ -53,6 +55,42 @@
 }
 
 - (IBAction)addPostButtonTapped:(id)sender {
+
+	// Create a new post object
+	PFObject *newPost = [PFObject objectWithClassName:@"Post"];
+	
+	// Extract a plain string of the username to use as label above post
+	NSString *usernameOfPoster = [PFUser currentUser].username;
+	
+	// Get the timestamp
+	NSDate *now = [NSDate date];
+	NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+	[outputFormatter setDateFormat:@"HH:mm"];
+	newPost[@"postedAtTime"] = now;
+	
+	// Link values to Parse data columns
+	[newPost setObject:usernameOfPoster forKey:@"usernameOfPoster"];
+	[newPost setObject:[PFUser currentUser] forKey:@"userThatPosted"];
+	[newPost setObject:[self.postTextView text] forKey:@"actualPost"];
+	[newPost setObject:now forKey:@"postedAtTime"];
+	[newPost setObject:[self.fromThread self] forKey:@"fromThread"];
+	
+	// Show progress
+	[ProgressHUD show:@"Adding post..."];
+	
+	// Unwind to the posts view controller ready to display the new post
+	[self performSegueWithIdentifier:@"addPostFinishedUnwindSegue" sender:self];
+	
+	// Save the new post to Parse
+	[PFObject saveAllInBackground:@[newPost] block:^(BOOL succeeded, NSError *error) {
+		if (succeeded) {
+			[ProgressHUD showSuccess:@"Post Added"];
+			NSLog(@"New post added by: %@", [PFUser currentUser].username);
+		} else {
+			[ProgressHUD showError:@"Network error."];
+			NSLog(@"Error: No new post added.");
+		}
+	}];
 }
 
 -(void)dealloc {

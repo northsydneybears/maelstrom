@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 #import "IQTextView.h"
 #import <LHSKeyboardAdjusting/LHSKeyboardAdjusting.h>
 
@@ -14,5 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *postTextView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addPostBarButton;
+@property (strong, nonatomic) PFObject *fromThread;
 
 @end
